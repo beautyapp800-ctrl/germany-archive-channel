@@ -241,5 +241,33 @@ def main():
     sheet.save(OUT / "check_readability.jpg", quality=90)
 
 
+def final_banner():
+    """Owner 22.11: banner 3's style (ruins + airlift plane) with the chosen name and schedule.
+    Everything that must be read sits inside 1235x338 (the safe area on every device)."""
+    srcs = json.load(open("branding/src/sources.json", encoding="utf-8"))
+    imgs = {s["key"]: Image.open(s["local"]).convert("RGB") for s in srcs}
+    plane = outlined(cutout(enhance(imgs["c54"])), 12)
+    b = cover(enhance(warm_tint(imgs["frankfurt"]), sat=1.5), (2560, 1440)).convert("RGBA")
+    b.alpha_composite(Image.new("RGBA", (2560, 400), (0, 0, 0, 125)), (0, 520))
+    d = ImageDraw.Draw(b)
+    sx0, sy0, sx1, sy1 = 662, 551, 1898, 889          # 1235 x 338, centred
+    plane_w = 400
+    tx0, tx1 = sx0, sx1 - plane_w
+    name = "ALS OMA JUNG WAR"
+    text(d, ((tx0 + tx1) / 2, 640), name, fit_size(name, tx1 - tx0 - 20, 170), WHITE)
+    sub = "DEUTSCHLAND 1945–1970"
+    text(d, ((tx0 + tx1) / 2, 772), sub, fit_size(sub, tx1 - tx0 - 60, 84), YELLOW)
+    sched = "Neue Doku: jeden Sonntag 17 Uhr"
+    text(d, ((tx0 + tx1) / 2, 852), sched, fit_size(sched, tx1 - tx0 - 80, 50), WHITE, 3)
+    paste_fit(b, plane, (sx1 - plane_w + 10, sy0 + 10, sx1 + 10, sy1 - 30))
+    b.convert("RGB").save(OUT / "banner_final.jpg", quality=92)
+    # phone check: what a phone shows (1546x423 centre) with the 1235x338 safe frame drawn in
+    ph = b.convert("RGB").crop((507, 508, 2053, 931))
+    dd = ImageDraw.Draw(ph)
+    dd.rectangle((155, 43, 155 + 1235, 43 + 338), outline=(0, 255, 0), width=4)
+    ph.resize((773, 211)).save(OUT / "check_banner_phone.jpg", quality=90)
+    b.convert("RGB").resize((1280, 720)).save(OUT / "check_banner_tv.jpg", quality=88)
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(final_banner() if "final" in sys.argv else main())

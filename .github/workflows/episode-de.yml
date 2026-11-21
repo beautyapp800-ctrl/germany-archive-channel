@@ -1,0 +1,108 @@
+name: episode-de
+# One episode of "Als Oma jung war". Manual only until the owner says "ok" (automation off).
+# Jobs: prepare (narration, licences, scan, plan) -> cut x6 (shots) -> render (video, QA, covers, subtitles).
+run-name: episode-de ${{ inputs.slug }}
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: episode slug (episodes/<slug>/script.json)
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: episode-de
+  cancel-in-progress: false
+env:
+  PYTHONUTF8: 1
+  SLUG: ${{ inputs.slug }}
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - uses: actions/cache@v4
+        with:
+          path: assets/models
+          key: models-de-v1
+      - name: Install
+        run: |
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q piper-tts==1.8.0 numpy soundfile pillow -r requirements-prefilter.txt
+      - run: python automation/build_de.py "$SLUG" prepare
+      - uses: actions/upload-artifact@v4
+        with:
+          name: build-prepare
+          path: |
+            episodes/${{ inputs.slug }}/build/narration.wav
+            episodes/${{ inputs.slug }}/build/timeline.json
+            episodes/${{ inputs.slug }}/build/material.json
+            episodes/${{ inputs.slug }}/build/plan.json
+            episodes/${{ inputs.slug }}/build/scan/
+            episodes/${{ inputs.slug }}/build/thumbs/
+          retention-days: 7
+  cut:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 200
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        k: [0, 1, 2, 3, 4, 5]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: pip install -q numpy pillow
+      - uses: actions/download-artifact@v4
+        with:
+          name: build-prepare
+          path: episodes/${{ inputs.slug }}/build
+      - run: python automation/build_de.py "$SLUG" cut ${{ matrix.k }} 6
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shots-${{ matrix.k }}
+          path: episodes/${{ inputs.slug }}/build/shots/
+          retention-days: 7
+  render:
+    needs: cut
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - uses: actions/cache@v4
+        with:
+          path: assets/models
+          key: models-de-v1
+      - name: Install
+        run: |
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q numpy soundfile pillow scipy "rembg[cpu]==2.0.67" -r requirements-prefilter.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: build-prepare
+          path: episodes/${{ inputs.slug }}/build
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: shots-*
+          merge-multiple: true
+          path: episodes/${{ inputs.slug }}/build/shots
+      - run: python automation/build_de.py "$SLUG" render
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: out-${{ inputs.slug }}
+          path: episodes/${{ inputs.slug }}/out/
+          retention-days: 14

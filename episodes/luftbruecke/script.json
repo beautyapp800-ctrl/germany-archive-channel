@@ -1,0 +1,757 @@
+{
+ "slug": "luftbruecke",
+ "title": "Berliner Luftbrücke 1948: Alle 3 Minuten ein Flugzeug – ging das wirklich?",
+ "year_label": "1948",
+ "place": "Berlin",
+ "hook_question": "Kann man eine Stadt mit über zwei Millionen Menschen ein Jahr lang nur aus der Luft versorgen?",
+ "cover": {
+  "hero": "a C-54 cargo plane landing over people",
+  "hooks": [
+   "ALLE 3 MINUTEN",
+   "2,1 MIO. TONNEN",
+   "UNGLAUBLICH"
+  ],
+  "tag": "1.398 FLÜGE",
+  "stamp": "ECHT?"
+ },
+ "sources": [
+  {
+   "what": "Berliner Luftbrücke",
+   "where": "de.wikipedia.org/wiki/Berliner_Luftbrücke",
+   "revision": 271355356
+  },
+  {
+   "what": "Berlin-Blockade",
+   "where": "de.wikipedia.org/wiki/Berlin-Blockade",
+   "revision": 270547177
+  },
+  {
+   "what": "Gail Halvorsen",
+   "where": "de.wikipedia.org/wiki/Gail_Halvorsen",
+   "revision": 271547097
+  },
+  {
+   "what": "Flughafen Berlin-Tegel",
+   "where": "de.wikipedia.org/wiki/Flughafen_Berlin-Tegel",
+   "revision": 270636337
+  },
+  {
+   "what": "Währungsreform 1948 (Westdeutschland)",
+   "where": "de.wikipedia.org/wiki/Währungsreform_1948_(Westdeutschland)",
+   "revision": 267830248
+  }
+ ],
+ "chapters": [
+  {
+   "title": "Ostern 1949",
+   "lines": [
+    {
+     "text": "Ostersonntag, sechzehnter April neunzehnhundertneunundvierzig.",
+     "en": "Easter Sunday, 16 April 1949.",
+     "look": "a four-engine cargo plane landing at an airfield in Berlin"
+    },
+    {
+     "text": "In vierundzwanzig Stunden landen in West-Berlin eintausenddreihundertachtundneunzig Flugzeuge.",
+     "en": "In 24 hours, 1,398 aircraft land in West Berlin.",
+     "look": "many cargo planes parked in a row on an airfield",
+     "tag": "1.398 FLÜGE"
+    },
+    {
+     "text": "Rein rechnerisch ist das ungefähr ein Flugzeug pro Minute. Tag und Nacht.",
+     "en": "On paper, that is roughly one aircraft a minute. Day and night.",
+     "look": "a cargo plane approaching a runway"
+    },
+    {
+     "text": "An Bord: zwölftausendachthundertneunundvierzig Tonnen Fracht. Kohle, Mehl, Trockenmilch.",
+     "en": "On board: 12,849 tonnes of cargo. Coal, flour, dried milk.",
+     "look": "workers unloading sacks from a cargo plane",
+     "tag": "12.849 TONNEN"
+    },
+    {
+     "text": "Keine Straße, keine Schiene, kein Kanal bringt zu dieser Zeit etwas in die Westsektoren der Stadt.",
+     "en": "At this time no road, no railway, no canal brings anything into the city's western sectors.",
+     "look": "an empty road and rail line with a barrier"
+    },
+    {
+     "text": "Alles, was über zwei Millionen Menschen zum Leben brauchen, kommt vom Himmel.",
+     "en": "Everything that more than two million people need to live comes from the sky.",
+     "look": "people in a city street watching a plane fly over"
+    },
+    {
+     "text": "Wie konnte das funktionieren? Und warum glaubte am Anfang kaum jemand daran?",
+     "en": "How could that work? And why did hardly anyone believe in it at first?",
+     "look": "a crowd of people looking up at the sky"
+    }
+   ]
+  },
+  {
+   "title": "Die Nacht, in der das Licht ausging",
+   "lines": [
+    {
+     "text": "Die Geschichte beginnt mit Geld.",
+     "en": "The story begins with money.",
+     "look": "German banknotes and coins on a table"
+    },
+    {
+     "text": "Am zwanzigsten Juni neunzehnhundertachtundvierzig führen die Westalliierten in ihren drei Zonen die Deutsche Mark ein.",
+     "en": "On 20 June 1948 the Western Allies introduce the Deutsche Mark in their three zones.",
+     "look": "people queueing outside a bank office"
+    },
+    {
+     "text": "Jeder bekommt zunächst vierzig D-Mark Kopfgeld. Bar, am Sonntagmorgen.",
+     "en": "At first everyone gets 40 Deutsche Marks per head. In cash, on Sunday morning.",
+     "look": "people standing in a long queue in a German town",
+     "tag": "40 DM"
+    },
+    {
+     "text": "Und plötzlich füllen sich die Schaufenster: mit Lebensmitteln, Schnaps, Schokolade und Zigaretten.",
+     "en": "And suddenly shop windows fill up: with food, schnapps, chocolate and cigarettes.",
+     "look": "a shop window with goods in a German street"
+    },
+    {
+     "text": "Die sowjetische Besatzungsmacht nimmt die Reform zum Anlass für eine Blockade ohne Enddatum.",
+     "en": "The Soviet occupying power takes the reform as the reason for a blockade with no end date.",
+     "look": "soldiers at a road checkpoint barrier"
+    },
+    {
+     "text": "In der Nacht auf den vierundzwanzigsten Juni wird West-Berlin vom Strom aus der sowjetischen Zone abgeschnitten.",
+     "en": "In the night before 24 June, West Berlin is cut off from electricity from the Soviet zone.",
+     "look": "a dark city street at night with ruined buildings"
+    },
+    {
+     "text": "Gegen sechs Uhr morgens stehen Straßen und Schienen still. Wenige Tage später auch die Wasserwege.",
+     "en": "At around six in the morning, roads and railways come to a halt. A few days later, the waterways too.",
+     "look": "a stopped freight train on a railway line"
+    },
+    {
+     "text": "In den Westsektoren leben damals etwa zwei Komma zwei Millionen Menschen.",
+     "en": "About 2.2 million people live in the western sectors at that time.",
+     "look": "a crowded street in Berlin with many people",
+     "tag": "2,2 MIO."
+    },
+    {
+     "text": "Rund drei Viertel von allem, was sie verbrauchen, kam bis dahin aus den Westzonen.",
+     "en": "Around three quarters of everything they use had come from the western zones until then.",
+     "look": "trucks loaded with goods on a road"
+    }
+   ]
+  },
+  {
+   "title": "Sechsunddreißig Tage",
+   "lines": [
+    {
+     "text": "Wie lange reichen die Vorräte? Die Schätzungen sind ernüchternd.",
+     "en": "How long will the supplies last? The estimates are sobering.",
+     "look": "a warehouse with stacked sacks and boxes"
+    },
+    {
+     "text": "Lebensmittel: sechsunddreißig Tage.",
+     "en": "Food: 36 days.",
+     "look": "sacks of flour stacked in a storeroom",
+     "tag": "36 TAGE"
+    },
+    {
+     "text": "Kohle zum Heizen und Kochen: fünfunddreißig Tage.",
+     "en": "Coal for heating and cooking: 35 days.",
+     "look": "a pile of coal with workers and shovels"
+    },
+    {
+     "text": "Kohle für die Kraftwerke, bei strenger Stromsperre: drei Wochen.",
+     "en": "Coal for the power stations, with strict power rationing: three weeks.",
+     "look": "a power station with chimneys"
+    },
+    {
+     "text": "Und diese Zahlen beruhen schon auf sehr knappen Rationen.",
+     "en": "And these figures are already based on very tight rations.",
+     "look": "people with ration cards at a counter"
+    },
+    {
+     "text": "Ein normaler Verbraucher erhält über seine Lebensmittelkarte etwa eintausendfünfhundert Kilokalorien am Tag.",
+     "en": "An ordinary consumer gets about 1,500 kilocalories a day on his ration card.",
+     "look": "a family eating a small meal at a kitchen table",
+     "tag": "1.500 KCAL"
+    },
+    {
+     "text": "Ein Mann braucht im Mittel rund dreitausendeinhundert, eine Frau rund zweitausendvierhundert.",
+     "en": "On average a man needs about 3,100, a woman about 2,400.",
+     "look": "women and men working in a city street"
+    },
+    {
+     "text": "Pro Person gibt es am Tag: vierhundert Gramm Brot, vierzig Gramm Fleisch, dreißig Gramm Fett, vierhundert Gramm Trockenkartoffeln.",
+     "en": "Per person per day: 400 grams of bread, 40 grams of meat, 30 grams of fat, 400 grams of dried potatoes.",
+     "look": "loaves of bread on a bakery shelf"
+    },
+    {
+     "text": "Und fünf Gramm Käse.",
+     "en": "And five grams of cheese.",
+     "look": "a small portion of food on a plate"
+    },
+    {
+     "text": "Die West-Berliner verhungern nicht. Aber sie sind ständig hungrig.",
+     "en": "The West Berliners do not starve. But they are constantly hungry.",
+     "look": "children standing in a ruined Berlin street"
+    }
+   ]
+  },
+  {
+   "title": "Sie kümmern sich um die Luftbrücke",
+   "lines": [
+    {
+     "text": "Am fünfundzwanzigsten Juni lässt der amerikanische Militärgouverneur Lucius D. Clay den gewählten Bürgermeister Ernst Reuter zu sich kommen.",
+     "en": "On 25 June the American military governor Lucius D. Clay summons the elected mayor Ernst Reuter.",
+     "look": "officials in suits meeting in an office"
+    },
+    {
+     "text": "Seine Frage: Würden die Berliner eine Versorgung nur aus der Luft durchhalten?",
+     "en": "His question: would Berliners hold out with supplies only from the air?",
+     "look": "a military officer speaking to civilians"
+    },
+    {
+     "text": "Reuter antwortet sinngemäß: Sie kümmern sich um die Luftbrücke, ich kümmere mich um die Berliner.",
+     "en": "Reuter's answer, in essence: you take care of the airlift, I will take care of the Berliners.",
+     "look": "a man speaking to a large crowd in Berlin"
+    },
+    {
+     "text": "Doch nach dem Gespräch sagt er, er glaube nicht, dass so eine Versorgung möglich sei.",
+     "en": "But after the meeting he says he does not believe such a supply is possible.",
+     "look": "ruined buildings in Berlin seen from a street"
+    },
+    {
+     "text": "Am sechsundzwanzigsten Juni starten die ersten amerikanischen Maschinen in Frankfurt und Wiesbaden Richtung Tempelhof.",
+     "en": "On 26 June the first American aircraft take off from Frankfurt and Wiesbaden towards Tempelhof.",
+     "look": "cargo planes taking off from an airbase"
+    },
+    {
+     "text": "Die Amerikaner nennen es Operation Vittles, Operation Proviant.",
+     "en": "The Americans call it Operation Vittles, Operation Provisions.",
+     "look": "a sign or aircraft marked Operation Vittles"
+    },
+    {
+     "text": "Zwei Tage später fliegen auch die Briten, zunächst nach Gatow.",
+     "en": "Two days later the British fly too, at first to Gatow.",
+     "look": "a twin-engine transport plane on an airfield"
+    },
+    {
+     "text": "Ihre Flugboote landen sogar auf der Havel und dem Großen Wannsee. Sie bringen vor allem Salz, weil ihre Rümpfe dem Salz widerstehen.",
+     "en": "Their flying boats even land on the Havel and the Großer Wannsee. They mainly carry salt, because their hulls resist corrosion.",
+     "look": "a seaplane on a lake"
+    },
+    {
+     "text": "Am Anfang hält man höchstens siebenhundertfünfzig Tonnen am Tag für möglich.",
+     "en": "At the start, at most 750 tonnes a day are thought possible.",
+     "look": "soldiers loading crates into a plane",
+     "tag": "750 T / TAG"
+    },
+    {
+     "text": "Im Juli sagen sechsundachtzig Prozent der befragten Berliner: Die Stadt wird den Winter nicht überstehen.",
+     "en": "In July, 86 percent of Berliners surveyed say the city will not survive the winter.",
+     "look": "Berlin residents talking in a street",
+     "tag": "86 %"
+    }
+   ]
+  },
+  {
+   "title": "Drei Straßen in der Luft",
+   "lines": [
+    {
+     "text": "Warum konnten die Sowjets Straßen und Schienen sperren, aber nicht den Himmel?",
+     "en": "Why could the Soviets block roads and railways, but not the sky?",
+     "look": "a cargo plane flying above clouds"
+    },
+    {
+     "text": "Die Antwort steht auf Papier, unterschrieben im November neunzehnhundertfünfundvierzig.",
+     "en": "The answer is on paper, signed in November 1945.",
+     "look": "officials signing documents at a table"
+    },
+    {
+     "text": "Damals sicherten die Sowjets den Westmächten drei Luftkorridore nach Berlin zu, jeder etwa zweiunddreißig Kilometer breit.",
+     "en": "Back then the Soviets guaranteed the Western powers three air corridors to Berlin, each about 32 kilometres wide.",
+     "look": "a map with air routes to Berlin",
+     "tag": "3 KORRIDORE"
+    },
+    {
+     "text": "Einer führt Richtung Hamburg, einer Richtung Hannover, einer Richtung Frankfurt.",
+     "en": "One runs towards Hamburg, one towards Hanover, one towards Frankfurt.",
+     "look": "a map of Germany with lines to Berlin"
+    },
+    {
+     "text": "Eine weitere Vereinbarung vom Dezember neunzehnhundertfünfundvierzig regelt: Die Korridore dürfen frei genutzt werden, zu jeder Tageszeit, ohne Voranmeldung.",
+     "en": "A further agreement of December 1945 states: the corridors may be used freely, at any time of day, without prior notice.",
+     "look": "a pilot in a cockpit looking at instruments"
+    },
+    {
+     "text": "Eine Straße kann man sperren. Einen Vertrag über den Himmel zu brechen, hätte Krieg bedeutet.",
+     "en": "A road can be closed. Breaking a treaty about the sky would have meant war.",
+     "look": "two planes flying side by side in the sky"
+    },
+    {
+     "text": "Und die Briten waren vorbereitet. Schon im April hatten sie mit einer kleinen Luftbrücke zwei Tage lang ihre Garnison versorgt.",
+     "en": "And the British were prepared. Back in April, a small airlift had supplied their garrison for two days.",
+     "look": "British airmen loading a transport plane"
+    },
+    {
+     "text": "Ihr Plan hieß Operation Knicker. Er zeigte: Für den Sommer könnte es reichen. Für den Winter wusste es niemand.",
+     "en": "Their plan was called Operation Knicker. It showed: it might be enough for the summer. For the winter, nobody knew.",
+     "look": "an RAF plane on an airfield in summer"
+    },
+    {
+     "text": "Billig ist das nicht. Anfang Juli kostet der Luftpendelverkehr allein Großbritannien sechstausend Pfund am Tag.",
+     "en": "It is not cheap. In early July the air shuttle costs Britain alone 6,000 pounds a day.",
+     "look": "pound banknotes and coins",
+     "tag": "6.000 £ / TAG"
+    },
+    {
+     "text": "Für Amerikaner und Briten zusammen werden sechsundfünfzigtausend Dollar am Tag genannt. Ohne Personal, ohne Verschleiß.",
+     "en": "For the Americans and British together, 56,000 dollars a day is cited. Without staff, without wear and tear.",
+     "look": "American dollar bills",
+     "tag": "56.000 $ / TAG"
+    }
+   ]
+  },
+  {
+   "title": "Der schwarze Freitag",
+   "lines": [
+    {
+     "text": "Am dreiundzwanzigsten Juli übernimmt Generalleutnant William Tunner das Kommando über die gemeinsame Luftbrücke.",
+     "en": "On 23 July Lieutenant General William Tunner takes command of the combined airlift.",
+     "look": "an American officer at a desk with maps"
+    },
+    {
+     "text": "Tunner hat schon im Krieg den Nachschub über den Himalaya organisiert. Er denkt in Takten, nicht in Heldentaten.",
+     "en": "Tunner had already organised supply over the Himalayas in the war. He thinks in cycles, not heroics.",
+     "look": "a chart showing aircraft schedules on a wall"
+    },
+    {
+     "text": "Ende Juli sind es schon mehr als zweitausend Tonnen am Tag.",
+     "en": "By the end of July it is already more than 2,000 tonnes a day.",
+     "look": "trucks driving up to parked cargo planes",
+     "tag": "2.000 T / TAG"
+    },
+    {
+     "text": "Dann kommt der dreizehnte August.",
+     "en": "Then comes 13 August.",
+     "look": "a cloudy sky over an airfield"
+    },
+    {
+     "text": "Schlechte Sicht über Berlin. Die Maschinen können nicht wie geplant im Abstand von drei Minuten landen.",
+     "en": "Poor visibility over Berlin. The aircraft cannot land three minutes apart as planned.",
+     "look": "a plane in rain and fog over a runway"
+    },
+    {
+     "text": "Sie stauen sich in der Luft, gestapelt zwischen dreitausend und elftausend Fuß.",
+     "en": "They stack up in the air, layered between 3,000 and 11,000 feet.",
+     "look": "aircraft flying in the sky one above another"
+    },
+    {
+     "text": "Auf der Landebahn unter Tunners Maschine verunglücken drei Flugzeuge. Eines brennt aus.",
+     "en": "On the runway beneath Tunner's plane, three aircraft crash. One burns out.",
+     "look": "fire crews and a damaged aircraft on a runway"
+    },
+    {
+     "text": "Tunner schickt per Funk alle anderen zurück zu ihren Startplätzen.",
+     "en": "By radio, Tunner sends all the others back to their bases.",
+     "look": "a radio operator with headphones in a control room"
+    },
+    {
+     "text": "Und er macht daraus eine Regel: Wer seinen Landeanflug verpasst, landet nicht im zweiten Versuch.",
+     "en": "And he turns it into a rule: whoever misses the landing does not get a second attempt.",
+     "look": "a control tower at an airport"
+    },
+    {
+     "text": "Er fliegt zurück und reiht sich neu in die Kette ein.",
+     "en": "He flies back and rejoins the chain.",
+     "look": "a line of planes flying in the sky"
+    },
+    {
+     "text": "Mit diesem System landet in Berlin schließlich alle drei Minuten ein Flugzeug.",
+     "en": "With this system, an aircraft eventually lands in Berlin every three minutes.",
+     "look": "a cargo plane touching down on a runway",
+     "tag": "ALLE 3 MIN."
+    },
+    {
+     "text": "Die Zeit am Boden schrumpft von fünfundsiebzig auf dreißig Minuten.",
+     "en": "The time on the ground shrinks from 75 to 30 minutes.",
+     "look": "ground crew working on a parked plane"
+    },
+    {
+     "text": "Lastwagen fahren direkt an die Ladeluke. Entladen, tanken, zurück in die Luft.",
+     "en": "Trucks drive right up to the cargo door. Unload, refuel, back into the air.",
+     "look": "workers carrying sacks from a plane to a truck"
+    }
+   ]
+  },
+  {
+   "title": "Kohle für den Winter",
+   "lines": [
+    {
+     "text": "Der Sommer ist das kleinere Problem. Im Winter braucht die Stadt fast die doppelte Menge Kohle.",
+     "en": "Summer is the smaller problem. In winter the city needs almost twice as much coal.",
+     "look": "snow on an airfield with parked planes"
+    },
+    {
+     "text": "Für die Kraftwerke, für die Wasserwerke, für die Öfen in den Wohnungen.",
+     "en": "For the power stations, for the waterworks, for the stoves in people's homes.",
+     "look": "smoke rising from a power plant chimney"
+    },
+    {
+     "text": "Am Ende wird Kohle das wichtigste Gut der Luftbrücke: eins Komma vier vier Millionen Tonnen.",
+     "en": "In the end coal becomes the airlift's most important cargo: 1.44 million tonnes.",
+     "look": "men shovelling coal from sacks",
+     "tag": "1,44 MIO. T KOHLE"
+    },
+    {
+     "text": "Dazu kommen vierhundertfünfundachtzigtausend Tonnen Lebensmittel.",
+     "en": "Plus 485,000 tonnes of food.",
+     "look": "sacks of food being unloaded at an airport"
+    },
+    {
+     "text": "Dazu hundertsechzigtausend Tonnen Baustoffe: für die Flughäfen und für einen neuen Kraftwerksbau, das spätere Kraftwerk Reuter.",
+     "en": "Plus 160,000 tonnes of building materials: for the airports and for a new power station, the later Reuter power plant.",
+     "look": "construction materials and steel beams being unloaded",
+     "tag": "160.000 T"
+    },
+    {
+     "text": "Um Gewicht zu sparen, fliegt man getrocknet: Milchpulver, Trockengemüse, Trockenkartoffeln, Mehl.",
+     "en": "To save weight, things are flown in dried: milk powder, dried vegetables, dried potatoes, flour.",
+     "look": "boxes and sacks of dried food in a storeroom"
+    },
+    {
+     "text": "Trotzdem reicht es nicht für warme Wohnungen.",
+     "en": "Even so, it is not enough for warm homes.",
+     "look": "a woman in a coat in a cold apartment"
+    },
+    {
+     "text": "Die Briten schätzen: In ihrem Sektor bekommt jeder Haushalt für den ganzen Winter etwa einhundertzweiundfünfzig Kilo Kohle.",
+     "en": "The British estimate: in their sector each household gets about 152 kilos of coal for the whole winter.",
+     "look": "a family receiving coal rations",
+     "tag": "152 KG"
+    },
+    {
+     "text": "In Hamburg sind es zur selben Zeit rund achthundertneunzig Kilo.",
+     "en": "In Hamburg, at the same time, it is about 890 kilos.",
+     "look": "a coal yard with heaps of coal"
+    },
+    {
+     "text": "Also greifen die Berliner zur Axt. Bäume in Straßen, Parks und im Tiergarten werden gefällt.",
+     "en": "So Berliners reach for the axe. Trees in streets, parks and the Tiergarten are cut down.",
+     "look": "people cutting down trees in a park"
+    },
+    {
+     "text": "Strom gibt es nur noch stundenweise.",
+     "en": "Electricity is only available for a few hours at a time.",
+     "look": "a dark room lit by a candle"
+    }
+   ]
+  },
+  {
+   "title": "Schaut auf diese Stadt",
+   "lines": [
+    {
+     "text": "Die Blockade spaltet nicht nur Straßen, sondern auch die Stadtpolitik.",
+     "en": "The blockade splits not only roads but also the city's politics.",
+     "look": "a large public building in Berlin"
+    },
+    {
+     "text": "Die gewählte Stadtverordnetenversammlung wird im Ostsektor immer wieder gestört. Ab dem sechsten September tagt sie im britischen Sektor.",
+     "en": "The elected city assembly is repeatedly disrupted in the eastern sector. From 6 September it meets in the British sector.",
+     "look": "a meeting hall with many people seated"
+    },
+    {
+     "text": "Drei Tage später, am neunten September neunzehnhundertachtundvierzig, versammeln sich dreihunderttausend Berliner auf dem Platz der Republik.",
+     "en": "Three days later, on 9 September 1948, 300,000 Berliners gather on the Platz der Republik.",
+     "look": "a huge crowd in front of a ruined building in Berlin",
+     "tag": "300.000"
+    },
+    {
+     "text": "Ernst Reuter tritt ans Mikrofon. Seine Worte gehen um die Welt: Ihr Völker der Welt, schaut auf diese Stadt!",
+     "en": "Ernst Reuter steps up to the microphone. His words go around the world: you peoples of the world, look upon this city!",
+     "look": "a man speaking into microphones to a crowd"
+    },
+    {
+     "text": "Nach der Kundgebung wollen Volkspolizisten verhindern, dass ein Protestzug durch den sowjetischen Sektor zieht.",
+     "en": "After the rally, People's Police try to stop a protest march from crossing the Soviet sector.",
+     "look": "police officers facing a crowd in a Berlin street"
+    },
+    {
+     "text": "Am Pariser Platz erschießt ein Polizist den fünfzehnjährigen Schüler Wolfgang Scheunemann.",
+     "en": "On Pariser Platz a policeman shoots dead the fifteen-year-old schoolboy Wolfgang Scheunemann.",
+     "look": "an empty square in Berlin with ruins"
+    },
+    {
+     "text": "Im Dezember sprengen französische Pioniere die Sendemasten des Senders Tegel. Sie stehen den anfliegenden Maschinen im Weg.",
+     "en": "In December French engineers blow up the transmitter masts at Tegel. They are in the way of approaching aircraft.",
+     "look": "radio masts near an airfield"
+    },
+    {
+     "text": "Und die Flieger werden behindert: Amerikanische Piloten melden siebenhundertdreiunddreißig Vorfälle, von Störmanövern sowjetischer Jäger bis zu Scheinwerfern, die sie blenden.",
+     "en": "And the flyers are harassed: American pilots report 733 incidents, from interference by Soviet fighters to searchlights that dazzle them.",
+     "look": "a fighter plane in the sky",
+     "tag": "733"
+    }
+   ]
+  },
+  {
+   "title": "Ein Flughafen in neunzig Tagen",
+   "lines": [
+    {
+     "text": "Zwei Flughäfen sind zu wenig. Tempelhof und Gatow sind am Limit.",
+     "en": "Two airports are not enough. Tempelhof and Gatow are at their limit.",
+     "look": "aerial view of Tempelhof airport with planes"
+    },
+    {
+     "text": "Also bauen die Franzosen im eigenen Sektor einen neuen: in Tegel, auf einem ehemaligen Truppenübungsplatz.",
+     "en": "So the French build a new one in their own sector: in Tegel, on a former military training ground.",
+     "look": "a large flat construction site with workers"
+    },
+    {
+     "text": "Baubeginn ist der fünfte August neunzehnhundertachtundvierzig.",
+     "en": "Construction starts on 5 August 1948.",
+     "look": "construction workers with shovels on a building site"
+    },
+    {
+     "text": "Bis zu neunzehntausend Menschen arbeiten dort, rund um die Uhr. Etwa die Hälfte von ihnen sind Frauen.",
+     "en": "Up to 19,000 people work there, around the clock. About half of them are women.",
+     "look": "many women and men working with wheelbarrows on a construction site",
+     "tag": "19.000"
+    },
+    {
+     "text": "Sie brechen Trümmer, karren Schutt, walzen den Untergrund.",
+     "en": "They break up rubble, cart debris, roll the ground flat.",
+     "look": "workers with wheelbarrows and rubble"
+    },
+    {
+     "text": "Es entsteht die damals längste Start- und Landebahn Europas, rund zweitausendvierhundert Meter.",
+     "en": "The result is what was then the longest runway in Europe, about 2,400 metres.",
+     "look": "a long new runway under construction with steamrollers",
+     "tag": "2.400 M"
+    },
+    {
+     "text": "Am fünften November landet die erste Maschine, eine C-54.",
+     "en": "On 5 November the first aircraft lands, a C-54.",
+     "look": "a C-54 landing on a new airstrip"
+    },
+    {
+     "text": "Neunzig Tage nach Baubeginn.",
+     "en": "Ninety days after construction began.",
+     "look": "construction workers watching a plane land"
+    },
+    {
+     "text": "Und auch in Tempelhof wird gebaut: neue Bahnen, die den Winter und die vielen Landungen aushalten.",
+     "en": "And there is building at Tempelhof too: new runways that can withstand winter and the many landings.",
+     "look": "workers laying a runway at Tempelhof airport"
+    },
+    {
+     "text": "Dazu das damals modernste Radar, damit auch bei Nacht und Nebel geflogen werden kann.",
+     "en": "Plus the most modern radar of the time, so planes can fly at night and in fog.",
+     "look": "a radar antenna at an airfield"
+    }
+   ]
+  },
+  {
+   "title": "Onkel Wackelflügel",
+   "lines": [
+    {
+     "text": "Am Zaun von Tempelhof stehen Kinder. Auf kleinen Trümmerbergen auf der Neuköllner Seite schauen sie den Flugzeugen zu.",
+     "en": "Children stand at the Tempelhof fence. On small heaps of rubble on the Neukölln side, they watch the planes.",
+     "look": "children standing on rubble watching a plane land"
+    },
+    {
+     "text": "Einer der Piloten ist Gail Halvorsen aus Salt Lake City.",
+     "en": "One of the pilots is Gail Halvorsen from Salt Lake City.",
+     "look": "an American pilot in uniform smiling"
+    },
+    {
+     "text": "Er bindet Schokolade und Kaugummi an kleine Fallschirme aus Taschentüchern.",
+     "en": "He ties chocolate and chewing gum to small parachutes made from handkerchiefs.",
+     "look": "small parachutes with sweets attached"
+    },
+    {
+     "text": "Kurz vor der Landung wirft er sie für die wartenden Kinder ab.",
+     "en": "Shortly before landing he drops them for the waiting children.",
+     "look": "a plane dropping small parachutes over children"
+    },
+    {
+     "text": "Weil die Maschinen im Neunzig-Sekunden-Takt hereinkommen, können die Kinder seine nicht von den anderen unterscheiden.",
+     "en": "Because the planes come in every ninety seconds, the children cannot tell his from the others.",
+     "look": "planes lined up approaching an airport"
+    },
+    {
+     "text": "Also wackelt er beim Anflug mit den Tragflächen. Die Kinder nennen ihn Onkel Wackelflügel.",
+     "en": "So he waggles his wings on approach. The children call him Uncle Wiggly Wings.",
+     "look": "a plane flying low over houses"
+    },
+    {
+     "text": "Die Presse greift die Geschichte auf. Bald hat seine Crew täglich vierhundertfünfundzwanzig Kilo Süßigkeiten zum Abwerfen.",
+     "en": "The press picks up the story. Soon his crew has 425 kilos of sweets a day to drop.",
+     "look": "boxes of candy and chocolate being packed"
+    },
+    {
+     "text": "Bis zum Ende werfen rund fünfundzwanzig Besatzungen dreiundzwanzig Tonnen Süßigkeiten über Berlin ab.",
+     "en": "By the end, about 25 crews drop 23 tonnes of sweets over Berlin.",
+     "look": "children catching small parachutes",
+     "tag": "23 TONNEN"
+    },
+    {
+     "text": "Die Berliner nennen die Versorgungsflugzeuge seitdem liebevoll Rosinenbomber.",
+     "en": "Since then, Berliners have lovingly called the supply planes raisin bombers.",
+     "look": "a cargo plane with Berliners waving"
+    }
+   ]
+  },
+  {
+   "title": "Die Oster-Parade",
+   "lines": [
+    {
+     "text": "Im Frühjahr neunzehnhundertneunundvierzig läuft die Luftbrücke wie ein Uhrwerk.",
+     "en": "By spring 1949 the airlift runs like clockwork.",
+     "look": "a busy airfield with planes and trucks"
+    },
+    {
+     "text": "Die Amerikaner setzen fast nur noch einen Flugzeugtyp ein: die viermotorige C-54 Skymaster.",
+     "en": "The Americans now use almost only one aircraft type: the four-engine C-54 Skymaster.",
+     "look": "rows of C-54 Skymaster planes on an airfield"
+    },
+    {
+     "text": "Neun Tonnen Ladung statt drei bei den älteren Maschinen. Und alle fliegen gleich schnell.",
+     "en": "Nine tonnes of cargo instead of three on the older aircraft. And they all fly at the same speed.",
+     "look": "a C-47 and a C-54 parked side by side",
+     "tag": "9 T"
+    },
+    {
+     "text": "Gleiche Geschwindigkeit heißt: kleinere Abstände, mehr Landungen.",
+     "en": "Same speed means smaller gaps, more landings.",
+     "look": "planes flying in a line in the sky"
+    },
+    {
+     "text": "Zu Ostern will Tunner zeigen, was möglich ist.",
+     "en": "At Easter, Tunner wants to show what is possible.",
+     "look": "officers watching planes from a control tower"
+    },
+    {
+     "text": "Vom fünfzehnten auf den sechzehnten April: eintausenddreihundertachtundneunzig Flüge, zwölftausendachthundertneunundvierzig Tonnen.",
+     "en": "From 15 to 16 April: 1,398 flights, 12,849 tonnes.",
+     "look": "planes landing and taking off in quick succession",
+     "tag": "12.849 T"
+    },
+    {
+     "text": "Der Rekord eines einzigen Tages.",
+     "en": "The record for a single day.",
+     "look": "a stream of trucks loaded with coal"
+    },
+    {
+     "text": "Und es fliegt nicht nur nach Berlin hinein.",
+     "en": "And it is not only flights into Berlin.",
+     "look": "a cargo plane being loaded with boxes"
+    },
+    {
+     "text": "Aus der Stadt werden vierundsiebzigtausend Tonnen ausgeflogen, vieles mit dem Etikett: Hergestellt im blockierten Berlin.",
+     "en": "74,000 tonnes are flown out of the city, much of it labelled: made in blockaded Berlin.",
+     "look": "factory workers packing goods in boxes"
+    },
+    {
+     "text": "Die Royal Air Force fliegt Zivilisten aus Gatow nach Westdeutschland, etwa achtundsechzigtausend Menschen. Kinder fliegen umsonst.",
+     "en": "The Royal Air Force flies civilians from Gatow to West Germany, about 68,000 people. Children fly free.",
+     "look": "families with luggage boarding a plane"
+    }
+   ]
+  },
+  {
+   "title": "Zwölfter Mai, null Uhr eins",
+   "lines": [
+    {
+     "text": "Die Blockade hat ihr Ziel verfehlt. Die Stadt ist nicht eingebrochen.",
+     "en": "The blockade has failed. The city has not collapsed.",
+     "look": "Berlin street with people walking normally"
+    },
+    {
+     "text": "Kurz vor Mitternacht vom elften auf den zwölften Mai neunzehnhundertneunundvierzig fließt wieder Strom in die Westsektoren.",
+     "en": "Shortly before midnight on 11 to 12 May 1949, electricity flows into the western sectors again.",
+     "look": "street lights switched on in a city at night"
+    },
+    {
+     "text": "Um null Uhr eins ist die Blockade der Straßen, Schienen und Wasserwege aufgehoben.",
+     "en": "At one minute past midnight the blockade of roads, railways and waterways is lifted.",
+     "look": "a train arriving in Berlin with cheering people"
+    },
+    {
+     "text": "Die ersten Züge und Lastwagen rollen wieder nach Berlin.",
+     "en": "The first trains and trucks roll into Berlin again.",
+     "look": "trucks and a train arriving at a station"
+    },
+    {
+     "text": "Trotzdem fliegt die Luftbrücke weiter, bis Vorräte für etwa zwei Monate in der Stadt liegen.",
+     "en": "Even so, the airlift keeps flying until there are about two months of supplies in the city.",
+     "look": "a warehouse full of supplies"
+    },
+    {
+     "text": "Am dreißigsten September neunzehnhundertneunundvierzig landet in Tempelhof der letzte Rosinenbomber. Mit zehn Tonnen Kohle an Bord.",
+     "en": "On 30 September 1949 the last raisin bomber lands at Tempelhof. With ten tonnes of coal on board.",
+     "look": "the last airlift plane at Tempelhof with a ceremony",
+     "tag": "LETZTER FLUG"
+    },
+    {
+     "text": "Insgesamt kommen in fünfzehn Monaten rund zwei Komma eins Millionen Tonnen Fracht in die Stadt.",
+     "en": "In total, about 2.1 million tonnes of cargo reach the city in fifteen months.",
+     "look": "aerial view of an airfield full of cargo planes",
+     "tag": "2,1 MIO. T"
+    },
+    {
+     "text": "Der Preis ist hoch. Es gibt Abstürze in der Luft und Unfälle am Boden.",
+     "en": "The price is high. There are crashes in the air and accidents on the ground.",
+     "look": "a damaged aircraft after an accident"
+    },
+    {
+     "text": "Mehrere Autoren nennen übereinstimmend einunddreißig amerikanische Tote. Dazu kommen mindestens vierzig Briten und dreizehn Deutsche.",
+     "en": "Several authors consistently cite 31 American dead. In addition, at least 40 British and 13 Germans died.",
+     "look": "a military ceremony with soldiers standing still"
+    },
+    {
+     "text": "Neunzehnhundertneunundfünfzig ruft Willy Brandt zu Spenden für die Stiftung Luftbrückendank auf. Es kommen rund eins Komma sechs Millionen Mark zusammen.",
+     "en": "In 1959 Willy Brandt calls for donations to the Airlift Gratitude Foundation. About 1.6 million marks are raised.",
+     "look": "people giving money at a collection table",
+     "tag": "1,6 MIO. MARK"
+    },
+    {
+     "text": "Aus den Zinsen werden Angehörige der Opfer unterstützt.",
+     "en": "The interest supports relatives of the victims.",
+     "look": "a family looking at a photograph"
+    }
+   ]
+  },
+  {
+   "title": "Die Antwort",
+   "lines": [
+    {
+     "text": "Also: Kann man eine Millionenstadt aus der Luft versorgen?",
+     "en": "So: can a city of millions be supplied from the air?",
+     "look": "a cargo plane flying over Berlin rooftops"
+    },
+    {
+     "text": "Im Juni neunzehnhundertachtundvierzig glaubten das nicht einmal die, die es versuchten.",
+     "en": "In June 1948 not even those who tried believed it.",
+     "look": "officers studying a map"
+    },
+    {
+     "text": "Ein Jahr später war daraus ein Fließband am Himmel geworden. Mit festen Abständen, festen Höhen und festen Regeln.",
+     "en": "A year later it had become an assembly line in the sky. With fixed gaps, fixed altitudes and fixed rules.",
+     "look": "a sequence of planes landing one after another"
+    },
+    {
+     "text": "Satt wurden die Berliner davon nicht. Aber sie kamen durch.",
+     "en": "It did not fill the Berliners' stomachs. But they got through.",
+     "look": "Berlin residents walking among ruins"
+    },
+    {
+     "text": "Und eine Generation von Kindern erinnerte sich ihr Leben lang an kleine Fallschirme mit Schokolade.",
+     "en": "And a generation of children remembered small parachutes with chocolate for the rest of their lives.",
+     "look": "smiling children in Berlin in 1948"
+    },
+    {
+     "text": "Als Oma jung war, kam das Brot aus der Luft.",
+     "en": "When Grandma was young, the bread came from the sky.",
+     "look": "a plane flying low over children on rubble"
+    }
+   ]
+  }
+ ]
+}
