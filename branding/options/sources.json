@@ -1,0 +1,93 @@
+[
+ {
+  "key": "beetle",
+  "file": "File:1000000th Beetle.jpg",
+  "page": "commons.wikimedia.org/wiki/File:1000000th_Beetle.jpg",
+  "licence": "Public domain",
+  "author": "Mewtu",
+  "credit": "Own work",
+  "date": "",
+  "size": [
+   2273,
+   1593
+  ],
+  "local": "branding/src/beetle.jpg",
+  "checked_on_page": "2026-11-21: Photo of the millionth VW (1955) in a museum, own work by Commons user Mewtu, PD-self"
+ },
+ {
+  "key": "tempelhof",
+  "file": "File:C-54 landing on old Tempelhof runway as work continues - USACE-p15141coll5-630.jpeg",
+  "page": "commons.wikimedia.org/wiki/File:C-54_landing_on_old_Tempelhof_runway_as_work_continues_-_USACE-p15141coll5-630.jpeg",
+  "licence": "Public domain",
+  "author": "United States. Air Force",
+  "credit": "https://usace.contentdm.oclc.org/digital/collection/p15141coll5/id/630",
+  "date": "September 1948date QS:P571,+1948-09-00T00:00:00Z/10",
+  "size": [
+   2443,
+   1700
+  ],
+  "local": "branding/src/tempelhof.jpg",
+  "checked_on_page": "2026-11-21: US Army Corps of Engineers 1948, PD-USGov"
+ },
+ {
+  "key": "ruins",
+  "file": "File:Germany Under Allied Occupation, 1945 BU8684.jpg",
+  "page": "commons.wikimedia.org/wiki/File:Germany_Under_Allied_Occupation,_1945_BU8684.jpg",
+  "licence": "Public domain",
+  "author": "Hewitt (Sgt), No 5 Army Film &amp; Photographic Unit",
+  "credit": "http://media.iwm.org.uk/iwm/mediaLib//36/media-36824/large.jpg\n\n\n\n\n\nThis photograph BU 8684 comes from the collections of the Imperial War Museums.",
+  "date": "Taken on 7 July 1945",
+  "size": [
+   762,
+   800
+  ],
+  "local": "branding/src/ruins.jpg",
+  "checked_on_page": "2026-11-21: Sgt Hewitt, No 5 Army Film & Photographic Unit, 7 July 1945 (IWM BU8684), PD-UKGov"
+ },
+ {
+  "key": "rhine",
+  "file": "File:Rijnvaart, reportage vanaf sleepboot Damco 9 West-Duitsland. Drachenfels met ru, Bestanddeelnr 254-6415.jpg",
+  "page": "commons.wikimedia.org/wiki/File:Rijnvaart,_reportage_vanaf_sleepboot_Damco_9_West-Duitsland._Drachenfels_met_ru,_Bestanddeelnr_254-6415.jpg",
+  "licence": "CC0",
+  "author": "Willem van de Poll",
+  "credit": "http://proxy.handle.net/10648/aef2ea2a-d0b4-102d-bcf8-003048976d84",
+  "date": "1955-04-01",
+  "size": [
+   3345,
+   2386
+  ],
+  "local": "branding/src/rhine.jpg",
+  "checked_on_page": "2026-11-21: Nationaal Archief / Anefo, CC0"
+ },
+ {
+  "key": "c54",
+  "file": "File:C-54 landing at Tempelhof 1948.jpg",
+  "page": "commons.wikimedia.org/wiki/File:C-54_landing_at_Tempelhof_1948.jpg",
+  "licence": "Public domain",
+  "author": "USAF",
+  "credit": "United States Air Force Historical Research Agency via Cees Steijger (1991), \"A History of USAFE\", Voyageur, ISBN: 1853100757; USAF photo 070119-F-0000R-101 [1]",
+  "date": "1948",
+  "size": [
+   530,
+   422
+  ],
+  "local": "branding/src/c54.jpg",
+  "checked_on_page": "2026-11-21: USAF 1948 (photo 070119-F-0000R-101), PD-USGov-Military-Air Force"
+ },
+ {
+  "key": "frankfurt",
+  "file": "File:Frankfurt am Main 1945.jpg",
+  "page": "commons.wikimedia.org/wiki/File:Frankfurt_am_Main_1945.jpg",
+  "licence": "Public domain",
+  "author": "",
+  "credit": "",
+  "date": "",
+  "size": [
+   2282,
+   2560
+  ],
+  "desc": "",
+  "local": "branding/src/frankfurt.jpg",
+  "checked_on_page": "2026-11-21: USAF aerial photo 1945, PD-USGov-Military-Air Force"
+ }
+]

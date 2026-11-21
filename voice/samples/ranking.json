@@ -1,0 +1,2145 @@
+{
+ "text": "Berlin, im Juni neunzehnhundertachtundvierzig. Die Stadt liegt in Trümmern, und über Nacht wird sie zur Insel. Keine Straße, keine Schiene, kein Schiff kommt mehr durch. Zwei Millionen Menschen brauchen jeden Tag Kohle, Mehl und Milch. Die Antwort kommt aus der Luft: Alle drei Minuten landet in Tempelhof ein Flugzeug. Aber wie lange kann man eine ganze Stadt aus dem Himmel versorgen? Und was kostete das Leben dort wirklich?",
+ "top": [
+  {
+   "voice": "kerstin-low",
+   "model": "kerstin-low",
+   "sid": null,
+   "licence": "CC0 (dataset-voice-kerstin)",
+   "sr": 16000,
+   "utmos_probe": 3.053,
+   "utmos_full": 3.158,
+   "f0_median_hz": 169.7,
+   "gender_guess": "female"
+  },
+  {
+   "voice": "karlsson-low",
+   "model": "karlsson-low",
+   "sid": null,
+   "licence": "M-AILABS, BSD-style, commercial use allowed",
+   "sr": 16000,
+   "utmos_probe": 3.364,
+   "utmos_full": 3.1,
+   "f0_median_hz": 99.7,
+   "gender_guess": "male"
+  },
+  {
+   "voice": "kerstin-medium",
+   "model": "kerstin-medium",
+   "sid": null,
+   "licence": "CC0 (dataset-voice-kerstin)",
+   "sr": 22050,
+   "utmos_probe": 3.565,
+   "utmos_full": 3.041,
+   "f0_median_hz": 172.7,
+   "gender_guess": "female"
+  },
+  {
+   "voice": "mls-medium-spk12335",
+   "model": "mls-medium",
+   "sid": 222,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.65,
+   "utmos_full": 2.926,
+   "f0_median_hz": 123.5,
+   "gender_guess": "male"
+  },
+  {
+   "voice": "mls-medium-spk4533",
+   "model": "mls-medium",
+   "sid": 23,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.738,
+   "utmos_full": 2.844,
+   "f0_median_hz": 154.7,
+   "gender_guess": "male"
+  },
+  {
+   "voice": "mls-medium-spk4730",
+   "model": "mls-medium",
+   "sid": 140,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.647,
+   "utmos_full": 2.842,
+   "f0_median_hz": 170.7,
+   "gender_guess": "female"
+  },
+  {
+   "voice": "mls-medium-spk6448",
+   "model": "mls-medium",
+   "sid": 215,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.635,
+   "utmos_full": 2.839,
+   "f0_median_hz": 116.6,
+   "gender_guess": "male"
+  },
+  {
+   "voice": "mls-medium-spk7150",
+   "model": "mls-medium",
+   "sid": 231,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.649,
+   "utmos_full": 2.808,
+   "f0_median_hz": 129.4,
+   "gender_guess": "male"
+  },
+  {
+   "voice": "mls-medium-spk2506",
+   "model": "mls-medium",
+   "sid": 166,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.719,
+   "utmos_full": 2.791,
+   "f0_median_hz": 201.8,
+   "gender_guess": "female"
+  },
+  {
+   "voice": "mls-medium-spk10364",
+   "model": "mls-medium",
+   "sid": 213,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.594,
+   "utmos_full": 2.725,
+   "f0_median_hz": 105.7,
+   "gender_guess": "male"
+  },
+  {
+   "voice": "mls-medium-spk6117",
+   "model": "mls-medium",
+   "sid": 214,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.678,
+   "utmos_full": 2.702,
+   "f0_median_hz": 182.9,
+   "gender_guess": "female"
+  },
+  {
+   "voice": "mls-medium-spk8732",
+   "model": "mls-medium",
+   "sid": 206,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.648,
+   "utmos_full": 2.661,
+   "f0_median_hz": 109.4,
+   "gender_guess": "male"
+  },
+  {
+   "voice": "mls-medium-spk10614",
+   "model": "mls-medium",
+   "sid": 192,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.788,
+   "utmos_full": 2.635,
+   "f0_median_hz": 200.7,
+   "gender_guess": "female"
+  },
+  {
+   "voice": "mls-medium-spk9353",
+   "model": "mls-medium",
+   "sid": 228,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.653,
+   "utmos_full": 2.561,
+   "f0_median_hz": 175.7,
+   "gender_guess": "female"
+  },
+  {
+   "voice": "mls-medium-spk10148",
+   "model": "mls-medium",
+   "sid": 4,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.679,
+   "utmos_full": 2.264,
+   "f0_median_hz": 177.7,
+   "gender_guess": "female"
+  }
+ ],
+ "all_probe": [
+  {
+   "voice": "mls-medium-spk10614",
+   "model": "mls-medium",
+   "sid": 192,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.788,
+   "utmos_full": 2.635,
+   "f0_median_hz": 200.7,
+   "gender_guess": "female"
+  },
+  {
+   "voice": "mls-medium-spk4533",
+   "model": "mls-medium",
+   "sid": 23,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.738,
+   "utmos_full": 2.844,
+   "f0_median_hz": 154.7,
+   "gender_guess": "male"
+  },
+  {
+   "voice": "mls-medium-spk2506",
+   "model": "mls-medium",
+   "sid": 166,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.719,
+   "utmos_full": 2.791,
+   "f0_median_hz": 201.8,
+   "gender_guess": "female"
+  },
+  {
+   "voice": "mls-medium-spk10148",
+   "model": "mls-medium",
+   "sid": 4,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.679,
+   "utmos_full": 2.264,
+   "f0_median_hz": 177.7,
+   "gender_guess": "female"
+  },
+  {
+   "voice": "mls-medium-spk6117",
+   "model": "mls-medium",
+   "sid": 214,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.678,
+   "utmos_full": 2.702,
+   "f0_median_hz": 182.9,
+   "gender_guess": "female"
+  },
+  {
+   "voice": "mls-medium-spk9353",
+   "model": "mls-medium",
+   "sid": 228,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.653,
+   "utmos_full": 2.561,
+   "f0_median_hz": 175.7,
+   "gender_guess": "female"
+  },
+  {
+   "voice": "mls-medium-spk12335",
+   "model": "mls-medium",
+   "sid": 222,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.65,
+   "utmos_full": 2.926,
+   "f0_median_hz": 123.5,
+   "gender_guess": "male"
+  },
+  {
+   "voice": "mls-medium-spk7150",
+   "model": "mls-medium",
+   "sid": 231,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.649,
+   "utmos_full": 2.808,
+   "f0_median_hz": 129.4,
+   "gender_guess": "male"
+  },
+  {
+   "voice": "mls-medium-spk8732",
+   "model": "mls-medium",
+   "sid": 206,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.648,
+   "utmos_full": 2.661,
+   "f0_median_hz": 109.4,
+   "gender_guess": "male"
+  },
+  {
+   "voice": "mls-medium-spk4730",
+   "model": "mls-medium",
+   "sid": 140,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.647,
+   "utmos_full": 2.842,
+   "f0_median_hz": 170.7,
+   "gender_guess": "female"
+  },
+  {
+   "voice": "mls-medium-spk6448",
+   "model": "mls-medium",
+   "sid": 215,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.635,
+   "utmos_full": 2.839,
+   "f0_median_hz": 116.6,
+   "gender_guess": "male"
+  },
+  {
+   "voice": "mls-medium-spk10364",
+   "model": "mls-medium",
+   "sid": 213,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.594,
+   "utmos_full": 2.725,
+   "f0_median_hz": 105.7,
+   "gender_guess": "male"
+  },
+  {
+   "voice": "mls-medium-spk7486",
+   "model": "mls-medium",
+   "sid": 210,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.593
+  },
+  {
+   "voice": "mls-medium-spk3698",
+   "model": "mls-medium",
+   "sid": 145,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.591
+  },
+  {
+   "voice": "mls-medium-spk11328",
+   "model": "mls-medium",
+   "sid": 207,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.584
+  },
+  {
+   "voice": "mls-medium-spk10163",
+   "model": "mls-medium",
+   "sid": 186,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.576
+  },
+  {
+   "voice": "kerstin-medium",
+   "model": "kerstin-medium",
+   "sid": null,
+   "licence": "CC0 (dataset-voice-kerstin)",
+   "sr": 22050,
+   "utmos_probe": 3.565,
+   "utmos_full": 3.041,
+   "f0_median_hz": 172.7,
+   "gender_guess": "female"
+  },
+  {
+   "voice": "mls-medium-spk12776",
+   "model": "mls-medium",
+   "sid": 169,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.547
+  },
+  {
+   "voice": "mls-medium-spk6315",
+   "model": "mls-medium",
+   "sid": 147,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.545
+  },
+  {
+   "voice": "mls-medium-spk8659",
+   "model": "mls-medium",
+   "sid": 59,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.541
+  },
+  {
+   "voice": "mls-medium-spk2037",
+   "model": "mls-medium",
+   "sid": 2,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.532
+  },
+  {
+   "voice": "mls-medium-spk7449",
+   "model": "mls-medium",
+   "sid": 235,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.519
+  },
+  {
+   "voice": "mls-medium-spk3995",
+   "model": "mls-medium",
+   "sid": 234,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.505
+  },
+  {
+   "voice": "mls-medium-spk4705",
+   "model": "mls-medium",
+   "sid": 122,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.495
+  },
+  {
+   "voice": "mls-medium-spk12379",
+   "model": "mls-medium",
+   "sid": 129,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.492
+  },
+  {
+   "voice": "mls-medium-spk7515",
+   "model": "mls-medium",
+   "sid": 217,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.491
+  },
+  {
+   "voice": "mls-medium-spk12417",
+   "model": "mls-medium",
+   "sid": 212,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.482
+  },
+  {
+   "voice": "mls-medium-spk1613",
+   "model": "mls-medium",
+   "sid": 157,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.479
+  },
+  {
+   "voice": "mls-medium-spk6880",
+   "model": "mls-medium",
+   "sid": 47,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.474
+  },
+  {
+   "voice": "mls-medium-spk6952",
+   "model": "mls-medium",
+   "sid": 232,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.468
+  },
+  {
+   "voice": "mls-medium-spk5055",
+   "model": "mls-medium",
+   "sid": 6,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.462
+  },
+  {
+   "voice": "mls-medium-spk1054",
+   "model": "mls-medium",
+   "sid": 99,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.46
+  },
+  {
+   "voice": "mls-medium-spk10625",
+   "model": "mls-medium",
+   "sid": 151,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.452
+  },
+  {
+   "voice": "mls-medium-spk12500",
+   "model": "mls-medium",
+   "sid": 223,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.443
+  },
+  {
+   "voice": "mls-medium-spk5819",
+   "model": "mls-medium",
+   "sid": 227,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.441
+  },
+  {
+   "voice": "mls-medium-spk7579",
+   "model": "mls-medium",
+   "sid": 193,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.439
+  },
+  {
+   "voice": "mls-medium-spk1757",
+   "model": "mls-medium",
+   "sid": 82,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.437
+  },
+  {
+   "voice": "mls-medium-spk9610",
+   "model": "mls-medium",
+   "sid": 37,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.426
+  },
+  {
+   "voice": "mls-medium-spk11355",
+   "model": "mls-medium",
+   "sid": 229,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.426
+  },
+  {
+   "voice": "mls-medium-spk4001",
+   "model": "mls-medium",
+   "sid": 135,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.416
+  },
+  {
+   "voice": "mls-medium-spk1897",
+   "model": "mls-medium",
+   "sid": 45,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.415
+  },
+  {
+   "voice": "mls-medium-spk8294",
+   "model": "mls-medium",
+   "sid": 64,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.41
+  },
+  {
+   "voice": "mls-medium-spk13255",
+   "model": "mls-medium",
+   "sid": 116,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.41
+  },
+  {
+   "voice": "mls-medium-spk8675",
+   "model": "mls-medium",
+   "sid": 194,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.409
+  },
+  {
+   "voice": "mls-medium-spk8337",
+   "model": "mls-medium",
+   "sid": 28,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.408
+  },
+  {
+   "voice": "mls-medium-spk5934",
+   "model": "mls-medium",
+   "sid": 108,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.406
+  },
+  {
+   "voice": "mls-medium-spk7998",
+   "model": "mls-medium",
+   "sid": 35,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.403
+  },
+  {
+   "voice": "mls-medium-spk1033",
+   "model": "mls-medium",
+   "sid": 170,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.403
+  },
+  {
+   "voice": "mls-medium-spk3685",
+   "model": "mls-medium",
+   "sid": 226,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.4
+  },
+  {
+   "voice": "mls-medium-spk5823",
+   "model": "mls-medium",
+   "sid": 218,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.397
+  },
+  {
+   "voice": "mls-medium-spk3631",
+   "model": "mls-medium",
+   "sid": 71,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.391
+  },
+  {
+   "voice": "mls-medium-spk1593",
+   "model": "mls-medium",
+   "sid": 93,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.39
+  },
+  {
+   "voice": "mls-medium-spk8305",
+   "model": "mls-medium",
+   "sid": 187,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.387
+  },
+  {
+   "voice": "mls-medium-spk10191",
+   "model": "mls-medium",
+   "sid": 162,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.381
+  },
+  {
+   "voice": "mls-medium-spk13494",
+   "model": "mls-medium",
+   "sid": 85,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.37
+  },
+  {
+   "voice": "mls-medium-spk3503",
+   "model": "mls-medium",
+   "sid": 7,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.366
+  },
+  {
+   "voice": "mls-medium-spk6611",
+   "model": "mls-medium",
+   "sid": 199,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.365
+  },
+  {
+   "voice": "karlsson-low",
+   "model": "karlsson-low",
+   "sid": null,
+   "licence": "M-AILABS, BSD-style, commercial use allowed",
+   "sr": 16000,
+   "utmos_probe": 3.364,
+   "utmos_full": 3.1,
+   "f0_median_hz": 99.7,
+   "gender_guess": "male"
+  },
+  {
+   "voice": "mls-medium-spk6826",
+   "model": "mls-medium",
+   "sid": 173,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.364
+  },
+  {
+   "voice": "mls-medium-spk5295",
+   "model": "mls-medium",
+   "sid": 121,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.363
+  },
+  {
+   "voice": "mls-medium-spk10870",
+   "model": "mls-medium",
+   "sid": 128,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.352
+  },
+  {
+   "voice": "mls-medium-spk2158",
+   "model": "mls-medium",
+   "sid": 144,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.352
+  },
+  {
+   "voice": "mls-medium-spk10433",
+   "model": "mls-medium",
+   "sid": 216,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.351
+  },
+  {
+   "voice": "mls-medium-spk11481",
+   "model": "mls-medium",
+   "sid": 203,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.346
+  },
+  {
+   "voice": "mls-medium-spk11869",
+   "model": "mls-medium",
+   "sid": 221,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.34
+  },
+  {
+   "voice": "mls-medium-spk3244",
+   "model": "mls-medium",
+   "sid": 51,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.336
+  },
+  {
+   "voice": "mls-medium-spk6646",
+   "model": "mls-medium",
+   "sid": 209,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.333
+  },
+  {
+   "voice": "mls-medium-spk9646",
+   "model": "mls-medium",
+   "sid": 58,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.33
+  },
+  {
+   "voice": "mls-medium-spk9168",
+   "model": "mls-medium",
+   "sid": 176,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.324
+  },
+  {
+   "voice": "mls-medium-spk12174",
+   "model": "mls-medium",
+   "sid": 230,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.322
+  },
+  {
+   "voice": "eva_k-x_low",
+   "model": "eva_k-x_low",
+   "sid": null,
+   "licence": "M-AILABS, BSD-style, commercial use allowed",
+   "sr": 16000,
+   "utmos_probe": 3.321
+  },
+  {
+   "voice": "mls-medium-spk13871",
+   "model": "mls-medium",
+   "sid": 106,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.321
+  },
+  {
+   "voice": "mls-medium-spk9287",
+   "model": "mls-medium",
+   "sid": 177,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.315
+  },
+  {
+   "voice": "mls-medium-spk4153",
+   "model": "mls-medium",
+   "sid": 179,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.31
+  },
+  {
+   "voice": "mls-medium-spk11920",
+   "model": "mls-medium",
+   "sid": 208,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.309
+  },
+  {
+   "voice": "mls-medium-spk10179",
+   "model": "mls-medium",
+   "sid": 36,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.306
+  },
+  {
+   "voice": "mls-medium-spk5764",
+   "model": "mls-medium",
+   "sid": 168,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.305
+  },
+  {
+   "voice": "mls-medium-spk7483",
+   "model": "mls-medium",
+   "sid": 195,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.302
+  },
+  {
+   "voice": "mls-medium-spk253",
+   "model": "mls-medium",
+   "sid": 39,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.299
+  },
+  {
+   "voice": "mls-medium-spk4911",
+   "model": "mls-medium",
+   "sid": 101,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.291
+  },
+  {
+   "voice": "mls-medium-spk11413",
+   "model": "mls-medium",
+   "sid": 190,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.289
+  },
+  {
+   "voice": "mls-medium-spk1171",
+   "model": "mls-medium",
+   "sid": 74,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.275
+  },
+  {
+   "voice": "mls-medium-spk10819",
+   "model": "mls-medium",
+   "sid": 205,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.275
+  },
+  {
+   "voice": "mls-medium-spk9706",
+   "model": "mls-medium",
+   "sid": 174,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.27
+  },
+  {
+   "voice": "mls-medium-spk8139",
+   "model": "mls-medium",
+   "sid": 57,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.269
+  },
+  {
+   "voice": "mls-medium-spk7006",
+   "model": "mls-medium",
+   "sid": 225,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.261
+  },
+  {
+   "voice": "mls-medium-spk11546",
+   "model": "mls-medium",
+   "sid": 152,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.254
+  },
+  {
+   "voice": "mls-medium-spk7320",
+   "model": "mls-medium",
+   "sid": 125,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.252
+  },
+  {
+   "voice": "mls-medium-spk13755",
+   "model": "mls-medium",
+   "sid": 224,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.251
+  },
+  {
+   "voice": "mls-medium-spk6719",
+   "model": "mls-medium",
+   "sid": 44,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.248
+  },
+  {
+   "voice": "mls-medium-spk10904",
+   "model": "mls-medium",
+   "sid": 148,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.238
+  },
+  {
+   "voice": "mls-medium-spk5424",
+   "model": "mls-medium",
+   "sid": 12,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.236
+  },
+  {
+   "voice": "mls-medium-spk2252",
+   "model": "mls-medium",
+   "sid": 132,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.236
+  },
+  {
+   "voice": "mls-medium-spk2840",
+   "model": "mls-medium",
+   "sid": 183,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.231
+  },
+  {
+   "voice": "mls-medium-spk11987",
+   "model": "mls-medium",
+   "sid": 233,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.23
+  },
+  {
+   "voice": "mls-medium-spk7328",
+   "model": "mls-medium",
+   "sid": 34,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.226
+  },
+  {
+   "voice": "mls-medium-spk1724",
+   "model": "mls-medium",
+   "sid": 161,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.226
+  },
+  {
+   "voice": "mls-medium-spk19",
+   "model": "mls-medium",
+   "sid": 48,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.217
+  },
+  {
+   "voice": "mls-medium-spk7261",
+   "model": "mls-medium",
+   "sid": 102,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.216
+  },
+  {
+   "voice": "mls-medium-spk10791",
+   "model": "mls-medium",
+   "sid": 69,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.21
+  },
+  {
+   "voice": "mls-medium-spk2677",
+   "model": "mls-medium",
+   "sid": 43,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.206
+  },
+  {
+   "voice": "mls-medium-spk8223",
+   "model": "mls-medium",
+   "sid": 103,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.206
+  },
+  {
+   "voice": "mls-medium-spk3588",
+   "model": "mls-medium",
+   "sid": 118,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.204
+  },
+  {
+   "voice": "mls-medium-spk8470",
+   "model": "mls-medium",
+   "sid": 17,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.198
+  },
+  {
+   "voice": "mls-medium-spk12461",
+   "model": "mls-medium",
+   "sid": 188,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.192
+  },
+  {
+   "voice": "mls-medium-spk4542",
+   "model": "mls-medium",
+   "sid": 29,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.191
+  },
+  {
+   "voice": "mls-medium-spk6067",
+   "model": "mls-medium",
+   "sid": 113,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.19
+  },
+  {
+   "voice": "mls-medium-spk13626",
+   "model": "mls-medium",
+   "sid": 156,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.19
+  },
+  {
+   "voice": "mls-medium-spk9241",
+   "model": "mls-medium",
+   "sid": 185,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.189
+  },
+  {
+   "voice": "mls-medium-spk3330",
+   "model": "mls-medium",
+   "sid": 180,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.184
+  },
+  {
+   "voice": "mls-medium-spk1649",
+   "model": "mls-medium",
+   "sid": 26,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.181
+  },
+  {
+   "voice": "mls-medium-spk8769",
+   "model": "mls-medium",
+   "sid": 110,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.181
+  },
+  {
+   "voice": "mls-medium-spk11927",
+   "model": "mls-medium",
+   "sid": 18,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.18
+  },
+  {
+   "voice": "mls-medium-spk11772",
+   "model": "mls-medium",
+   "sid": 201,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.177
+  },
+  {
+   "voice": "mls-medium-spk140",
+   "model": "mls-medium",
+   "sid": 137,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.175
+  },
+  {
+   "voice": "mls-medium-spk7479",
+   "model": "mls-medium",
+   "sid": 75,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.174
+  },
+  {
+   "voice": "mls-medium-spk4396",
+   "model": "mls-medium",
+   "sid": 65,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.171
+  },
+  {
+   "voice": "mls-medium-spk7456",
+   "model": "mls-medium",
+   "sid": 136,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.168
+  },
+  {
+   "voice": "mls-medium-spk11870",
+   "model": "mls-medium",
+   "sid": 211,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.162
+  },
+  {
+   "voice": "mls-medium-spk3494",
+   "model": "mls-medium",
+   "sid": 20,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.161
+  },
+  {
+   "voice": "mls-medium-spk3731",
+   "model": "mls-medium",
+   "sid": 77,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.161
+  },
+  {
+   "voice": "mls-medium-spk8743",
+   "model": "mls-medium",
+   "sid": 115,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.159
+  },
+  {
+   "voice": "mls-medium-spk11990",
+   "model": "mls-medium",
+   "sid": 46,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.155
+  },
+  {
+   "voice": "mls-medium-spk4414",
+   "model": "mls-medium",
+   "sid": 167,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.152
+  },
+  {
+   "voice": "mls-medium-spk6905",
+   "model": "mls-medium",
+   "sid": 178,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.135
+  },
+  {
+   "voice": "mls-medium-spk7270",
+   "model": "mls-medium",
+   "sid": 196,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.132
+  },
+  {
+   "voice": "mls-medium-spk278",
+   "model": "mls-medium",
+   "sid": 89,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.131
+  },
+  {
+   "voice": "mls-medium-spk8704",
+   "model": "mls-medium",
+   "sid": 197,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.131
+  },
+  {
+   "voice": "mls-medium-spk10536",
+   "model": "mls-medium",
+   "sid": 191,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.13
+  },
+  {
+   "voice": "mls-medium-spk589",
+   "model": "mls-medium",
+   "sid": 30,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.12
+  },
+  {
+   "voice": "mls-medium-spk1998",
+   "model": "mls-medium",
+   "sid": 31,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.117
+  },
+  {
+   "voice": "mls-medium-spk10162",
+   "model": "mls-medium",
+   "sid": 204,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.112
+  },
+  {
+   "voice": "mls-medium-spk7002",
+   "model": "mls-medium",
+   "sid": 109,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.105
+  },
+  {
+   "voice": "mls-medium-spk3040",
+   "model": "mls-medium",
+   "sid": 112,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.105
+  },
+  {
+   "voice": "mls-medium-spk989",
+   "model": "mls-medium",
+   "sid": 61,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.102
+  },
+  {
+   "voice": "mls-medium-spk4463",
+   "model": "mls-medium",
+   "sid": 130,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.102
+  },
+  {
+   "voice": "mls-medium-spk1946",
+   "model": "mls-medium",
+   "sid": 86,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.098
+  },
+  {
+   "voice": "mls-medium-spk9565",
+   "model": "mls-medium",
+   "sid": 3,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.097
+  },
+  {
+   "voice": "mls-medium-spk8567",
+   "model": "mls-medium",
+   "sid": 219,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.088
+  },
+  {
+   "voice": "mls-medium-spk2314",
+   "model": "mls-medium",
+   "sid": 172,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.083
+  },
+  {
+   "voice": "mls-medium-spk10947",
+   "model": "mls-medium",
+   "sid": 220,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.081
+  },
+  {
+   "voice": "mls-medium-spk12275",
+   "model": "mls-medium",
+   "sid": 25,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.074
+  },
+  {
+   "voice": "mls-medium-spk9908",
+   "model": "mls-medium",
+   "sid": 72,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.073
+  },
+  {
+   "voice": "mls-medium-spk5244",
+   "model": "mls-medium",
+   "sid": 33,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.072
+  },
+  {
+   "voice": "mls-medium-spk1965",
+   "model": "mls-medium",
+   "sid": 165,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.065
+  },
+  {
+   "voice": "mls-medium-spk252",
+   "model": "mls-medium",
+   "sid": 8,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.059
+  },
+  {
+   "voice": "mls-medium-spk4174",
+   "model": "mls-medium",
+   "sid": 14,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.054
+  },
+  {
+   "voice": "kerstin-low",
+   "model": "kerstin-low",
+   "sid": null,
+   "licence": "CC0 (dataset-voice-kerstin)",
+   "sr": 16000,
+   "utmos_probe": 3.053,
+   "utmos_full": 3.158,
+   "f0_median_hz": 169.7,
+   "gender_guess": "female"
+  },
+  {
+   "voice": "mls-medium-spk3759",
+   "model": "mls-medium",
+   "sid": 42,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.047
+  },
+  {
+   "voice": "mls-medium-spk4512",
+   "model": "mls-medium",
+   "sid": 154,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.044
+  },
+  {
+   "voice": "mls-medium-spk3276",
+   "model": "mls-medium",
+   "sid": 189,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.041
+  },
+  {
+   "voice": "mls-medium-spk11480",
+   "model": "mls-medium",
+   "sid": 150,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.038
+  },
+  {
+   "voice": "mls-medium-spk12415",
+   "model": "mls-medium",
+   "sid": 16,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.035
+  },
+  {
+   "voice": "mls-medium-spk1262",
+   "model": "mls-medium",
+   "sid": 127,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.029
+  },
+  {
+   "voice": "mls-medium-spk3277",
+   "model": "mls-medium",
+   "sid": 87,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.024
+  },
+  {
+   "voice": "mls-medium-spk9514",
+   "model": "mls-medium",
+   "sid": 84,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 3.007
+  },
+  {
+   "voice": "mls-medium-spk11497",
+   "model": "mls-medium",
+   "sid": 200,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.998
+  },
+  {
+   "voice": "mls-medium-spk7242",
+   "model": "mls-medium",
+   "sid": 70,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.996
+  },
+  {
+   "voice": "mls-medium-spk2043",
+   "model": "mls-medium",
+   "sid": 55,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.995
+  },
+  {
+   "voice": "mls-medium-spk5632",
+   "model": "mls-medium",
+   "sid": 76,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.993
+  },
+  {
+   "voice": "mls-medium-spk141",
+   "model": "mls-medium",
+   "sid": 96,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.985
+  },
+  {
+   "voice": "mls-medium-spk9515",
+   "model": "mls-medium",
+   "sid": 49,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.981
+  },
+  {
+   "voice": "mls-medium-spk7272",
+   "model": "mls-medium",
+   "sid": 124,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.977
+  },
+  {
+   "voice": "mls-medium-spk146",
+   "model": "mls-medium",
+   "sid": 27,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.974
+  },
+  {
+   "voice": "mls-medium-spk138",
+   "model": "mls-medium",
+   "sid": 95,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.963
+  },
+  {
+   "voice": "mls-medium-spk5595",
+   "model": "mls-medium",
+   "sid": 88,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.959
+  },
+  {
+   "voice": "mls-medium-spk9207",
+   "model": "mls-medium",
+   "sid": 159,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.954
+  },
+  {
+   "voice": "mls-medium-spk11695",
+   "model": "mls-medium",
+   "sid": 92,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.953
+  },
+  {
+   "voice": "mls-medium-spk7202",
+   "model": "mls-medium",
+   "sid": 149,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.953
+  },
+  {
+   "voice": "mls-medium-spk5406",
+   "model": "mls-medium",
+   "sid": 182,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.949
+  },
+  {
+   "voice": "mls-medium-spk2792",
+   "model": "mls-medium",
+   "sid": 202,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.935
+  },
+  {
+   "voice": "mls-medium-spk13726",
+   "model": "mls-medium",
+   "sid": 171,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.927
+  },
+  {
+   "voice": "mls-medium-spk8125",
+   "model": "mls-medium",
+   "sid": 123,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.925
+  },
+  {
+   "voice": "mls-medium-spk5675",
+   "model": "mls-medium",
+   "sid": 146,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.921
+  },
+  {
+   "voice": "mls-medium-spk143",
+   "model": "mls-medium",
+   "sid": 56,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.914
+  },
+  {
+   "voice": "mls-medium-spk6659",
+   "model": "mls-medium",
+   "sid": 141,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.912
+  },
+  {
+   "voice": "mls-medium-spk5405",
+   "model": "mls-medium",
+   "sid": 62,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.91
+  },
+  {
+   "voice": "mls-medium-spk5753",
+   "model": "mls-medium",
+   "sid": 11,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.898
+  },
+  {
+   "voice": "mls-medium-spk135",
+   "model": "mls-medium",
+   "sid": 79,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.898
+  },
+  {
+   "voice": "mls-medium-spk4468",
+   "model": "mls-medium",
+   "sid": 198,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.892
+  },
+  {
+   "voice": "mls-medium-spk8450",
+   "model": "mls-medium",
+   "sid": 120,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.889
+  },
+  {
+   "voice": "mls-medium-spk4748",
+   "model": "mls-medium",
+   "sid": 119,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.872
+  },
+  {
+   "voice": "mls-medium-spk3363",
+   "model": "mls-medium",
+   "sid": 111,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.871
+  },
+  {
+   "voice": "mls-medium-spk1874",
+   "model": "mls-medium",
+   "sid": 126,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.871
+  },
+  {
+   "voice": "mls-medium-spk3862",
+   "model": "mls-medium",
+   "sid": 94,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.865
+  },
+  {
+   "voice": "mls-medium-spk137",
+   "model": "mls-medium",
+   "sid": 81,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.836
+  },
+  {
+   "voice": "mls-medium-spk2732",
+   "model": "mls-medium",
+   "sid": 143,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.829
+  },
+  {
+   "voice": "mls-medium-spk2946",
+   "model": "mls-medium",
+   "sid": 21,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.822
+  },
+  {
+   "voice": "mls-medium-spk6982",
+   "model": "mls-medium",
+   "sid": 160,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.819
+  },
+  {
+   "voice": "mls-medium-spk2859",
+   "model": "mls-medium",
+   "sid": 181,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.814
+  },
+  {
+   "voice": "mls-medium-spk2234",
+   "model": "mls-medium",
+   "sid": 53,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.809
+  },
+  {
+   "voice": "mls-medium-spk8427",
+   "model": "mls-medium",
+   "sid": 175,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.796
+  },
+  {
+   "voice": "mls-medium-spk2497",
+   "model": "mls-medium",
+   "sid": 24,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.795
+  },
+  {
+   "voice": "mls-medium-spk7624",
+   "model": "mls-medium",
+   "sid": 104,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.793
+  },
+  {
+   "voice": "mls-medium-spk9132",
+   "model": "mls-medium",
+   "sid": 9,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.789
+  },
+  {
+   "voice": "mls-medium-spk91",
+   "model": "mls-medium",
+   "sid": 83,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.786
+  },
+  {
+   "voice": "mls-medium-spk327",
+   "model": "mls-medium",
+   "sid": 50,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.784
+  },
+  {
+   "voice": "mls-medium-spk20",
+   "model": "mls-medium",
+   "sid": 38,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.774
+  },
+  {
+   "voice": "mls-medium-spk7120",
+   "model": "mls-medium",
+   "sid": 90,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.766
+  },
+  {
+   "voice": "mls-medium-spk9494",
+   "model": "mls-medium",
+   "sid": 114,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.751
+  },
+  {
+   "voice": "mls-medium-spk7906",
+   "model": "mls-medium",
+   "sid": 73,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.748
+  },
+  {
+   "voice": "mls-medium-spk2034",
+   "model": "mls-medium",
+   "sid": 142,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.748
+  },
+  {
+   "voice": "mls-medium-spk11299",
+   "model": "mls-medium",
+   "sid": 139,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.736
+  },
+  {
+   "voice": "mls-medium-spk12899",
+   "model": "mls-medium",
+   "sid": 40,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.733
+  },
+  {
+   "voice": "mls-medium-spk3052",
+   "model": "mls-medium",
+   "sid": 134,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.721
+  },
+  {
+   "voice": "mls-medium-spk3990",
+   "model": "mls-medium",
+   "sid": 10,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.695
+  },
+  {
+   "voice": "mls-medium-spk9639",
+   "model": "mls-medium",
+   "sid": 19,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.694
+  },
+  {
+   "voice": "mls-medium-spk1163",
+   "model": "mls-medium",
+   "sid": 98,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.688
+  },
+  {
+   "voice": "mls-medium-spk145",
+   "model": "mls-medium",
+   "sid": 80,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.685
+  },
+  {
+   "voice": "mls-medium-spk1474",
+   "model": "mls-medium",
+   "sid": 66,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.679
+  },
+  {
+   "voice": "mls-medium-spk9538",
+   "model": "mls-medium",
+   "sid": 60,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.666
+  },
+  {
+   "voice": "mls-medium-spk7194",
+   "model": "mls-medium",
+   "sid": 41,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.663
+  },
+  {
+   "voice": "mls-medium-spk4536",
+   "model": "mls-medium",
+   "sid": 1,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.653
+  },
+  {
+   "voice": "mls-medium-spk3797",
+   "model": "mls-medium",
+   "sid": 32,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.648
+  },
+  {
+   "voice": "mls-medium-spk8325",
+   "model": "mls-medium",
+   "sid": 133,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.632
+  },
+  {
+   "voice": "mls-medium-spk9948",
+   "model": "mls-medium",
+   "sid": 97,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.62
+  },
+  {
+   "voice": "mls-medium-spk7406",
+   "model": "mls-medium",
+   "sid": 91,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.612
+  },
+  {
+   "voice": "mls-medium-spk1844",
+   "model": "mls-medium",
+   "sid": 100,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.595
+  },
+  {
+   "voice": "mls-medium-spk8634",
+   "model": "mls-medium",
+   "sid": 155,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.595
+  },
+  {
+   "voice": "mls-medium-spk136",
+   "model": "mls-medium",
+   "sid": 68,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.592
+  },
+  {
+   "voice": "mls-medium-spk2422",
+   "model": "mls-medium",
+   "sid": 0,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.59
+  },
+  {
+   "voice": "mls-medium-spk6507",
+   "model": "mls-medium",
+   "sid": 5,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.57
+  },
+  {
+   "voice": "mls-medium-spk5283",
+   "model": "mls-medium",
+   "sid": 22,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.556
+  },
+  {
+   "voice": "mls-medium-spk10349",
+   "model": "mls-medium",
+   "sid": 131,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.554
+  },
+  {
+   "voice": "mls-medium-spk4739",
+   "model": "mls-medium",
+   "sid": 138,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.547
+  },
+  {
+   "voice": "mls-medium-spk4576",
+   "model": "mls-medium",
+   "sid": 153,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.545
+  },
+  {
+   "voice": "mls-medium-spk2909",
+   "model": "mls-medium",
+   "sid": 164,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.534
+  },
+  {
+   "voice": "ramona-low",
+   "model": "ramona-low",
+   "sid": null,
+   "licence": "M-AILABS, BSD-style, commercial use allowed",
+   "sr": 16000,
+   "utmos_probe": 2.529
+  },
+  {
+   "voice": "mls-medium-spk1920",
+   "model": "mls-medium",
+   "sid": 184,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.514
+  },
+  {
+   "voice": "mls-medium-spk2974",
+   "model": "mls-medium",
+   "sid": 107,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.509
+  },
+  {
+   "voice": "mls-medium-spk139",
+   "model": "mls-medium",
+   "sid": 67,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.461
+  },
+  {
+   "voice": "mls-medium-spk3885",
+   "model": "mls-medium",
+   "sid": 15,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.448
+  },
+  {
+   "voice": "mls-medium-spk4650",
+   "model": "mls-medium",
+   "sid": 78,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.431
+  },
+  {
+   "voice": "mls-medium-spk3124",
+   "model": "mls-medium",
+   "sid": 54,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.409
+  },
+  {
+   "voice": "mls-medium-spk1091",
+   "model": "mls-medium",
+   "sid": 163,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.404
+  },
+  {
+   "voice": "mls-medium-spk144",
+   "model": "mls-medium",
+   "sid": 105,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.396
+  },
+  {
+   "voice": "mls-medium-spk287",
+   "model": "mls-medium",
+   "sid": 158,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.285
+  },
+  {
+   "voice": "mls-medium-spk2602",
+   "model": "mls-medium",
+   "sid": 13,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.09
+  },
+  {
+   "voice": "mls-medium-spk10087",
+   "model": "mls-medium",
+   "sid": 63,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 2.032
+  },
+  {
+   "voice": "mls-medium-spk1660",
+   "model": "mls-medium",
+   "sid": 117,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 1.971
+  },
+  {
+   "voice": "mls-medium-spk5324",
+   "model": "mls-medium",
+   "sid": 52,
+   "licence": "MLS (openslr 94), CC BY 4.0 - credit in description",
+   "sr": 22050,
+   "utmos_probe": 1.364
+  }
+ ]
+}
