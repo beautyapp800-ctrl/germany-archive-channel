@@ -53,6 +53,12 @@ def mos(pred, a, sr):
     return float(pred(w, 16000).item())
 
 
+def f0(a, sr):
+    import librosa
+    f, voiced, _ = librosa.pyin(a, fmin=60, fmax=400, sr=sr)
+    return round(float(np.nanmedian(f[voiced])), 1)
+
+
 def save(a, sr, name):
     wav = OUT / f"{name}.wav"
     with wave.open(str(wav), "wb") as f:
@@ -79,15 +85,20 @@ def main():
             print(rows[-1], flush=True)
     rows.sort(key=lambda r: -r["utmos_probe"])
     loaded = {}
-    for r in rows[:8]:  # full sample for the best 8; the owner hears the top 3
+    mls = [r for r in rows if r["model"] == "mls-medium"][:12]
+    single = [r for r in rows if r["model"] in ("kerstin-medium", "karlsson-low", "kerstin-low")]
+    full = mls + single
+    for r in full:  # full sample; the owner hears the best 3 (at least one male, one female voice)
         v = loaded.setdefault(r["model"], PiperVoice.load(str(fetch(VOICES[r["model"]][0]))))
         a, sr = synth(v, FULL, r["sid"])
         r["utmos_full"] = round(mos(pred, a, sr), 3)
+        r["f0_median_hz"] = f0(a, sr)
+        r["gender_guess"] = "male" if r["f0_median_hz"] < 165 else "female"
         save(a, sr, r["voice"])
-    top = sorted(rows[:8], key=lambda r: -r["utmos_full"])
+    top = sorted(full, key=lambda r: -r["utmos_full"])
     json.dump({"text": FULL, "top": top, "all_probe": rows}, open(OUT / "ranking.json", "w"), indent=1, ensure_ascii=False)
     for r in top:
-        print("FULL", r["voice"], r["utmos_full"], r["licence"])
+        print("FULL", r["voice"], r["utmos_full"], r["gender_guess"], r["f0_median_hz"], r["licence"])
 
 
 if __name__ == "__main__":

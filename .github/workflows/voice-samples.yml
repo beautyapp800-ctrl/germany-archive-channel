@@ -14,7 +14,7 @@ jobs:
       - name: Install
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
-          pip install -q piper-tts==1.8.0 numpy
+          pip install -q piper-tts==1.8.0 numpy librosa
           pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
       - name: Render and score
         run: python scripts/voice_samples.py
