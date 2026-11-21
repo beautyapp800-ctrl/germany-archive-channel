@@ -169,11 +169,10 @@ def paste_fit(canvas, rgba, box):
 
 
 def main():
-    imgs, srcs = {}, []
-    for k, q in WANT.items():
-        imgs[k], s = fetch(k, q)
-        srcs.append(s)
-        print(s, flush=True)
+    # photos were fetched with fetch() (licence checked) and committed to branding/src:
+    # Wikimedia throttles downloads from GitHub runner addresses
+    srcs = json.load(open("branding/src/sources.json", encoding="utf-8"))
+    imgs = {s["key"]: Image.open(s["local"]).convert("RGB") for s in srcs}
     json.dump(srcs, open(OUT / "sources.json", "w"), indent=1, ensure_ascii=False)
     beetle = outlined(cutout(enhance(imgs["beetle"])), 16)
     plane = outlined(cutout(enhance(imgs["c54"])), 12)
@@ -194,8 +193,8 @@ def main():
 
     # banners 2560x1440, safe area 1546x423 centred
     sx0, sy0, sx1, sy1 = 507, 508, 2053, 931
-    for i, (bk, name) in enumerate(zip(["tempelhof", "rhine", "ruins"], NAMES), 1):
-        base = imgs[bk] if bk == "rhine" else warm_tint(imgs[bk])
+    for i, (bk, name) in enumerate(zip(["tempelhof", "rhine", "frankfurt"], NAMES), 1):
+        base = warm_tint(imgs[bk])  # all three are black-and-white photos
         b = cover(enhance(base, sat=1.5), (2560, 1440)).convert("RGBA")
         band = Image.new("RGBA", (2560, 380), (0, 0, 0, 120))
         b.alpha_composite(band, (0, 530))
