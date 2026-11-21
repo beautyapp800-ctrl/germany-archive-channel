@@ -1,0 +1,19 @@
+name: branding
+# Manual only: channel art options (avatars, banners) from licence-checked photos
+on:
+  workflow_dispatch:
+jobs:
+  art:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q pillow "rembg[cpu]==2.0.67"
+      - run: python scripts/branding.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: branding
+          path: out/branding
