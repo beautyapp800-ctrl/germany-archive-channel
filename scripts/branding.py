@@ -95,8 +95,17 @@ def warm_tint(im):
 
 def cutout(im):
     from rembg import remove, new_session
+    import numpy as np
+    from scipy import ndimage
     rgba = remove(im, session=new_session("isnet-general-use"))
-    bbox = rgba.getchannel("A").point(lambda a: 255 if a > 40 else 0).getbbox()
+    a = np.array(rgba.getchannel("A"))
+    lab, n = ndimage.label(a > 40)
+    if n > 1:  # keep only the hero: the largest piece of the mask (no stray bystanders)
+        sizes = ndimage.sum(np.ones_like(a), lab, range(1, n + 1))
+        keep = lab == (1 + int(np.argmax(sizes)))
+        a = np.where(ndimage.binary_dilation(keep, iterations=3), a, 0).astype("uint8")
+        rgba.putalpha(Image.fromarray(a))
+    bbox = rgba.getchannel("A").point(lambda v: 255 if v > 40 else 0).getbbox()
     return rgba.crop(bbox)
 
 
@@ -183,8 +192,8 @@ def main():
     ImageDraw.Draw(a).ellipse((6, 6, 794, 794), outline=RED, width=26)
     a.convert("RGB").save(OUT / "avatar_1_kaefer.png")
     a = sunburst((800, 800), (90, 180, 255), (40, 130, 230)).convert("RGBA")
-    paste_fit(a, plane, (30, 170, 770, 600))
-    text(ImageDraw.Draw(a), (400, 660), "1948", 170, YELLOW)
+    paste_fit(a, plane, (10, 120, 790, 560))
+    text(ImageDraw.Draw(a), (400, 650), "1948", 190, YELLOW)
     a.convert("RGB").save(OUT / "avatar_2_luftbruecke.png")
     a = cover(enhance(warm_tint(imgs["ruins"])), (800, 800)).convert("RGBA")
     st = stamp("45-70", 640, RED)
@@ -201,7 +210,7 @@ def main():
         d = ImageDraw.Draw(b)
         hero_w = 560
         tx0 = sx0 + (hero_w if i != 3 else 0)
-        tx1 = sx1 - (0 if i != 3 else 380)
+        tx1 = sx1 - (0 if i == 1 else 380)
         size = fit_size(name, tx1 - tx0 - 40, 190)
         text(d, ((tx0 + tx1) / 2, 650), name, size, WHITE)
         text(d, ((tx0 + tx1) / 2, 815), "DEUTSCHLAND 1945-1970", 92, YELLOW)
@@ -209,10 +218,10 @@ def main():
         if i in (1, 2):
             paste_fit(b, beetle, (sx0 - 40, sy0 - 40, sx0 + hero_w, sy1 + 30))
         if i == 1:
-            b.alpha_composite(tag("NR. 1.000.000", 110), (sx0 + 200, sy0 - 40))
+            b.alpha_composite(tag("NR. 1.000.000", 100), (sx0 + 170, sy0 - 120))
         elif i == 2:
-            st = stamp("ECHT?", 300)
-            b.alpha_composite(st, (sx1 - 230, sy0 - 120))
+            st = stamp("ECHT?", 340)
+            b.alpha_composite(st, (sx1 - 380, sy0 + 20))
         else:
             paste_fit(b, plane, (sx1 - 420, sy0 - 60, sx1 + 60, sy1 + 20))
         b.convert("RGB").save(OUT / f"banner_{i}.jpg", quality=92)
