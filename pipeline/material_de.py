@@ -30,7 +30,8 @@ ROOT = Path(__file__).resolve().parent.parent
 CFG = json.loads((ROOT / "config" / "channel.json").read_text(encoding="utf-8"))["material"]
 UA = {"User-Agent": "germany-archive-channel/1.0 (https://github.com/beautyapp800-ctrl/germany-archive-channel)"}
 USAGE = ROOT / "state" / "usage.json"
-FORBIDDEN = re.compile("|".join(re.escape(w) for w in CFG["forbidden"]) + r"|newsreel library|filmed news release", re.I)
+FORBIDDEN = re.compile(r"\b(?:" + "|".join(re.escape(w) for w in CFG["forbidden"]) + r"|newsreel library|filmed news release)\b",
+                       re.I)
 NAZI = re.compile(r"nazi|hitler|swastika|hakenkreuz|nsdap|reichsparteitag|wehrmacht|\bSS\b|gestapo|führer|fuehrer|"
                   r"concentration camp|konzentrationslager|holocaust|1933|1934|1935|1936|1937|1938|1939|1940|1941|1942|"
                   r"1943|1944", re.I)

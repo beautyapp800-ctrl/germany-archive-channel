@@ -156,9 +156,19 @@
      "look": "a pile of coal with workers and shovels"
     },
     {
+     "text": "Koks reicht für neunundvierzig Tage, Braunkohle-Briketts für fünfundzwanzig.",
+     "en": "Coke lasts 49 days, lignite briquettes 25.",
+     "look": "briquettes stacked in a cellar"
+    },
+    {
      "text": "Kohle für die Kraftwerke, bei strenger Stromsperre: drei Wochen.",
      "en": "Coal for the power stations, with strict power rationing: three weeks.",
      "look": "a power station with chimneys"
+    },
+    {
+     "text": "Etwas besser sieht es nur bei Medikamenten aus: Sie reichen für sechs Monate, Benzin für vier bis fünf.",
+     "en": "Only medicines look a little better: they last six months, petrol four to five.",
+     "look": "boxes of medical supplies"
     },
     {
      "text": "Und diese Zahlen beruhen schon auf sehr knappen Rationen.",
@@ -235,6 +245,11 @@
      "text": "Ihre Flugboote landen sogar auf der Havel und dem Großen Wannsee. Sie bringen vor allem Salz, weil ihre Rümpfe dem Salz widerstehen.",
      "en": "Their flying boats even land on the Havel and the Großer Wannsee. They mainly carry salt, because their hulls resist corrosion.",
      "look": "a seaplane on a lake"
+    },
+    {
+     "text": "Bis zum ersten Frost im Dezember landen die Flugboote auf dem Wasser. Australien beteiligt sich mit der Operation Pelican.",
+     "en": "Until the first frost in December the flying boats land on the water. Australia takes part with Operation Pelican.",
+     "look": "a flying boat moored on a river"
     },
     {
      "text": "Am Anfang hält man höchstens siebenhundertfünfzig Tonnen am Tag für möglich.",
@@ -531,6 +546,11 @@
      "look": "a C-54 landing on a new airstrip"
     },
     {
+     "text": "Im Dezember lassen die Franzosen die Sendemasten in Tegel sprengen. Wenige Tage später besetzen die Sowjets das Dorf Stolpe im französischen Sektor.",
+     "en": "In December the French blow up the transmitter masts at Tegel. A few days later the Soviets occupy the village of Stolpe in the French sector.",
+     "look": "a village street near Berlin"
+    },
+    {
      "text": "Neunzig Tage nach Baubeginn.",
      "en": "Ninety days after construction began.",
      "look": "construction workers watching a plane land"
@@ -586,6 +606,11 @@
      "look": "boxes of candy and chocolate being packed"
     },
     {
+     "text": "Ein Berliner Mädchen, Mercedes Wild, schreibt ihm neunzehnhundertachtundvierzig einen Brief und bittet um Schokolade.",
+     "en": "A Berlin girl, Mercedes Wild, writes him a letter in 1948 asking for chocolate.",
+     "look": "a child writing a letter at a table"
+    },
+    {
      "text": "Bis zum Ende werfen rund fünfundzwanzig Besatzungen dreiundzwanzig Tonnen Süßigkeiten über Berlin ab.",
      "en": "By the end, about 25 crews drop 23 tonnes of sweets over Berlin.",
      "look": "children catching small parachutes",
@@ -595,6 +620,16 @@
      "text": "Die Berliner nennen die Versorgungsflugzeuge seitdem liebevoll Rosinenbomber.",
      "en": "Since then, Berliners have lovingly called the supply planes raisin bombers.",
      "look": "a cargo plane with Berliners waving"
+    },
+    {
+     "text": "Er stirbt im Februar zweitausendzweiundzwanzig, mit einhundertein Jahren.",
+     "en": "He dies in February 2022, aged 101.",
+     "look": "an old pilot portrait photograph"
+    },
+    {
+     "text": "Halvorsen bleibt der Stadt verbunden. Von neunzehnhundertsiebzig bis neunzehnhundertvierundsiebzig ist er Kommandant des Flughafens Tempelhof.",
+     "en": "Halvorsen stays connected to the city. From 1970 to 1974 he is commander of Tempelhof airport.",
+     "look": "the Tempelhof airport building"
     }
    ]
   },
@@ -652,6 +687,11 @@
      "text": "Die Royal Air Force fliegt Zivilisten aus Gatow nach Westdeutschland, etwa achtundsechzigtausend Menschen. Kinder fliegen umsonst.",
      "en": "The Royal Air Force flies civilians from Gatow to West Germany, about 68,000 people. Children fly free.",
      "look": "families with luggage boarding a plane"
+    },
+    {
+     "text": "Insgesamt befördert die Luftbrücke rund zweihundertsiebenundzwanzigtausend Passagiere.",
+     "en": "In total the airlift carries about 227,000 passengers.",
+     "look": "passengers walking to a plane on an airfield"
     }
    ]
   },

@@ -4,9 +4,9 @@
     python scripts/youtube_auth.py --check                 # which channel the stored token opens
     python scripts/youtube_auth.py --store                 # put the token in Secrets (YT_TOKEN_JSON)
 
-The OAuth client is closed-tabs' (client_secret.json, git-ignored here). On the
-consent screen pick the channel Yesterday in Color; check the name and id this
-prints before --store. The token stays in youtube_token.json (git-ignored) and
+The OAuth client is the Google Cloud project hypothetica-511509 (owner 22.11;
+client_secret.json, git-ignored here). On the consent screen pick the channel
+"Als Oma jung war"; --store refuses a token of any other channel. The token stays in youtube_token.json (git-ignored) and
 in the secret, and is never printed.
 """
 import json
@@ -19,17 +19,19 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from pipeline import youtube  # noqa: E402
 
-REPO = "edbackulin-eng/archive-channel"
+REPO = "beautyapp800-ctrl/germany-archive-channel"
+SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly",
+          "https://www.googleapis.com/auth/youtube.force-ssl"]   # force-ssl: captions.insert
 TOKEN_FILE = ROOT / "youtube_token.json"
 
 
 def authorize(client_secret):
     from google_auth_oauthlib.flow import InstalledAppFlow
-    flow = InstalledAppFlow.from_client_secrets_file(str(client_secret), youtube.SCOPES)
+    flow = InstalledAppFlow.from_client_secrets_file(str(client_secret), SCOPES)
     creds = flow.run_local_server(port=0, prompt="consent", access_type="offline")
     TOKEN_FILE.write_text(json.dumps({"refresh_token": creds.refresh_token, "client_id": creds.client_id,
                                       "client_secret": creds.client_secret, "token_uri": creds.token_uri,
-                                      "scopes": youtube.SCOPES}), encoding="utf-8")
+                                      "scopes": SCOPES}), encoding="utf-8")
 
 
 def show():
@@ -45,16 +47,21 @@ def show():
 
 def main(argv):
     if "--store" in argv:
+        ch = show()
+        if "oma" not in ch["snippet"]["title"].lower():
+            print("NOT stored: this token opens", ch["snippet"]["title"], "- authorise again and pick 'Als Oma jung war'")
+            return 1
         subprocess.run(["gh", "secret", "set", "YT_TOKEN_JSON", "--repo", REPO],
                        input=TOKEN_FILE.read_text(encoding="utf-8"), text=True, check=True)
-        print("YT_TOKEN_JSON stored in", REPO)
+        subprocess.run(["gh", "variable", "set", "YT_CHANNEL_ID", "--repo", REPO, "--body", ch["id"]], check=True)
+        print("YT_TOKEN_JSON and YT_CHANNEL_ID stored in", REPO)
         return 0
     if "--check" in argv:
         show()
         return 0
     authorize(Path(argv[0]))
     show()
-    print("If this is Yesterday in Color: python scripts/youtube_auth.py --store")
+    print("If this is Als Oma jung war: python scripts/youtube_auth.py --store")
     return 0
 
 

@@ -24,7 +24,7 @@
   "model": "de_DE-karlsson-low",
   "path": "karlsson/low/de_DE-karlsson-low",
   "licence": "trained on the M-AILABS speech dataset (BSD-style licence, commercial use allowed)",
-  "length_scale": 1.0,
+  "length_scale": 1.03,
   "line_pause_s": 0.28,
   "chapter_pause_s": 0.9
  },
