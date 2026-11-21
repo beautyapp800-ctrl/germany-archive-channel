@@ -32,7 +32,7 @@ jobs:
           key: models-de-v1
       - name: Install
         run: |
-          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q torch torchvision --index-url https://download.pytorch.org/whl/cpu
           pip install -q piper-tts==1.8.0 numpy soundfile pillow -r requirements-prefilter.txt
       - run: python automation/build_de.py "$SLUG" prepare
       - uses: actions/upload-artifact@v4
@@ -88,7 +88,7 @@ jobs:
           key: models-de-v1
       - name: Install
         run: |
-          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q torch torchvision --index-url https://download.pytorch.org/whl/cpu
           pip install -q numpy soundfile pillow scipy "rembg[cpu]==2.0.67" -r requirements-prefilter.txt
       - uses: actions/download-artifact@v4
         with:
