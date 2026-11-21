@@ -210,7 +210,7 @@ def main():
         d = ImageDraw.Draw(b)
         hero_w = 560
         tx0 = sx0 + (hero_w if i != 3 else 0)
-        tx1 = sx1 - (0 if i == 1 else 380)
+        tx1 = sx1 - (380 if i == 3 else 0)
         size = fit_size(name, tx1 - tx0 - 40, 190)
         text(d, ((tx0 + tx1) / 2, 650), name, size, WHITE)
         text(d, ((tx0 + tx1) / 2, 815), "DEUTSCHLAND 1945-1970", 92, YELLOW)
@@ -218,10 +218,10 @@ def main():
         if i in (1, 2):
             paste_fit(b, beetle, (sx0 - 40, sy0 - 40, sx0 + hero_w, sy1 + 30))
         if i == 1:
-            b.alpha_composite(tag("NR. 1.000.000", 100), (sx0 + 170, sy0 - 120))
+            b.alpha_composite(tag("NR. 1.000.000", 90), (sx0 + 40, sy1 - 150))
         elif i == 2:
-            st = stamp("ECHT?", 340)
-            b.alpha_composite(st, (sx1 - 380, sy0 + 20))
+            st = stamp("ECHT?", 250)
+            b.alpha_composite(st, (sx0 - 30, sy0 - 50))
         else:
             paste_fit(b, plane, (sx1 - 420, sy0 - 60, sx1 + 60, sy1 + 20))
         b.convert("RGB").save(OUT / f"banner_{i}.jpg", quality=92)
