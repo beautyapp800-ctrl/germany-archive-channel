@@ -35,6 +35,17 @@ def api(p, n=0):
         raise
 
 
+def download(url, n=0):
+    time.sleep(2)
+    try:
+        return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=180).read()
+    except urllib.error.HTTPError as e:
+        if e.code == 429 and n < 5:
+            time.sleep(30 * (n + 1))
+            return download(url, n + 1)
+        raise
+
+
 def free(lic):
     l = lic.lower()
     if re.search(r"\bsa\b|by-sa|\bnc\b|-nc|\bnd\b|-nd|gfdl", l):
@@ -44,14 +55,14 @@ def free(lic):
 
 def fetch(key, q):
     d = api({"action": "query", "generator": "search", "gsrsearch": "filetype:bitmap " + q, "gsrnamespace": 6,
-             "gsrlimit": 5, "prop": "imageinfo", "iiprop": "extmetadata|url|size", "iiurlwidth": 2560})
+             "gsrlimit": 5, "prop": "imageinfo", "iiprop": "extmetadata|url|size"})
     for pg in sorted(d["query"]["pages"].values(), key=lambda p: p["index"]):
         ii = pg["imageinfo"][0]
         m = ii["extmetadata"]
         g = lambda k: re.sub("<[^>]+>", "", m.get(k, {}).get("value", "")).strip()[:300]
         if not free(g("LicenseShortName")):
             continue
-        raw = urllib.request.urlopen(urllib.request.Request(ii.get("thumburl") or ii["url"], headers=UA), timeout=120).read()
+        raw = download(ii["url"])  # the original file: odd thumbnail widths are throttled by Wikimedia
         src = {"key": key, "file": pg["title"], "page": ii["descriptionurl"].replace("https://", ""),
                "licence": g("LicenseShortName"), "author": g("Artist"), "credit": g("Credit"),
                "date": g("DateTimeOriginal"), "size": [ii["width"], ii["height"]]}
