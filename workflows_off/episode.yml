@@ -1,0 +1,236 @@
+name: episode
+# One episode, one job per stage so none can hit GitHub's six-hour limit; a
+# failed job is rerun on its own by the watchdog, on the artifacts of the rest.
+run-name: episode ${{ inputs.slug }}
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: topic slug (empty = the next queued one)
+        default: ""
+      force:
+        description: "build a topic the queue marks merged/skipped or that repeats another (never one with a video)"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+  issues: write
+  actions: write          # a deferred topic starts the next one (08.11: 403 without it)
+concurrency:
+  group: episode
+  cancel-in-progress: false
+env:
+  PYTHONUTF8: 1
+jobs:
+  pick:
+    runs-on: ubuntu-24.04
+    env:
+      GH_TOKEN: ${{ github.token }}
+    outputs:
+      slug: ${{ steps.p.outputs.slug }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - id: p
+        run: |
+          s="${{ inputs.slug }}"
+          # paused after a QA failure or a build that failed all its attempts, until the code
+          # or the plan changes (automation/pause.py); a slug given by hand still builds
+          if [ -z "$s" ] && why=$(python automation/pause.py active); then
+            echo "::notice::builds paused: $why"
+          elif [ -z "$s" ] && why=$(python automation/quota_hold.py waiting); then
+            echo "::notice::no build: $why"
+          else
+            [ -n "$s" ] || s=$(python automation/next_topic.py)
+          fi
+          # owner 17.11: a topic with a video, a build or a repeated subject never renders again
+          # (cars-roads was built ten times and went up twice): refused here, before any hour is spent
+          if [ -n "$s" ] && why=$(FORCE=${{ inputs.force && '1' || '0' }} python automation/topic_guard.py "$s"); then
+            echo "::warning::$s is not rendered: $why"
+            [ -z "${{ inputs.slug }}" ] || python scripts/notify.py "Build of $s refused" "$why"
+            s=""
+          fi
+          echo "slug=$s" >> "$GITHUB_OUTPUT"
+  prepare:
+    needs: pick
+    if: needs.pick.outputs.slug != ''
+    runs-on: ubuntu-24.04
+    outputs:
+      deferred: ${{ steps.plan.outputs.deferred }}
+    timeout-minutes: 300
+    env:
+      SLUG: ${{ needs.pick.outputs.slug }}
+      GROQ_API_KEY_AR: ${{ secrets.GROQ_API_KEY_AR }}
+      GEMINI_API_KEY_AR: ${{ secrets.GEMINI_API_KEY_AR }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng
+      - uses: actions/cache@v4
+        with:
+          path: assets/models
+          key: models-${{ hashFiles('automation/fetch_models.py') }}
+      - run: pip install -q -r requirements.txt && python automation/fetch_models.py
+      - uses: actions/cache@v4
+        with:
+          path: assets/models/open_clip
+          key: open-clip-ViT-B-16-SigLIP-webli-1
+      # SigLIP on the CPU before Gemini (pipeline/prefilter.py)
+      - run: pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q -r requirements-prefilter.txt
+      - run: python automation/build.py "$SLUG" script
+      - run: espeak-ng --version && python automation/build.py "$SLUG" narrate
+      # the vision answers of earlier runs of this topic (pipeline/vision.py): a day that ran out
+      # goes on where it stopped instead of asking the same frames again
+      - uses: actions/cache/restore@v4
+        with:
+          path: .vision_cache.json
+          key: vision-${{ env.SLUG }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: vision-${{ env.SLUG }}-
+      - name: Plan the shots (a topic with under 15 min of confirmed film is deferred, the next one started)
+        id: plan
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rc=0; python automation/build.py "$SLUG" plan || rc=$?
+          if [ $rc = 3 ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add topics/queue.json
+            git commit -q -m "Topic $SLUG deferred: too little confirmed film"
+            for i in 1 2 3 4 5; do git pull -q --rebase --autostash origin main && git push -q origin HEAD:main && break; sleep $((i*8)); done
+            echo "deferred=true" >> "$GITHUB_OUTPUT"
+            gh workflow run episode.yml -R "${{ github.repository }}"
+            exit 0
+          fi
+          exit $rc
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with: {name: "vision-log-${{ env.SLUG }}", path: work/vision_log/, retention-days: 30, if-no-files-found: ignore, overwrite: true}
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: .vision_cache.json
+          key: vision-${{ env.SLUG }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Keep the script in the repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "episodes/$SLUG/script.txt" "episodes/$SLUG/meta.json" "episodes/$SLUG/fact_check.json" data/cpi_u.json 2>/dev/null || true
+          git diff --cached --quiet || { git commit -q -m "Script for $SLUG"; for i in 1 2 3 4 5; do git pull -q --rebase --autostash origin main && git push -q origin HEAD:main && break; sleep $((i*8)); done; }
+      - name: Keep the spent Gemini day (state/quota_hold.json)
+        if: failure()
+        run: |
+          [ -f state/quota_hold.json ] || exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/quota_hold.json
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Gemini's day spent: $SLUG waits"
+          for i in 1 2 3 4 5; do git pull -q --rebase --autostash origin main && git push -q origin HEAD:main && exit 0; sleep $((i*8)); done
+      - run: tar cf "$RUNNER_TEMP/prep.tar" "episodes/$SLUG"
+      - uses: actions/upload-artifact@v5
+        with: {name: prep, path: "${{ runner.temp }}/prep.tar", retention-days: 3}
+  cut:
+    needs: [pick, prepare]
+    if: needs.prepare.outputs.deferred != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      max-parallel: 4   # account limit: 20 jobs at once for all channels (channels-monitor docs/render-schedule.md)
+      matrix: {part: [0, 1, 2, 3, 4, 5, 6, 7]}
+    env:
+      SLUG: ${{ needs.pick.outputs.slug }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: pip install -q -r requirements.txt
+      - uses: actions/download-artifact@v5
+        with: {name: prep, path: "${{ runner.temp }}"}
+      - run: tar xf "$RUNNER_TEMP/prep.tar"
+      - run: python automation/build.py "$SLUG" cut ${{ matrix.part }} 8
+      - run: mkdir -p "episodes/$SLUG/build/clips" && tar cf "$RUNNER_TEMP/clips.tar" "episodes/$SLUG/build/clips"
+      - uses: actions/upload-artifact@v5
+        with: {name: "clips-${{ matrix.part }}", path: "${{ runner.temp }}/clips.tar", retention-days: 3}
+  render:
+    needs: [pick, cut]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    env:
+      SLUG: ${{ needs.pick.outputs.slug }}
+      YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+      GH_TOKEN: ${{ github.token }}
+      # 12.11: the viewer gate and the thumbnail's frame check run in this job and ask Gemini; without
+      # the key every request was a 403 that read as "no answer" - 9 of 9 sheets, twice, and a pause
+      GEMINI_API_KEY_AR: ${{ secrets.GEMINI_API_KEY_AR }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - uses: actions/cache@v4
+        with:
+          path: assets/models
+          key: models-${{ hashFiles('automation/fetch_models.py') }}
+      - run: pip install -q -r requirements.txt && python automation/fetch_models.py && python automation/fetch_music.py
+      # Real-ESRGAN for the thumbnail frame, on the CPU
+      - uses: actions/cache@v4
+        with:
+          path: assets/models/open_clip
+          key: open-clip-ViT-B-16-SigLIP-webli-1
+      - run: pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q -r requirements-prefilter.txt
+      - uses: actions/download-artifact@v5
+        with: {path: "${{ runner.temp }}/a"}
+      - run: |
+          tar xf "$RUNNER_TEMP/a/prep/prep.tar"
+          for t in "$RUNNER_TEMP"/a/clips-*/clips.tar; do tar xf "$t"; done
+      - run: python automation/build.py "$SLUG" render
+      - run: tar cf "$RUNNER_TEMP/out.tar" "episodes/$SLUG/out"
+      - uses: actions/upload-artifact@v5
+        with: {name: "release-${{ needs.pick.outputs.slug }}", path: "${{ runner.temp }}/out.tar", retention-days: 30}
+      # what the owner reviews, small (owner 07.11): a contact sheet (a frame every 5 s), the
+      # thumbnails, the QA report - the release itself is ~2 GB
+      - name: Review files
+        if: always()
+        run: |
+          o="episodes/$SLUG/out"; r="$RUNNER_TEMP/review"; mkdir -p "$r"
+          if [ -f "$o/video.mp4" ]; then
+            ffmpeg -hide_banner -loglevel error -y -i "$o/video.mp4" -vf "fps=1/5,scale=240:-2,tile=12x20" "$r/contact_%02d.jpg" || true
+          fi
+          cp "$o"/thumb_*.jpg "$o"/thumbnail.jpg "$o"/qa.json "$r"/ 2>/dev/null || true
+          ls -la "$r"
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with: {name: "review-${{ needs.pick.outputs.slug }}", path: "${{ runner.temp }}/review/", retention-days: 30}
+      - name: Record (QA gate; upload when a token exists, else buffer)
+        run: python automation/release.py record "$SLUG"
+      - name: Save the state
+        id: save
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python automation/pause.py from-state "$SLUG" || true
+          # one path at a time: `git add a b` with a missing b adds NOTHING (17.11: the state of
+          # three videos was never committed, so the topic was built ten times and uploaded twice)
+          for f in state/episodes.json state/build_pause.json topics/queue.json; do
+            if [ -e "$f" ]; then git add "$f"; fi
+          done
+          git diff --cached --quiet && exit 0
+          git commit -q -m "state: $SLUG"
+          for i in 1 2 3 4 5; do git pull -q --rebase --autostash origin main && git push -q origin HEAD:main && exit 0; sleep $((i*8)); done
+          exit 1
+      - name: Mail the owner when the state could not be saved
+        if: failure() && steps.save.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/notify.py "Run failed: $SLUG" "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} - a step after the upload failed; check state/episodes.json for $SLUG." || true

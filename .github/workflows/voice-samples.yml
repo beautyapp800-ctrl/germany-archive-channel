@@ -1,0 +1,24 @@
+name: voice-samples
+# Manual only: German Piper voice audition (no schedule, nothing is uploaded anywhere)
+on:
+  workflow_dispatch:
+jobs:
+  audition:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q piper-tts==1.8.0 numpy
+          pip install -q torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+      - name: Render and score
+        run: python scripts/voice_samples.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: voices
+          path: out/voices

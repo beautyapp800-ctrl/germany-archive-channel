@@ -1,0 +1,60 @@
+name: smoke
+run-name: smoke ${{ inputs.ref || github.ref_name }}
+# Code reaches main only through here: work is pushed to dev, scripts/smoke.py
+# runs the chain on a few seconds of a real script and real public-domain film,
+# and only a passing run merges dev into main. A failure emails the owner.
+on:
+  push:
+    branches: [dev]
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: the branch to test (an autofix branch is tested, never promoted)
+        default: dev
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: smoke
+  cancel-in-progress: false
+jobs:
+  smoke:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    env:
+      PYTHONUTF8: 1
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ inputs.ref || 'dev' }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg espeak-ng
+      - run: pip install -q -r requirements.txt
+      # Real-ESRGAN for the thumbnail frame, on the CPU
+      - run: pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+      - uses: actions/cache@v4
+        with:
+          path: assets/models
+          key: models-${{ hashFiles('automation/fetch_models.py') }}
+      - run: python automation/fetch_models.py && python automation/fetch_music.py
+      - run: python scripts/smoke.py
+      - name: Shared guards (owner 17.11)
+        run: pip install -q pyyaml google-api-python-client google-auth && python -X utf8 scripts/smoke_guards.py
+      - name: Promote dev to main
+        if: (inputs.ref || 'dev') == 'dev'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch -q origin main dev
+          git reset -q --hard                      # the smoke run leaves topics/queue.json changed
+          git checkout -q -B main origin/main
+          git merge --no-edit origin/dev
+          for i in 1 2 3 4 5; do git push origin main && break; sleep $((i * 8)); git fetch -q origin main && git merge --no-edit origin/main; done
+          git push origin main:dev || true
+      - name: Email on failure
+        if: failure() && (inputs.ref || 'dev') == 'dev'
+        run: python scripts/notify.py "smoke test failed - the change was NOT moved to main" "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
