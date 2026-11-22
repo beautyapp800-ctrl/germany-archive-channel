@@ -9,6 +9,7 @@
   "captions": {
    "de": "ok",
    "en": "ok"
-  }
+  },
+  "thumbnail": "failed: <HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=WI_-oFeAcEY&alt=j"
  }
 ]
