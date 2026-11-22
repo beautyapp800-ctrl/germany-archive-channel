@@ -72,12 +72,13 @@ konkrete Zahlen (Preise in DM, Löhne, Mengen) nur, wenn sie in den Quellen steh
     return o
 
 
-def chapter(topic, sources, title, facts, first=False, last=False, more=0):
+def chapter(topic, sources, title, facts, first=False, last=False, more=0, earlier=()):
     role = ("Dies ist das ERSTE Kapitel: gleich im ersten Satz die stärkste Zahl oder Szene, Hook in den ersten 15-30 Sekunden. "
             if first else "")
     role += ("Dies ist das LETZTE Kapitel: Fazit, was bleibt, ein Satz zu den Quellen. " if last else "")
     p = f"""Thema der Folge: {topic['name']}. Kapitel: "{title}".
 {role}
+{('BEREITS GESAGT in anderen Kapiteln (nichts davon wiederholen, auch nicht anders formuliert):' + chr(10) + chr(10).join('- ' + e for e in list(earlier)[-70:]) + chr(10)) if earlier else ''}
 FAKTEN (nur diese und die Quellen unten verwenden):
 {chr(10).join('- ' + f for f in facts)}
 
@@ -111,7 +112,24 @@ def _supported(en, corpus):
     return True
 
 
-def clean_lines(lines, corpus):
+def _tok(en):
+    return {w for w in re.findall(r"[a-zäöüß]{4,}", en.lower())}
+
+
+def _dupe(en, earlier):
+    """The line says what an earlier line already said (same words, or the same figure in similar words)."""
+    a, nums = _tok(en), _nums(en)
+    for e in earlier:
+        b = _tok(e)
+        if not a or not b:
+            continue
+        j = len(a & b) / len(a | b)
+        if j >= 0.45 or (j >= 0.25 and any(len(n) > 2 or int(n) > 31 for n in nums & _nums(e))):
+            return True
+    return False
+
+
+def clean_lines(lines, corpus, earlier=()):
     """The valid lines of a chapter: digits spelled out, no Nazi words, numbers backed by the articles."""
     out, dropped = [], []
     for ln in lines:
@@ -129,6 +147,9 @@ def clean_lines(lines, corpus):
             continue
         if len(text.split()) > 40:
             dropped.append(("too long", text[:50]))
+            continue
+        if _dupe(en, list(earlier) + [r["en"] for r in out]):
+            dropped.append(("repeats an earlier line", en[:60]))
             continue
         row = {"text": text, "en": en, "look": look}
         if ln.get("tag"):
@@ -154,9 +175,10 @@ def write(topic, sources):
     for i, c in enumerate(o["chapters"]):
         best, dropped = [], []
         for attempt in range(3):
+            earlier = [ln["en"] for ch in chapters for ln in ch["lines"]]
             raw = chapter(topic, sources, c["title"], c.get("facts") or [], first=i == 0, last=i == len(o["chapters"]) - 1,
-                          more=1 if attempt else 0)
-            lines, dropped = clean_lines(raw, corpus_nums)
+                          more=1 if attempt else 0, earlier=earlier)
+            lines, dropped = clean_lines(raw, corpus_nums, earlier)
             if _w(lines) > _w(best):
                 best = lines
             if _w(best) >= 150:
@@ -180,8 +202,10 @@ def write(topic, sources):
         short = [k for k in range(len(chapters)) if _w(chapters[k]["lines"]) < 150][:8] or             sorted(range(len(chapters)), key=lambda k: _w(chapters[k]["lines"]))[:4]
         for k in short:
             c = chapters[k]
-            raw = chapter(topic, sources, c["title"], c["facts"], first=k == 0, last=k == len(chapters) - 1, more=1)
-            lines, _ = clean_lines(raw, corpus_nums)
+            others = [ln["en"] for j, ch in enumerate(chapters) if j != k for ln in ch["lines"]]
+            raw = chapter(topic, sources, c["title"], c["facts"], first=k == 0, last=k == len(chapters) - 1, more=1,
+                          earlier=others)
+            lines, _ = clean_lines(raw, corpus_nums, others)
             if _w(lines) > _w(c["lines"]):
                 c["lines"] = lines
         log.info("after extending: %d words", words(script))
