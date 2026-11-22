@@ -39,9 +39,9 @@
     "berlin airlift",
     "berlin airfield"
    ],
-   "status": "skipped",
-   "script_fails": 3,
-   "skipped_why": "its script failed 3 times: script problems: 1589 words"
+   "status": "ready",
+   "script_fails": 0,
+   "skipped_why": null
   },
   {
    "slug": "waehrungsreform",

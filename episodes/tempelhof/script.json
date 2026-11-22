@@ -1,0 +1,902 @@
+{
+ "slug": "tempelhof",
+ "title": "Berlin 1948: Wie der Flughafen Tempelhof die Stadt rettete",
+ "year_label": "1948",
+ "place": "Berlin",
+ "hook_question": "Wie überlebte eine Millionenstadt im Sommer 1948, als alle Straßen und Gleise abgesperrt wurden?",
+ "intro": "Im Jahr 1948 rief die sowjetische Besatzungsmacht die Blockade über West-Berlin aus. Der Flughafen Tempelhof wurde zum zentralen Rettungsanker der Stadt.",
+ "hashtags": [
+  "#Berlin1948",
+  "#Tempelhof",
+  "#Luftbrücke",
+  "#Geschichte"
+ ],
+ "tags": [
+  "Berlin",
+  "Tempelhof",
+  "Luftbrücke",
+  "1948",
+  "Blockade",
+  "Geschichte",
+  "Flughafen",
+  "USA"
+ ],
+ "cover": {
+  "hero": "airplane landing at Tempelhof airport in Berlin",
+  "hooks": [
+   "BERLIN GESPERRT",
+   "NUR NOCH FLIEGEN",
+   "DIE RETTUNG"
+  ],
+  "tag": "350.000 FLUGGÄSTE",
+  "stamp": "GERETTET?"
+ },
+ "sources": [
+  {
+   "what": "Flughafen Berlin-Tempelhof",
+   "where": "de.wikipedia.org/wiki/Flughafen_Berlin-Tempelhof",
+   "revision": 272138337
+  },
+  {
+   "what": "Berliner Luftbrücke",
+   "where": "de.wikipedia.org/wiki/Berliner_Luftbrücke",
+   "revision": 271355356
+  }
+ ],
+ "chapters": [
+  {
+   "title": "Die Ausgangslage im Sommer",
+   "lines": [
+    {
+     "text": "Zu Beginn des Sommers neunzehnhundertachtundvierzig verändert sich das Leben für Millionen Menschen in Berlin schlagartig.",
+     "en": "At the beginning of the summer of 1948, life for millions of people in Berlin changes abruptly.",
+     "look": "street scene in Berlin with people walking past empty storefronts"
+    },
+    {
+     "text": "In den westlichen Sektoren der geteilten Stadt leben damals etwa zwei Komma zwei Millionen Menschen.",
+     "en": "In the western sectors of the divided city, about 2.2 million people live at that time.",
+     "look": "crowd of people standing on a Berlin street looking around"
+    },
+    {
+     "text": "Hinzu kommen tausende alliierte Soldaten mit ihren Familienangehörigen aus den USA, Großbritannien und Frankreich.",
+     "en": "Added to this are thousands of allied soldiers with their family members from the USA, Great Britain and France.",
+     "look": "soldiers in uniform walking together in a city street"
+    },
+    {
+     "text": "Als riesige Millionenstadt ist Berlin darauf angewiesen, aus dem Umland und den Westzonen versorgt zu werden.",
+     "en": "As a huge metropolis, Berlin depends on being supplied from the surrounding area and the western zones.",
+     "look": "cargo train standing on railway tracks near a station"
+    },
+    {
+     "text": "Bisher kamen etwa fünfundsiebzig Prozent aller wichtigen Importe genau aus diesen nun abgesperrten Westzonen.",
+     "en": "Previously, about 75 percent of all important imports came precisely from these now blocked western zones.",
+     "look": "heavy iron railway barriers closed across a street track"
+    },
+    {
+     "text": "Nun kappen die sowjetischen Besatzungsbehörden sämtliche Straßen, Schienenwege und die Verbindungen zu Wasser.",
+     "en": "Now the Soviet occupying authorities cut all roads, railway lines and water connections.",
+     "look": "empty highway stretching into the distance with no traffic"
+    },
+    {
+     "text": "Die Regierungen der westlichen Schutzmächte werden von dieser totalen und unbefristeten Blockade völlig unvorbereitet getroffen.",
+     "en": "The governments of the western protecting powers are caught completely unprepared by this total and indefinite blockade.",
+     "look": "men in suits standing around a large desk looking at papers"
+    },
+    {
+     "text": "Niemand weiß in diesen ersten Junitagen, wie die Versorgung der Millionenstadt ohne die üblichen Transportwege funktionieren soll.",
+     "en": "Nobody knows in these first days of June how the supply of the metropolis is supposed to work without the usual transport routes.",
+     "look": "worried woman looking out of a window onto the street"
+    },
+    {
+     "text": "Ein Blick in die Lagerhäuser offenbart das gesamte Ausmaß der drohenden Versorgungskatastrophe im Sommer.",
+     "en": "A look into the warehouses reveals the full extent of the impending supply catastrophe in summer.",
+     "look": "empty wooden shelves inside a dark and dusty warehouse"
+    },
+    {
+     "text": "Zu Beginn der Blockade lagern in den Westsektoren Lebensmittelvorräte für exakt sechsunddreißig Tage.",
+     "en": "At the beginning of the blockade, food supplies for exactly thirty-six days are stored in the western sectors.",
+     "look": "stacked sacks of flour standing in a storage room",
+     "tag": "36 TAGE"
+    },
+    {
+     "text": "Diese knappen Vorräte basieren zudem auf extrem strengen und sehr stark reduzierten täglichen Rationen.",
+     "en": "These scarce supplies are also based on extremely strict and very heavily reduced daily rations.",
+     "look": "close-up of old ration cards lying on a wooden table"
+    },
+    {
+     "text": "Normale Verbraucher erhalten über ihre Lebensmittelkarten lediglich etwa eintausendfünfhundert Kilokalorien pro Tag.",
+     "en": "Normal consumers receive only about 1,500 kilocalories per day via their food ration cards.",
+     "look": "hands holding a small piece of bread on a plate"
+    }
+   ]
+  },
+  {
+   "title": "Der Beginn der Blockade",
+   "lines": [
+    {
+     "text": "Ende Juni neunzehnhundertachtundvierzig spitz sich die Lage in der geteilten Stadt Berlin dramatisch und unumkehrbar zu.",
+     "en": "At the end of June 1948, the situation in the divided city of Berlin escalated dramatically and irreversibly.",
+     "look": "a high-angle view of a city divided by streets and buildings"
+    },
+    {
+     "text": "In der Nacht auf den vierundzwanzigsten Juni kappen sowjetische Stellen die gesamte Stromversorgung der Westsektoren.",
+     "en": "In the night of 24 June, Soviet authorities cut off the entire power supply to the western sectors.",
+     "look": "dark urban streets with unlit windows at night"
+    },
+    {
+     "text": "Gegen sechs Uhr morgens folgt am selben Tag die vollständige Unterbrechung des Personen- und Güterverkehrs.",
+     "en": "Around six o'clock in the morning on the same day, the complete interruption of passenger and freight traffic follows.",
+     "look": "metal barriers blocking a road leading across a sector border"
+    },
+    {
+     "text": "Züge, Straßenfahrzeuge und Schiffe können von den westlichen Besatzungszonen aus West-Berlin nicht mehr erreichen.",
+     "en": "Trains, road vehicles and ships can no longer reach West Berlin from the western zones of occupation.",
+     "look": "an empty railway station with closed platform barriers"
+    },
+    {
+     "text": "Die Sowjetische Militäradministration betont ausdrücklich, dass die Westsektoren keinerlei Versorgung aus der SBZ erhalten.",
+     "en": "The Soviet Military Administration explicitly emphasizes that the western sectors receive no supplies from the SBZ.",
+     "look": "a large official sign posted at a checkpoint or border"
+    },
+    {
+     "text": "Auch aus Ost-Berlin soll laut dieser Ankündigung keinerlei Belieferung für die abgeschnittenen Stadtteile erfolgen.",
+     "en": "According to this announcement, no supplies whatsoever are to be delivered to the cut-off districts from East Berlin.",
+     "look": "empty streets near a closed border crossing point"
+    },
+    {
+     "text": "Damit sind über zwei Millionen Menschen in den Westsektoren von jeder normalen Zufuhr von außen abgeschnitten.",
+     "en": "This cuts off more than two million people in the western sectors from any normal external supply.",
+     "look": "a crowded city street corner with people walking past closed storefronts"
+    },
+    {
+     "text": "Hinzu kommen tausende alliierte Soldaten mit ihren Familienangehörigen, die ebenfalls im eingeschlossenen Stadtgebiet leben.",
+     "en": "In addition, thousands of allied soldiers with their family members also live in the enclosed urban area.",
+     "look": "foreign soldiers standing together on a cobblestone square"
+    },
+    {
+     "text": "Die gelagerten Vorräte an Kohle für das Heizen reichen laut den Schätzungen gerade noch für fünfunddreißig Tage.",
+     "en": "According to estimates, the stored coal reserves for heating will only last for thirty-five days.",
+     "look": "a small pile of dark coal briquettes lying on a courtyard floor",
+     "tag": "35 TAGE KOHLE"
+    },
+    {
+     "text": "Lebensmittelreserven sind ebenfalls knapp bemessen und nach exakt sechsunddreißig Tagen vollständig aufgebraucht.",
+     "en": "Food reserves are also strictly limited and will be completely used up after exactly thirty-six days.",
+     "look": "empty wooden shelves inside a small Berlin grocery store"
+    },
+    {
+     "text": "Die Westmächte trifft diese totale und harte Blockade trotz früherer Spannungen völlig unvorbereitet.",
+     "en": "Despite earlier tensions, this total and hard blockade hits the Western powers completely unprepared.",
+     "look": "officials looking anxiously at large maps spread out on a wooden table"
+    },
+    {
+     "text": "Nun muss eine rasche Entscheidung fallen, ob die besetzte Stadt gehalten oder aufgegeben werden soll.",
+     "en": "Now a quick decision has to be made whether the occupied city should be held or abandoned.",
+     "look": "a close-up of a desk telephone receiver resting next to official documents"
+    }
+   ]
+  },
+  {
+   "title": "Knappe Vorräte und Rationen",
+   "lines": [
+    {
+     "text": "Zu Beginn der Blockade sind die Vorräte in den westlichen Sektoren von Berlin bereits extrem knapp geworden.",
+     "en": "At the beginning of the blockade, supplies in the western sectors of Berlin have already become extremely scarce.",
+     "look": "empty shelves in a small grocery store in Berlin"
+    },
+    {
+     "text": "Die Stadt ist eine Millionenstadt und muss fast vollständig aus dem umliegenden Gebiet versorgt werden.",
+     "en": "The city is a metropolis and must be supplied almost entirely from the surrounding area.",
+     "look": "aerial view of the city of Berlin from above"
+    },
+    {
+     "text": "Bislang stammten fünfundsiebzig Prozent dieser lebenswichtigen Importe direkt aus den westlichen Besatzungszonen Deutschlands.",
+     "en": "Previously, seventy-five percent of these vital imports came directly from the western occupation zones of Germany.",
+     "look": "cargo trucks driving along a country road"
+    },
+    {
+     "text": "Jetzt stehen die Menschen vor großen Problemen, weil die dringend benötigte Steinkohle zum Heizen und Kochen fehlt.",
+     "en": "Now the people face major problems because the urgently needed hard coal for heating and cooking is missing.",
+     "look": "piles of black coal lying on a backyard pavement"
+    },
+    {
+     "text": "Die vorhandenen Vorräte an Steinkohle reichen zu diesem Zeitpunkt nur für fünfunddreißig Tage aus.",
+     "en": "The available hard coal supplies are sufficient at this time for only thirty-five days.",
+     "look": "a woman shoveling small amounts of coal into a stove",
+     "tag": "35 TAGE"
+    },
+    {
+     "text": "Auch beim Treibstoff ist die Lage angespannt, aber die Benzinvorräte halten immerhin für vier bis fünf Monate.",
+     "en": "The situation regarding fuel is also tense, but gasoline supplies will last for four to five months after all.",
+     "look": "metal fuel barrels stacked near a small garage"
+    },
+    {
+     "text": "Für das notwendige Motoröl sieht es etwas besser aus, denn hier reichen die Bestände für drei bis vier Monate.",
+     "en": "Things look a little better for the necessary motor oil, as stocks here last for three to four months.",
+     "look": "bottles and cans of oil on a wooden shelf"
+    },
+    {
+     "text": "Besonders hart trifft die alltägliche Not die Menschen bei der Verteilung von Lebensmitteln und Nahrungsmitteln.",
+     "en": "Everyday hardship hits people particularly hard when it comes to the distribution of food and groceries.",
+     "look": "people standing in a long line on the sidewalk"
+    },
+    {
+     "text": "Die Berechnungen für den täglichen Bedarf stützen sich dabei auf außerordentlich knappe Rationen im Alltag.",
+     "en": "The calculations for daily needs are based on extraordinarily meager rations in everyday life.",
+     "look": "close-up of an old ration card with stamps"
+    },
+    {
+     "text": "Ein normaler Verbraucher erhält damals über seine Lebensmittelkarten nur etwa eintausendfünfhundert Kilokalorien am Tag.",
+     "en": "A normal consumer at that time receives only about fifteen hundred kilocalories a day through their food cards.",
+     "look": "a small piece of dry bread and a potato on a plate"
+    }
+   ]
+  },
+  {
+   "title": "Der Entschluss zur Luftbrücke",
+   "lines": [
+    {
+     "text": "Ab Ende Juni neunzehnhundertachtundvierzig sperrte die sowjetische Besatzungsmacht alle Land- und Wasserwege nach West-Berlin.",
+     "en": "From late June 1948, the Soviet occupation power blocked all land and water routes to West Berlin.",
+     "look": "a closed metal gate on a road leading to a city"
+    },
+    {
+     "text": "Die totale Blockade der Stadt traf die Regierungen der Westmächte weitgehend unvorbereitet.",
+     "en": "The total blockade of the city caught the governments of the Western powers largely unprepared.",
+     "look": "men in suits looking at large maps on a table"
+    },
+    {
+     "text": "Der US-amerikanische Militärgouverneur Lucius D. Clay setzte sich gegen den Vorschlag durch, die Besetzung Berlins aufzugeben.",
+     "en": "US Military Governor Lucius D. Clay prevailed against the proposal to give up the occupation of Berlin.",
+     "look": "an American military officer talking seriously in an office"
+    },
+    {
+     "text": "Am fünfundzwanzigsten Juni neunzehnhundertachtundvierzig befragte Clay den gewählten Bürgermeister Ernst Reuter zur Versorgung durch eine Luftbrücke.",
+     "en": "On 25 June 1948, Clay asked the elected mayor Ernst Reuter about supply via an airlift.",
+     "look": "two men sitting together at a desk having a conversation"
+    },
+    {
+     "text": "Bürgermeister Ernst Reuter erklärte daraufhin, dass Berlin zugunsten der Freiheit die notwendigen Opfer bringen werde.",
+     "en": "Mayor Ernst Reuter then declared that Berlin would make the necessary sacrifices for the sake of freedom.",
+     "look": "a politician speaking into a microphone at a press conference"
+    },
+    {
+     "text": "Zu Beginn der Blockade lagerten in den Westsektoren nur noch Vorräte für sehr kurze Zeit.",
+     "en": "At the beginning of the blockade, supplies in the western sectors were only stored for a very short time.",
+     "look": "empty wooden shelves inside a storage room"
+    },
+    {
+     "text": "Steinkohle zum Heizen und Kochen reichte zu diesem Zeitpunkt nur für fünfunddreißig Tage.",
+     "en": "Hard coal for heating and cooking was only sufficient for thirty-five days at this time.",
+     "look": "a small pile of dark coal lying on the ground"
+    },
+    {
+     "text": "Auch für die Pumpen der Wasserwerke lag der Vorrat an Steinkohle bei nur fünfunddreißig Tagen.",
+     "en": "Also for the pumps of the waterworks, the stock of hard coal was only thirty-five days.",
+     "look": "large industrial water pumps operating inside a brick building"
+    },
+    {
+     "text": "Die Vorräte an Lebensmitteln reichten in den Westsektoren der Stadt lediglich für sechsunddreißig Tage.",
+     "en": "Food supplies in the western sectors of the city lasted for only thirty-six days.",
+     "look": "a close-up of sparse food items on a wooden table"
+    },
+    {
+     "text": "Koks war nach den Schätzungen nur für neunundvierzig Tage in den Westsektoren vorhanden.",
+     "en": "According to estimates, coke was available in the western sectors for only forty-nine days.",
+     "look": "grey pieces of coke piled up in a backyard"
+    },
+    {
+     "text": "Braunkohle-Briketts reichten zu Beginn der sowjetischen Blockade gerade einmal für fünfundzwanzig Tage.",
+     "en": "Brown coal briquettes lasted for just twenty-five days at the start of the Soviet blockade.",
+     "look": "stacked brown coal briquettes next to a wall",
+     "tag": "25 TAGE"
+    }
+   ]
+  },
+  {
+   "title": "Die ersten Flüge nach Tempelhof",
+   "lines": [
+    {
+     "text": "Am sechsundzwanzigsten Juni neunzehnhundertachtundvierzig flogen die ersten Maschinen der US-amerikanischen Luftwaffe zum Flughafen Tempelhof.",
+     "en": "On 26 June 1948, the first aircraft of the US Air Force flew to Tempelhof Airport.",
+     "look": "a twin-engine cargo airplane landing on a wide concrete runway",
+     "tag": "26. JUNI 1948"
+    },
+    {
+     "text": "Diese historischen Flüge starteten von der Rhein-Main Airbase in Frankfurt am Main.",
+     "en": "These historic flights started from the Rhein-Main Airbase in Frankfurt am Main.",
+     "look": "several transport planes parked on a large airbase apron"
+    },
+    {
+     "text": "Ein weiterer Startpunkt für die Maschinen war der Flugplatz im hessischen Wiesbaden-Erbenheim.",
+     "en": "Another starting point for the aircraft was the airfield in Wiesbaden-Erbenheim, Hesse.",
+     "look": "military transport aircraft standing outdoors on a grassy airfield"
+    },
+    {
+     "text": "Mit diesen ersten Flügen startete die US-Luftwaffe offiziell die sogenannte Operation Vittles.",
+     "en": "With these first flights, the US Air Force officially launched the so-called Operation Vittles.",
+     "look": "pilots walking across an airfield toward their transport aircraft"
+    },
+    {
+     "text": "Zuvor hatten sowjetische Stellen die Zufahrten auf Straßen und Schienen nach West-Berlin gesperrt.",
+     "en": "Previously, Soviet authorities had blocked road and rail access routes to West Berlin.",
+     "look": "guarded barrier blocking a road with no vehicle traffic passing through"
+    },
+    {
+     "text": "Auch die Stromversorgung aus der östlich besetzten Zone wurde damals abrupt unterbrochen.",
+     "en": "The power supply from the eastern occupied zone was also abruptly cut off at that time.",
+     "look": "darkened apartment interior with unlit lamps and windows looking out"
+    },
+    {
+     "text": "In den westlichen Sektoren lebten zu jener Zeit etwa zwei Komma zwei Millionen Menschen.",
+     "en": "At that time, about 2.2 million people lived in the western sectors.",
+     "look": "group of citizens standing on a city street looking serious"
+    },
+    {
+     "text": "Hinzu kamen Tausende alliierte Soldaten mit ihren Familienangehörigen vor Ort in der geteilten Stadt.",
+     "en": "Added to this were thousands of allied soldiers with their family members on site in the divided city.",
+     "look": "military personnel in uniform walking along an urban sidewalk"
+    },
+    {
+     "text": "Die Metropole musste fast komplett aus dem umliegenden Gebiet mit lebenswichtigen Gütern versorgt werden.",
+     "en": "The metropolis had to be supplied with vital goods almost completely from the surrounding area.",
+     "look": "large crates and sacks stacked high inside a warehouse"
+    },
+    {
+     "text": "Vor Beginn der Blockade stammten etwa fünfundsiebzig Prozent der Importe direkt aus den Westzonen.",
+     "en": "Before the blockade began, about seventy-five percent of imports came directly from the western zones.",
+     "look": "freight train cars standing on tracks at a cargo depot"
+    },
+    {
+     "text": "Zu Beginn lagerten in den westlichen Sektoren nur noch Lebensmittel für etwa sechsunddreißig Tage.",
+     "en": "At the beginning, food supplies in the western sectors would only last for about 36 days.",
+     "look": "empty wooden shelves inside a small grocery store"
+    },
+    {
+     "text": "Die Vorräte an Steinkohle zum Heizen und Kochen reichten ebenfalls lediglich für fünfunddreißig Tage.",
+     "en": "Hard coal reserves for heating and cooking were also sufficient for only thirty-five days.",
+     "look": "small piles of dark coal stored in a cellar basement"
+    }
+   ]
+  },
+  {
+   "title": "Die britische Beteiligung",
+   "lines": [
+    {
+     "text": "Die britische Luftwaffe beteiligte sich aktiv an der lebenswichtigen Luftbrücke zur Versorgung der abgeschnittenen Stadt.",
+     "en": "The British Air Force actively participated in the vital air bridge to supply the cut-off city.",
+     "look": "a military cargo airplane flying through the clouds"
+    },
+    {
+     "text": "Diese groß angelegte Operation trug offiziell den Namen Operation Plainfare und brachte dringend benötigte Güter nach Berlin.",
+     "en": "This large-scale operation was officially named Operation Plainfare and brought urgently needed goods to Berlin.",
+     "look": "crates and boxes being loaded into a large cargo aircraft"
+    },
+    {
+     "text": "Erstmals ließ die britische Luftwaffe am achtzigsten Tag des Jahres neunzehnhundertachtundvierzig Maschinen abheben.",
+     "en": "For the first time, the British air force had machines take off on the 80th day of 1948.",
+     "look": "propeller airplanes lined up on a grassy airfield before takeoff"
+    },
+    {
+     "text": "Genau gesagt geschah dies am achten Tag vor Juli neunzehnhundertachtundvierzig von Wunstorf aus.",
+     "en": "To be precise, this happened on the eighth day before July 1948 from Wunstorf.",
+     "look": "historical propeller planes on a runway with pilots walking nearby"
+    },
+    {
+     "text": "Das Ziel dieser historischen Flüge war der Berliner Flugplatz Gatow im westlichen Teil der Stadt.",
+     "en": "The destination of these historic flights was the Berlin airfield Gatow in the western part of the city.",
+     "look": "an airplane touching down on a wide grass runway at an airfield"
+    },
+    {
+     "text": "Von diesem Juli bis zum ersten Frost im Dezember neunzehnhundertachtundvierzig gab es eine weitere Besonderheit.",
+     "en": "From this July until the first frost in December 1948, there was another special feature.",
+     "look": "frost-covered grass on the banks of a wide river on a cold morning"
+    },
+    {
+     "text": "Die Briten nutzten in dieser Zeit zusätzlich ungewöhnliche Transportmittel für die Versorgung der Berliner Bevölkerung.",
+     "en": "During this time, the British additionally used unusual means of transport for supplying the Berlin population.",
+     "look": "people standing at a riverbank watching large transport vehicles on the water"
+    },
+    {
+     "text": "Sie setzten dafür spezielle Flugboote ein, um den Transport auf dem Luftweg weiter zu entlasten.",
+     "en": "They deployed special flying boats for this purpose to further relieve the transport by air.",
+     "look": "a large seaplane taxiing on a wide river surface"
+    },
+    {
+     "text": "Diese Flugboote starteten und landeten auf der Unterelbe im Bereich von Hamburg-Finkenwerder.",
+     "en": "These flying boats took off and landed on the Lower Elbe in the area of Hamburg-Finkenwerder.",
+     "look": "a flying boat lifting off from a wide river leaving a trail of water behind"
+    },
+    {
+     "text": "Jedes einzelne Flugzeug und jedes Flugboot brachte einen kleinen Teil der lebensnotwendigen Fracht in die abgeriegelte Metropole.",
+     "en": "Every single airplane and flying boat brought a small part of the vital cargo into the sealed-off metropolis.",
+     "look": "workers unloading sacks and boxes from the cargo bay of a large aircraft"
+    },
+    {
+     "text": "Zusammen bildeten diese Einsätze der Briten einen unverzichtbaren Pfeiler der gesamten Luftbrücke für das geteilte Berlin.",
+     "en": "Together, these missions by the British formed an indispensable pillar of the entire air bridge for divided Berlin.",
+     "look": "several transport aircraft parked tightly together on an airfield while being serviced",
+     "tag": "OPERATION"
+    }
+   ]
+  },
+  {
+   "title": "Skeptische Berliner und Experten",
+   "lines": [
+    {
+     "text": "Im Sommer neunzehnhundertachtundvierzig blicken die Menschen in West-Berlin mit großer Sorge auf die beginnende Blockade.",
+     "en": "In the summer of 1948, the people in West Berlin look with great concern at the beginning blockade.",
+     "look": "people standing on a street in Berlin looking serious"
+    },
+    {
+     "text": "Anfangsberechnungen gehen davon aus, dass allenfalls siebenhundertfünfzig Tonnen Luftfracht pro Tag über die Stadt geflogen werden können.",
+     "en": "Initial calculations assume that at most 750 tons of air freight can be flown into the city per day.",
+     "look": "piles of crates and boxes sitting outside a large warehouse",
+     "tag": "750 TONNEN"
+    },
+    {
+     "text": "Die Zweifel an diesem kühnen Plan der Westalliierten sind unter den betroffenen Berlinern von Beginn an sehr groß.",
+     "en": "Doubts about this bold plan by the Western Allies are very great among the affected Berliners from the beginning.",
+     "look": "a group of citizens talking anxiously together on a sidewalk"
+    },
+    {
+     "text": "Im Juli neunzehnhundertachtundvierzig werden die Bürgerinnen und Bürger zu den Aussichten der Luftbrücke befragt.",
+     "en": "In July 1948, citizens are surveyed about the prospects of the air bridge.",
+     "look": "people holding newspapers while standing near a city square"
+    },
+    {
+     "text": "Sechsundachtzig Prozent der Befragten geben an, dass Berlin trotz der Flüge den kommenden Winter keinesfalls überstehen wird.",
+     "en": "Eighty-six percent of those surveyed state that Berlin will by no means survive the coming winter despite the flights.",
+     "look": "a close-up of a hand turning the pages of a thick notebook"
+    },
+    {
+     "text": "Viele Experten und Politiker teilen diese pessimistische Einschätzung zur Lage in der abgeriegelten Millionenstadt voll und ganz.",
+     "en": "Many experts and politicians share this pessimistic assessment of the situation in the sealed-off metropolis completely.",
+     "look": "men in suits sitting around a conference table looking worried"
+    },
+    {
+     "text": "Selbst Otto Suhr ist damals fest davon überzeugt, dass die Westalliierten letztlich aufgeben und Berlin einfach verlassen werden.",
+     "en": "Even Otto Suhr is firmly convinced at the time that the Western Allies will ultimately give up and simply leave Berlin.",
+     "look": "a man speaking indoors in front of a window overlooking the city"
+    },
+    {
+     "text": "Die Lastwagen stehen still, die Züge fahren nicht mehr, und die Stromversorgung aus dem Umland ist komplett unterbrochen.",
+     "en": "The trucks are standing still, the trains no longer run, and the electricity supply from the surrounding area is completely cut off.",
+     "look": "train tracks overgrown with weeds and a blocked country road"
+    },
+    {
+     "text": "Einzig die Flugzeuge sollen nun die Versorgung von über zwei Millionen Menschen in den Westsektoren sicherstellen.",
+     "en": "Only airplanes are now supposed to ensure the supply of over two million people in the western sectors.",
+     "look": "a transport aircraft flying low across a cloudy sky over rooftops"
+    }
+   ]
+  },
+  {
+   "title": "Hohe tägliche Kosten",
+   "lines": [
+    {
+     "text": "Die Versorgung von West-Berlin fordert von den westlichen Verbündeten einen enormen materiellen und vor allem finanziellen Aufwand.",
+     "en": "The supply of West Berlin demands an enormous material and above all financial effort from the Western allies.",
+     "look": "people loading sacks into a cargo aircraft at an airfield"
+    },
+    {
+     "text": "Allein Großbritannien muss Anfang Juli neunzehnhundertachtundvierzig täglich sechstausend Pfund für diese logistische Meisterleistung aufbringen.",
+     "en": "Britain alone has to raise six thousand pounds daily for this logistical masterwork in early July 1948.",
+     "look": "British soldiers standing next to transport planes on a runway"
+    },
+    {
+     "text": "Zu dieser Zeit sind im Rahmen der Operation jeden Tag ununterbrochen fünfhundert Flugzeuge im harten Dauereinsatz.",
+     "en": "At this time, five hundred aircraft are in continuous hard daily use as part of the operation.",
+     "look": "several twin-engine cargo planes flying in formation in the sky"
+    },
+    {
+     "text": "Dabei handelt es sich um eine gemischte Flotte aus zweimotorigen und auch viermotorigen Maschinen.",
+     "en": "This is a mixed fleet of twin-engine and also four-engine machines.",
+     "look": "close-up of a large airplane engine on the wing of a transport plane"
+    },
+    {
+     "text": "Die Maschinen bringen lebenswichtige Fracht in die abgeriegelte Metropole und halten die Grundversorgung der Bevölkerung aufrecht.",
+     "en": "The machines bring vital freight to the sealed-off metropolis and maintain the basic supply of the population.",
+     "look": "workers unloading crates from the cargo bay of an airplane"
+    },
+    {
+     "text": "Neben den britischen Ausgaben schlagen auch die Aufwendungen der Vereinigten Staaten von Amerika gewaltig zu Buche.",
+     "en": "In addition to the British expenditures, the expenses of the United States of America are also extremely heavy.",
+     "look": "American flags painted on the tail fin of a large transport aircraft"
+    },
+    {
+     "text": "Für die gemeinsamen Anstrengungen der USA und Großbritanniens werden gigantische tägliche Gesamtkosten genannt.",
+     "en": "Gigantic daily total costs are cited for the joint efforts of the USA and Great Britain.",
+     "look": "clerks sitting at desks counting piles of papers and documents"
+    },
+    {
+     "text": "Die Summe beläuft sich auf täglich sechsundfünfzigtausend US-Dollar, die in den laufenden Betrieb fließen.",
+     "en": "The sum amounts to fifty-six thousand US dollars daily, which flow into ongoing operations.",
+     "look": "close-up of American dollar bills lying on a wooden table",
+     "tag": "56.000 US-DOLL"
+    },
+    {
+     "text": "Jeder einzelne Flug verbraucht wertvollen Treibstoff und bindet zahlreiche Arbeitskräfte am Boden und in der Luft.",
+     "en": "Every single flight consumes valuable fuel and ties up numerous workers on the ground and in the air.",
+     "look": "mechanics working with tools on the landing gear of a large airplane"
+    },
+    {
+     "text": "Die gigantische Maschinerie läuft Tag und Nacht, um die Versorgung der Menschen in den Westsektoren zu sichern.",
+     "en": "The gigantic machinery runs day and night to secure the supply of the people in the Western sectors.",
+     "look": "airfield illuminated by floodlights during the dark night hours"
+    },
+    {
+     "text": "Trotz dieser enormen finanziellen Belastung halten die Alliierten an ihrem Entschluss fest, die Stadt nicht aufzugeben.",
+     "en": "Despite this enormous financial burden, the allies stick to their resolution not to give up the city.",
+     "look": "military officers looking at large maps spread out on a table"
+    }
+   ]
+  },
+  {
+   "title": "Die Optimierung im Juli",
+   "lines": [
+    {
+     "text": "Ende Juli neunzehnhundertachtundvierzig wird die Luftbrücke für Berlin neu organisiert.",
+     "en": "In late July 1948, the airlift for Berlin is reorganized.",
+     "look": "military officers looking at large maps on a table"
+    },
+    {
+     "text": "Am dreiundzwanzigsten Juli wird Generalleutnant William Henry Tunner Befehlshaber.",
+     "en": "On 23 July, Lieutenant General William Henry Tunner becomes commander.",
+     "look": "an american general walking across an airfield towards a transport plane"
+    },
+    {
+     "text": "Er übernimmt die Leitung der neuerrichteten Combined Airlift Task Force.",
+     "en": "He takes command of the newly established Combined Airlift Task Force.",
+     "look": "officers working together in a crowded military operations room"
+    },
+    {
+     "text": "Diese neue Dienststelle hat ihren Sitz in der Stadt Wiesbaden.",
+     "en": "This new agency has its headquarters in the city of Wiesbaden.",
+     "look": "historic office buildings in a german city street"
+    },
+    {
+     "text": "Dort arbeiten die United States Air Force und die Royal Air Force zusammen.",
+     "en": "There, the United States Air Force and the Royal Air Force work together.",
+     "look": "british and american flags flying side by side outside a building"
+    },
+    {
+     "text": "Die Aufgabe der Task Force ist die enge Abstimmung beider Luftwaffen.",
+     "en": "The task force's job is the close coordination of both air forces.",
+     "look": "military pilots and officers pointing at flight schedules on a board"
+    },
+    {
+     "text": "Bisher fliegen die Amerikaner und Briten ihre Einsätze noch getrennt voneinander.",
+     "en": "Until now, the Americans and British have been flying their missions separately.",
+     "look": "two different types of cargo planes parked on separate tarmacs"
+    },
+    {
+     "text": "Das soll sich unter dem neuen Befehlshaber nun schnell grundlegend ändern.",
+     "en": "That is now to change fundamentally and quickly under the new commander.",
+     "look": "men in uniform discussing plans while walking along a runway"
+    },
+    {
+     "text": "Dafür werden umfangreiche Maßnahmen zur materiellen Verstärkung eingeleitet.",
+     "en": "To this end, extensive measures for material reinforcement are initiated.",
+     "look": "workers unloading heavy crates and equipment from a truck"
+    },
+    {
+     "text": "Zusätzlich wird auch neues Personal an die Standorte geholt.",
+     "en": "In addition, new personnel are brought to the locations.",
+     "look": "soldiers and mechanics carrying tools across an airfield"
+    },
+    {
+     "text": "Alles zielt darauf ab, die transportierten Frachtmenge drastisch zu erhöhen.",
+     "en": "Everything aims to drastically increase the amount of cargo transported.",
+     "look": "large piles of sacks and metal containers stacked near a hangar",
+     "tag": "23. JULI 1948"
+    },
+    {
+     "text": "Die Versorgung der Millionenstadt soll durch diese Optimierung gesichert werden.",
+     "en": "The supply of the metropolis is to be secured through this optimization.",
+     "look": "heavy transport aircraft taking off into the cloudy sky"
+    }
+   ]
+  },
+  {
+   "title": "Holznot im Sektor",
+   "lines": [
+    {
+     "text": "In den britischen Haushalten waren damals etwa eintausendsiebenhundertdreißig Kilogramm Kohle für den Winter zugeteilt.",
+     "en": "In British households, around 1,730 kilograms of coal were allocated for the winter back then.",
+     "look": "a pile of black coal chunks next to a brick fireplace inside a home",
+     "tag": "1.730 KG KOHLE"
+    },
+    {
+     "text": "In Hamburg lag die Zuteilung im Vergleich dazu bei etwa achthundertneunzig Kilogramm Kohle je Haushalt.",
+     "en": "In Hamburg, the allocation by comparison was around 890 kilograms of coal per household.",
+     "look": "black coal chunks stacked in a wooden cellar box in a house"
+    },
+    {
+     "text": "Doch die Lage in der geteilten Stadt Berlin war im Jahr neunzehnhundertachtundvierzig eine ganz andere.",
+     "en": "However, the situation in the divided city of Berlin in the year 1948 was completely different.",
+     "look": "pan over a ruined city street with piles of rubble and debris"
+    },
+    {
+     "text": "Im britischen Sektor Berlins konnten unter optimalen Bedingungen lediglich etwa einhundertzweiundfünfzig Kilogramm je Haushalt zugeteilt werden.",
+     "en": "In the British sector of Berlin, under optimal conditions, only about 152 kilograms per household could be allocated.",
+     "look": "a close-up of a small, nearly empty coal bucket standing on a wooden floor"
+    },
+    {
+     "text": "Die sowjetische Besatzungsmacht hielt die Land- und Wasserwege fest im Griff und sperrte alle Zugänge.",
+     "en": "The Soviet occupation force kept a firm grip on the land and water routes and blocked all access.",
+     "look": "a wooden barrier blocking a road with a metal sign and barbed wire"
+    },
+    {
+     "text": "Die Regierungen der Westmächte hatten zwar mit Reaktionen gerechnet, aber diese totale Blockade traf sie unvorbereitet.",
+     "en": "The governments of the Western powers had expected reactions, but this total blockade caught them unprepared.",
+     "look": "three men in military uniforms standing around a large map on a table"
+    },
+    {
+     "text": "In den westlichen Sektoren lebten damals etwa zweikommazwei Millionen Menschen in großer Sorge.",
+     "en": "In the western sectors, around 2.2 million people lived in great anxiety back then.",
+     "look": "a group of people standing on a street corner talking anxiously"
+    },
+    {
+     "text": "Hinzu kamen tausende alliierte Soldaten und ihre Familien, die ebenfalls versorgt werden mussten.",
+     "en": "In addition, thousands of allied soldiers and their families had to be supplied as well.",
+     "look": "military trucks parked in a row on a wide street in the city"
+    },
+    {
+     "text": "Vor Beginn der Blockade stammten fünfundsiebzig Prozent aller Importe für die Millionenstadt aus dem Umland.",
+     "en": "Before the blockade began, seventy-five percent of all imports for the million-strong city came from the surrounding area.",
+     "look": "barge loaded with goods moving slowly along a wide river canal"
+    },
+    {
+     "text": "Nach den Schätzungen lagerten in den Westsektoren zu Beginn der Blockade nur Vorräte für wenige Wochen.",
+     "en": "According to estimates, supplies in the western sectors only lasted for a few weeks at the start of the blockade.",
+     "look": "rows of wooden crates and sacks stacked high inside a dark warehouse"
+    },
+    {
+     "text": "Die Steinkohle zum Heizen und Kochen reichte zu diesem Zeitpunkt nach den Vorräten nur für fünfunddreißig Tage.",
+     "en": "At this point, the hard coal for heating and cooking only lasted for thirty-five days according to the supplies.",
+     "look": "an empty metal stove standing in the corner of a sparsely furnished room"
+    },
+    {
+     "text": "Kohle wurde so zu einem der kostbarsten Güter in dem abgeschnittenen Teil der Stadt.",
+     "en": "Coal thus became one of the most precious goods in the cut-off part of the city.",
+     "look": "a person holding a single small piece of black coal in their hands"
+    }
+   ]
+  },
+  {
+   "title": "Verteidigung der Freiheit",
+   "lines": [
+    {
+     "text": "Als Selbsthilfe blieb den Menschen in Berlin das Abholzen von Bäumen in Straßen, privaten und öffentlichen Anlagen.",
+     "en": "As self-help, the people in Berlin had to chop down trees in streets, private and public facilities.",
+     "look": "people cutting down trees with saws in a public park"
+    },
+    {
+     "text": "Bäume wurden im Tiergarten und im Grunewald gefällt, soweit diese für Zivilisten zugänglich waren.",
+     "en": "Trees were felled in the Tiergarten and the Grunewald, as far as these were accessible to civilians.",
+     "look": "stacked logs in a large public forest with bare trees"
+    },
+    {
+     "text": "Die Luftbrücke wurde am dreißigsten September neunzehnhundertneunundvierzig offiziell beendet.",
+     "en": "The airlift was officially ended on 30 September 1949.",
+     "look": "transport planes parked on an airfield under a cloudy sky",
+     "tag": "30. SEPT 1949"
+    },
+    {
+     "text": "Im Jahr neunzehnhundertachtundvierzig schränkte die sowjetische Besatzungsmacht die Land- und Wasserwege nach Berlin ein.",
+     "en": "In 1948, the Soviet occupation power restricted the land and water routes to Berlin.",
+     "look": "metal barriers blocking a road at a border checkpoint"
+    },
+    {
+     "text": "Die Westsektoren Berlins wurden in der Nacht zum vierzigsten Tag der Blockade nicht mehr versorgt.",
+     "en": "The western sectors of Berlin were no longer supplied on the night of the fortieth day of the blockade.",
+     "look": "empty shelves inside a grocery store in a city"
+    },
+    {
+     "text": "Hinzu kamen tausendtägig neuntausend amerikanische, siebentausendsechshundert britische und sechstausendeinhundert französische alliierte Soldaten.",
+     "en": "In addition, there were 9,000 American, 7,600 British and 6,100 French allied soldiers.",
+     "look": "military personnel standing together near trucks on a street"
+    },
+    {
+     "text": "Fast drei Viertel der Güter stammten zuvor aus den westlichen Besatzungszonen und mussten nun ersetzt werden.",
+     "en": "Almost three quarters of the goods previously came from the western zones and now had to be replaced.",
+     "look": "cargo crates piled high inside a large warehouse"
+    },
+    {
+     "text": "Vorräte für Lebensmittel reichten zu Beginn der Sperrung nach Schätzungen nur für sechsunddreißig Tage.",
+     "en": "At the beginning of the blockade, food supplies were estimated to last for only 36 days.",
+     "look": "a person holding a small piece of bread in a kitchen"
+    },
+    {
+     "text": "Steinkohle zum Heizen und Kochen war zu Beginn der Blockade gerade einmal für fünfunddreißig Tage vorhanden.",
+     "en": "Hard coal for heating and cooking was available for only 35 days at the start of the blockade.",
+     "look": "a pile of dark coal pieces lying on the ground"
+    },
+    {
+     "text": "Normale Verbraucher erhielten über ihre Lebensmittelkarten damals nur etwa eintausendfünfhundert Kilokalorien täglich.",
+     "en": "Normal consumers received only about 1,500 kilocalories daily via their ration cards back then.",
+     "look": "stamped paper ration cards lying on a wooden table"
+    }
+   ]
+  },
+  {
+   "title": "Das Ende der Blockade",
+   "lines": [
+    {
+     "text": "Die sowjetische Besatzungsmacht sperrte die Wege von der Trizone zu den West-Sektoren.",
+     "en": "The Soviet occupation power blocked the routes from the Trizone to the western sectors.",
+     "look": "a closed metal gate on a road with guards standing near it"
+    },
+    {
+     "text": "Diese Blockade dauerte vom vierundzwanzigsten Juni neunzehnhundertachtundvierzig bis zum zwölften Mai neunzehnhundertneunundvierzig.",
+     "en": "This blockade lasted from 24 June 1948 to 12 May 1949.",
+     "look": "black and white calendar pages flipping through months",
+     "tag": "12. MAI 1949"
+    },
+    {
+     "text": "Die Berliner Luftbrücke diente der Versorgung des Westteils der Stadt durch Flugzeuge.",
+     "en": "The Berlin Airlift served to supply the western part of the city by aircraft.",
+     "look": "several transport airplanes flying in the cloudy sky over houses"
+    },
+    {
+     "text": "Flugzeuge der Westalliierten flogen damals ununterbrochen das festgelegte Ziel an.",
+     "en": "Aircraft of the Western Allies flew continuously to the designated destination back then.",
+     "look": "propeller engines turning on a large transport aircraft wing"
+    },
+    {
+     "text": "Hinzu kamen tausende alliierte Soldaten mit ihren Familienangehörigen vor Ort.",
+     "en": "In addition, thousands of allied soldiers with their family members were on site.",
+     "look": "military personnel in uniforms standing near trucks on a paved yard"
+    },
+    {
+     "text": "Die Stadt war eine Millionenstadt und musste nahezu komplett aus dem Umland versorgt werden.",
+     "en": "The city was a metropolis and had to be supplied almost completely from the surrounding area.",
+     "look": "panoramic view over dense rows of apartment buildings in a big city"
+    },
+    {
+     "text": "Zuvor stammten etwa fünfundsiebzig Prozent der Importe direkt aus den Westzonen.",
+     "en": "Previously, about 75 percent of imports came directly from the western zones.",
+     "look": "crates and boxes stacked high inside a large warehouse building"
+    },
+    {
+     "text": "Zu Beginn der Blockade reichten die gelagerten Vorräte an Lebensmitteln nur für wenige Tage.",
+     "en": "At the beginning of the blockade, the stored food supplies lasted only a few days.",
+     "look": "empty shelves in a small grocery store with few goods left"
+    },
+    {
+     "text": "Steinkohle zum Heizen und Kochen war laut den damaligen Schätzungen nur kurzzeitig vorhanden.",
+     "en": "Hard coal for heating and cooking was only available for a short time according to estimates back then.",
+     "look": "a small pile of dark coal lying on the ground next to a cellar entrance"
+    },
+    {
+     "text": "Schließlich endete diese historische Luftbrücke am dreißigsten September neunzehnhundertneunundvierzig offiziell.",
+     "en": "Finally, this historic airlift officially ended on 30 September 1949.",
+     "look": "a transport plane taking off from a wide runway into the grey sky"
+    }
+   ]
+  },
+  {
+   "title": "Die Bedeutung Tempelhofs",
+   "lines": [
+    {
+     "text": "Der Flughafen Berlin-Tempelhof war einer der ersten Verkehrsflughäfen in Deutschland und nahm im Jahre neunzehnhundertdreiundzwanzig den Linienverkehr auf.",
+     "en": "Berlin-Tempelhof airport was one of the first commercial airports in Germany and started scheduled traffic in 1923.",
+     "look": "an old airplane taking off from a grassy airfield"
+    },
+    {
+     "text": "Das Gelände liegt vier Kilometer südlich des Stadtkerns innerhalb des Berliner S-Bahn-Ringes und erstreckt sich bis nach Neukölln.",
+     "en": "The site is located four kilometers south of the city center within the S-Bahn ring and extends to Neukoelln.",
+     "look": "aerial view of a large open airfield surrounded by city buildings"
+    },
+    {
+     "text": "In den westlichen Sektoren Berlins lebten damals etwa zwei Millionen zweihunderttausend Menschen in einer schweren Versorgungskrise.",
+     "en": "In the western sectors of Berlin, about 2.2 million people lived back then in a severe supply crisis.",
+     "look": "people standing in a queue on a city street"
+    },
+    {
+     "text": "Hinzu kamen tausende alliierte Soldaten mit ihren Angehörigen, die ebenfalls auf tägliche Lieferungen aus dem Umland angewiesen waren.",
+     "en": "In addition, there were thousands of allied soldiers with their families who also depended on daily deliveries from the surrounding area.",
+     "look": "soldiers in uniform standing near military vehicles"
+    },
+    {
+     "text": "Die sowjetische Besatzungsmacht sperrte alle Land- und Wasserwege von den westlichen Zonen zu den West-Sektoren der geteilten Stadt.",
+     "en": "The Soviet occupation power blocked all land and water routes from the western zones to the western sectors of the divided city.",
+     "look": "a closed metal gate on a deserted road with a guard post"
+    },
+    {
+     "text": "Die Berlin-Blockade begann am vierundzwanzigsten Juni neunzehnhundertachtundvierzig mit der Unterbrechung der Stromversorgung und des gesamten Verkehrs.",
+     "en": "The Berlin Blockade began on June 24, 1948, with the interruption of power supply and all traffic.",
+     "look": "darkened apartment window looking out onto a dark street"
+    },
+    {
+     "text": "Als die Stadt komplett abgeschnitten wurde, lagerten in den Westsektoren Lebensmittel nur für exakt sechsunddreißig Tage.",
+     "en": "When the city was completely cut off, food supplies in the western sectors were stored for exactly thirty-six days.",
+     "look": "empty wooden shelves in a small grocery store"
+    },
+    {
+     "text": "Auch die Vorräte an Kohle für das Heizen und Kochen reichten nach den damaligen Schätzungen nur für fünfunddreißig Tage.",
+     "en": "According to estimates at the time, coal supplies for heating and cooking also lasted for only thirty-five days.",
+     "look": "a small pile of black coal chunks on the floor in a cellar"
+    },
+    {
+     "text": "Medikamente waren noch für sechs Monate vorhanden, während Benzin und Motoröl für wenige Monate ausreichen sollten.",
+     "en": "Medicines were still available for six months, while gasoline and motor oil were expected to last for a few months.",
+     "look": "glass medicine bottles and small containers on a wooden table"
+    },
+    {
+     "text": "Die täglichen Essensrationen blieben außerordentlich knapp, da normale Verbraucher nur etwa eintausendfünfhundert Kilokalorien erhielten.",
+     "en": "Daily food rations remained extremely scarce, as normal consumers received only about 1,500 kilocalories.",
+     "look": "a piece of dark bread and a small amount of food on a white plate"
+    },
+    {
+     "text": "Im Jahre zweitausendundsieben wurden auf dem Flughafen Tempelhof noch rund dreihundertfünfzigtausend Fluggäste abgefertigt.",
+     "en": "In the year 2007, around 350,000 passengers were still handled at Tempelhof Airport.",
+     "look": "passengers walking inside a large airport terminal building",
+     "tag": "350.000 FÄLLE"
+    },
+    {
+     "text": "Am dreißigsten Oktober zweitausendundacht wurde der historische Flughafen Berlin-Tempelhof schließlich endgültig für den Betrieb geschlossen.",
+     "en": "On October 30, 2008, the historic Berlin-Tempelhof airport was finally closed for operation.",
+     "look": "a large airport building facade with the main entrance under a canopy"
+    }
+   ]
+  },
+  {
+   "title": "Vom Flughafen zum Feld",
+   "lines": [
+    {
+     "text": "Ab zweitausendundzehn wurde das ehemalige Flughafengelände vom Land Berlin mit dem Projektnamen Tempelhofer Freiheit bezeichnet.",
+     "en": "From 2010 onwards, the former airport site was designated by the state of Berlin with the project name Tempelhofer Freiheit.",
+     "look": "wide shot of a large empty field with people walking",
+     "tag": "AB 2010"
+    },
+    {
+     "text": "Das Land Berlin und seine Unternehmen machten diesen großen Raum damals auch für die Öffentlichkeit zugänglich.",
+     "en": "The state of Berlin and its companies made this large space accessible to the public back then.",
+     "look": "people riding bicycles on a wide paved runway"
+    },
+    {
+     "text": "Ein wichtiger Schritt folgte wenige Jahre später für die Menschen in der deutschen Hauptstadt.",
+     "en": "An important step followed a few years later for the people in the German capital.",
+     "look": "close-up of a modern sign on a large open area"
+    },
+    {
+     "text": "Am vierzehnten Juni zweitausendundvierzehn trat das Gesetz zum Erhalt des Tempelhofer Feldes in Kraft.",
+     "en": "On June 14, 2014, the law for the preservation of the Tempelhofer Feld came into force.",
+     "look": "people sitting on the green grass of a massive park"
+    },
+    {
+     "text": "Dieses besondere Gesetz schrieb den Namen Tempelhofer Feld für die Zukunft fest.",
+     "en": "This special law permanently established the name Tempelhofer Feld for the future.",
+     "look": "aerial view of the huge open field within the city"
+    },
+    {
+     "text": "Das einstige Zentrum der Rettung und der Versorgung wurde so zu einem frei zugänglichen Ort.",
+     "en": "The former center of rescue and supply thus became a freely accessible place.",
+     "look": "children running and flying kites on a huge flat field"
+    },
+    {
+     "text": "Heute erinnern nur noch die riesigen Gebäude an die Zeiten der Luftbrücke und der Blockade.",
+     "en": "Today, only the huge buildings remind us of the times of the airlift and the blockade.",
+     "look": "the large historic terminal building seen from the field"
+    },
+    {
+     "text": "Die historischen Quellen zeigen deutlich, wie wichtig dieser Flughafen für das Überleben der Stadt war.",
+     "en": "The historical sources clearly show how important this airport was for the survival of the city.",
+     "look": "old black and white photographs of airplanes on a desk"
+    },
+    {
+     "text": "Damals schufen die Alliierten mit ihren Maschinen eine Verbindung, die das Leben in West-Berlin rettete.",
+     "en": "Back then, the allies created a connection with their machines that saved life in West Berlin.",
+     "look": "archival footage of historic transport aircraft taking off"
+    },
+    {
+     "text": "Tempelhof bleibt für immer mit der Geschichte der Berliner Luftbrücke und dem Jahr neunzehnhundertachtundvierzig verbunden.",
+     "en": "Tempelhof remains forever connected with the history of the Berlin airlift and the year 1948.",
+     "look": "sunset over the large historical airport terminal building"
+    }
+   ]
+  }
+ ]
+}
