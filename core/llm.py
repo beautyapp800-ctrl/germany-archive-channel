@@ -240,6 +240,7 @@ def complete(prompt, system="", max_tokens=4000, temperature=0.6, as_json=False,
                     time.sleep(min(90.0, max(wait, 20.0)) + 2)
                     continue
             except Exception as e:                                   # noqa: BLE001
+                log.info("%s: %s", name, str(e)[:200])
                 errors.append(f"{name}: {e}")
             time.sleep(4 * (attempt + 1))
     raise LLMError("no provider answered: " + "; ".join(errors[-6:]) if errors else "no provider configured")
