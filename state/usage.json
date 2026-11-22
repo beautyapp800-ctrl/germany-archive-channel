@@ -1,0 +1,526 @@
+{
+ "films": {
+  "111-adc-7164": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "111-adc-7199": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "111-adc-7248": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "111-adc-7365": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "111-adc-7654": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "111-adc-7749": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "ADC-7366": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "ADC-7508": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "ADC-7509a": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "ADC-7658a": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  }
+ },
+ "photos": {
+  "File:20111110-OC-AMW-0016 - Flickr - USDAgov.jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Administration building and control tower near completion, Tegel - USACE-p15141coll5-424.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Aerial view from north end of Tempelhof Air Base, Berlin - USACE-p15141coll5-124.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Aerial view from north end of Tempelhof Air Base, Berlin - USACE-p15141coll5-131.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Aerial view from north end of Tempelhof Air Base, Berlin 2 - USACE-p15141coll5-163.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Aerial view from south end of Tempelhof Air Base, Berlin - USACE-p15141coll5-226.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Aerial view of Tegel Airstrip, Berlin, 29 September 1948 - 2 - USACE-p15141coll5-389.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Aerial view of Tegel Airstrip, Berlin, 29 September 1948 - 3 - USACE-p15141coll5-390.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Aerial view of Tempelhof Air Force Base, Berlin, Germany - USACE-p15141coll5-69.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Aerial view of Tempelhof Airstrip, Berlin, 29 Sep 1948 - 1 - USACE-p15141coll5-247.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Aerial view of Tempelhof Airstrip, Berlin, 29 Sep 1948 - 2 - USACE-p15141coll5-251.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Aerial view of proposed location of Tegel Air Strip 2 - USACE-p15141coll5-331.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Airlift to Berlin (1948-1949), the München Airport (JOKAUAS2 1770-10).tiff": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Airlift to Berlin (1948-1949), the München Airport (JOKAUAS2 1770-4).tiff": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Airlift to Berlin (1948-1949), the München Airport (JOKAUAS2 1770-5).tiff": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Airlift to Berlin (1948-1949), the München Airport (JOKAUAS2 1770-6).tiff": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Airlift to Berlin (1948-1949), the München Airport (JOKAUAS2 1770-7).tiff": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Airlift to Berlin (1948-1949), the München Airport (JOKAUAS2 1770-8).tiff": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Airlift to Berlin (1948-1949), the München Airport (JOKAUAS2 1770-9).tiff": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:American engineer equipment maintenance & repair shop at Tegel - USACE-p15141coll5-387.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:An itinerant is hired to do the wiring, fire prevention demo - USACE-p15141coll5-455.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:An overhead picture of the machines that mix the tar - USACE-p15141coll5-317.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Asphalt heating plant near runway at Tegel, Berlin - USACE-p15141coll5-372.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Asphalt heating plant with two pre-heaters in use, Tegel - USACE-p15141coll5-373.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Asphalt spreading and rolling operations at Tegel, Berlin - USACE-p15141coll5-322.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Avro Tudor - The Berlin Airlift 1948 - 1949 HU98410.jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Award of commendation ribbons by General Clay, Berlin, 16 Oct 48 - USACE-p15141coll5-474.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Barrels of tar hoisted by steam driven winch at Tegel 1 - USACE-p15141coll5-402.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Berlin Blockade and Airlift, June 1948.jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Brig. Gen. Benson and Air Commodore Waite at Tegel, Berlin - USACE-p15141coll5-363.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:British officers arriving at Tegel, Berlin, 28 Sep 1948 - USACE-p15141coll5-364.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:C-47s at Tempelhof Airport Berlin 1948.jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:C-47s in the unloading line at Tempelhof, 1948-1949 - USACE-p15141coll5-62.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:C-47s packed on apron after unloading operations at Tegel - USACE-p15141coll5-425.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:C-54 dropping candy during Berlin Airlift c1949.jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:C-54s unloaded at Tempelhof AFB in snow, Berlin, 1948-1949 - USACE-p15141coll5-75.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:C-74 Globemaster unloading flour at Berlin Gatow during Operation Vittles.jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:C-82A Packet being unloaded at Termpelhof Airport c1948.jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Capt. Hart, Col. Howley, Gen. Diamantopoulos, Col. Whitaker - USACE-p15141coll5-435.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Carrying operations of pierced plank at Tempelhof, Berlin - USACE-p15141coll5-132.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Checking over a power control unit before its assembly - USACE-p15141coll5-472.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Class of T.A.R. School inspecting fire truck - USACE-p15141coll5-459.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Completed parking area of Anchor Service Club in Wannsee, Berlin - USACE-p15141coll5-466.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Course number 3 being rolled at Tegel, Berlin - USACE-p15141coll5-371.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Crushed rock course on apron at Tegel, Berlin 2 - USACE-p15141coll5-377.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Display board posted in 10 HQ buildings, fire prevention, Berlin - USACE-p15141coll5-460.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Douglas DC-3 - Lübeck - D 044287 Berlin Airlift (cropped).jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Duties of individual firemen explained, fire prevention demo - USACE-p15141coll5-445.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:End of completed first strip at Tempelhof, Berlin - USACE-p15141coll5-195.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:End of perimeter taxiway showing cutting of shoulders - USACE-p15141coll5-180.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Entrance to Anchor Service Club in Wannsee, Berlin, Aug 1949 - USACE-p15141coll5-465.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Finished runway, crews making final adjustments at Tempelhof - USACE-p15141coll5-186.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Finishing asphalt by hand trowel method at Tempelhof, Berlin - USACE-p15141coll5-225.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Foundation and construction of main terminal building at Tegel - USACE-p15141coll5-418.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Four foundation posts for the new control tower - USACE-p15141coll5-407.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:General Ganeval, host at the inauguration of Tegel Airbase - USACE-p15141coll5-303.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:General Herbert, General Clay, and General Ganeval - USACE-p15141coll5-419.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:German laborers unloading bricks from ruins at Tegel 1 - USACE-p15141coll5-313.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:German roller crushing bricks used as foundation of runway - USACE-p15141coll5-308.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:German steam type rollers rolling gravel course at Tempelhof - USACE-p15141coll5-141.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:German truck dumping rock on apron at Tegel, Berlin - USACE-p15141coll5-375.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:German women loading fine gravel into asphalt mixer at Tempelhof - USACE-p15141coll5-125.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:German women loading gravel into asphalt mixer at Tempelhof - USACE-p15141coll5-227.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:German worker digs a hole for the first soil test at Tegel - USACE-p15141coll5-362.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:German workers construct a water drainage ditch at Tempelhof - USACE-p15141coll5-249.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:German workers leveling earth at Tegel, Berlin - USACE-p15141coll5-350.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:German workers spread layer of fine crushed rock at Tempelhof - USACE-p15141coll5-155.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:German workers spreading heavy crushed rock at Tempelhof 2 - USACE-p15141coll5-153.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:German workmen spread 2nd layer of hot asphalt at Tempelhof - USACE-p15141coll5-220.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Germans collecting coal rations during Berli Airlift.jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Germans-airlift-1948.jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Germany. (Berlin) - NARA - 541693.tif": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Graded earth prior to application of crushed brick - USACE-p15141coll5-253.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Grading action on taxiway adjoining apron at Tegel - USACE-p15141coll5-378.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Half of new airstrip and changing shifts at Tegel, Berlin - USACE-p15141coll5-391.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Hasting op vliegveld bij Kiel. Luchtbrug, Bestanddeelnr 903-0856.jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Heavy equipment mechanics make repairs to a tractor at Tegel - USACE-p15141coll5-325.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:How the 'Berlin Airlift' - an 'around the clock' Combined Operation of the Air Force, Navy, and Army - functions in keeping the 'Island City' of Berlin supplied with the necessities of life.jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Korte plechtigheid bij het laatste vliegtuig van de luchtbrug van Frankfurt naar Berlijn, SFA001006922.jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Laying asphalt on runway at Tegel, Berlin - USACE-p15141coll5-367.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Laying pierced plank at Tempelhof, Berlin, 24 August 1948 - USACE-p15141coll5-152.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Levelled driveway to Anchor Service Club in Wannsee, Berlin - USACE-p15141coll5-468.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Levelled parking area of Anchor Service Club in Wannsee, Berlin - USACE-p15141coll5-469.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Looking down at the row of tar-mixing machines at Tegel - USACE-p15141coll5-318.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Maintenance shops used by American Forces in Napoleon Kaserne - USACE-p15141coll5-388.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Maj. Gen. Herbert and Gen. Diamantopoulos at Tegel, Berlin - USACE-p15141coll5-360.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Men spreading asphalt and roller packing it at Tempelhof, Berlin - USACE-p15141coll5-205.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Mr. Babcock, Brig. Gen. Benson, Col. Whitaker, and Gen. Ganeval - USACE-p15141coll5-365.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Mr. Charles Foster of Flexible Pavement Laboratory of WES - USACE-p15141coll5-207.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Mr. Charles Foster of WES running soil tests at Tegel 1 - USACE-p15141coll5-356.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Mr. Charles Foster of WES running soil tests at Tegel 2 - USACE-p15141coll5-357.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Mr. Foster running a technical test on soil at Tempelhof, Berlin - USACE-p15141coll5-209.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:New loading dock at Tempelhof Air Base showing loading 1 - USACE-p15141coll5-437.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:New loading dock at Tempelhof Air Base showing loading 2 - USACE-p15141coll5-438.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:New loading dock at Tempelhof Air Base showing loading 4 - USACE-p15141coll5-440.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:New loading dock at Tempelhof Air Base showing loading 5 - USACE-p15141coll5-441.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:New loading dock at Tempelhof Air Base showing loading 6 - USACE-p15141coll5-442.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:New loading dock at Tempelhof Air Base showing loading 7 - USACE-p15141coll5-443.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:New loading dock at Tempelhof Air Base showing loading 8 - USACE-p15141coll5-444.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:OCAMA commander Maj. Gen. Fred S. \"Fritz\" Borum with military and civilian managers, October 1948.jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:One of the two pre-heat asphalt plants in operation, Tempelhof - USACE-p15141coll5-219.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Perimeter taxiway showing rolling of finished fine grading - USACE-p15141coll5-196.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Photo taken from apron in front of new administration bldg - USACE-p15141coll5-379.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Pierced plank is placed at Tempelhof, Berlin, 24 August 1948 - USACE-p15141coll5-142.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Placing gravel course on apron by hand at Tegel, Berlin - USACE-p15141coll5-374.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Placing pierced plank on runway at Tempelhof, Berlin - USACE-p15141coll5-148.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Placing pierced plank on runway at Tempelhof, Berlin 2 - USACE-p15141coll5-129.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Placing pierced plank on runway at Tempelhof, Berlin 3 - USACE-p15141coll5-162.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Placing pierced plank on runway at Tempelhof, Berlin 4 - USACE-p15141coll5-130.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Placing pierced plank on runway at Tempelhof, Berlin 5 - USACE-p15141coll5-134.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Plane coming in on the newly finished airstrip at Tempelhof - USACE-p15141coll5-208.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Pokey gets first aid from Smokey, fire prevention demo, Berlin - USACE-p15141coll5-446.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Pokey looking for CO2 that Pokey put in bucket, fire prevention - USACE-p15141coll5-447.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Portable electric flood lights used for night work - USACE-p15141coll5-179.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Pre-heat asphalt plant in operation at Tempelhof, Berlin - USACE-p15141coll5-197.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Preliminary operations before actual laying plank at Tempelhof - USACE-p15141coll5-133.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Primary grading construction at Tegel showing length of runway - USACE-p15141coll5-346.jpeg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:RAF C-47s at Berlin-Tegel 1948.jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Sunderland 201 Sqn on Havel during Berlin Airlift 1948.jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  },
+  "File:Wiesbaden Air Base during Berlin Airlift 1949.jpg": {
+   "date": "2026-11-22",
+   "slug": "luftbruecke"
+  }
+ }
+}
