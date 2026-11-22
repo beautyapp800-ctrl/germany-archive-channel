@@ -8,6 +8,7 @@ episodes/<slug>/script.json and material.json are in the repository; build/ and 
 the runner and travel between jobs as artifacts.
 """
 import json
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -118,7 +119,12 @@ def _clean_pieces(shots, ok, sec_dir, refused, min_len=2.5):
                 s0, s1 = max(a, run[0] - 0.4), min(z, run[-1] + 0.4)
                 if s1 - s0 >= min_len:
                     mid = run[len(run) // 2]
-                    k = kf if s0 <= (a + z) / 2 <= s1 else sec_dir / f"s_{mid + 1:05d}.jpg"
+                    k = kf
+                    if not s0 <= (a + z) / 2 <= s1:
+                        # a frame from the clean stretch, kept next to the scan's keyframes
+                        # (the per-second folder does not travel to the later jobs)
+                        k = sec_dir.parent / f"kf_s{mid:05d}.jpg"
+                        shutil.copyfile(sec_dir / f"s_{mid + 1:05d}.jpg", k)
                     yield round(s0, 2), round(s1, 2), k
                 else:
                     refused["short clean stretch"] = refused.get("short clean stretch", 0) + 1
@@ -210,7 +216,15 @@ def stage_render(slug):
 
     # covers: the episode's own pictures that best show the cover subject
     hero_txt = plan_de.prompt(script["cover"]["hero"], script.get("year_label", ""))
-    frames = [s["kf"] for s in plan["shots"]]
+    frames = []
+    for i, s in enumerate(plan["shots"]):
+        if not Path(s["kf"]).exists():
+            # keyframe left behind on the prepare runner: a frame of the finished shot instead
+            jpg = work / f"kf_{i:04d}.jpg"
+            subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-ss", "1.0", "-i", str(shots[i]), "-frames:v", "1",
+                            str(jpg)])
+            s["kf"] = str(jpg)
+        frames.append(s["kf"])
     S = plan_de.score_matrix([hero_txt], frames)[0]
     order = sorted(range(len(frames)), key=lambda k: -S[k])
     base_shot = plan["shots"][order[0]]
