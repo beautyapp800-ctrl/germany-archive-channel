@@ -30,6 +30,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CFG = json.loads((ROOT / "config" / "channel.json").read_text(encoding="utf-8"))["material"]
 UA = {"User-Agent": "germany-archive-channel/1.0 (https://github.com/beautyapp800-ctrl/germany-archive-channel)"}
 USAGE = ROOT / "state" / "usage.json"
+BLACKLIST = ROOT / "state" / "blacklist.json"     # sources a Content ID claim pointed at (owner 23.11)
 FORBIDDEN = re.compile(r"\b(?:" + "|".join(re.escape(w) for w in CFG["forbidden"]) + r"|newsreel library|filmed news release)\b",
                        re.I)
 NAZI = re.compile(r"nazi|hitler|swastika|hakenkreuz|nsdap|reichsparteitag|wehrmacht|\bSS\b|gestapo|führer|fuehrer|"
@@ -91,6 +92,23 @@ def mark_used(slug, films, photos, day=None):
     USAGE.write_text(json.dumps(u, indent=1, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
 
 
+# ---------------------------------------------------------------- blacklist
+
+def blacklisted():
+    try:
+        return json.loads(BLACKLIST.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {"films": {}, "photos": {}}
+
+
+def blacklist(kind, key, reason, day=None):
+    """After a Content ID claim: the film/photo never comes back; the episode's fragment is replaced."""
+    b = blacklisted()
+    b.setdefault(kind, {})[key] = {"reason": reason, "date": (day or dt.date.today()).isoformat()}
+    BLACKLIST.parent.mkdir(parents=True, exist_ok=True)
+    BLACKLIST.write_text(json.dumps(b, indent=1, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
+
+
 # ---------------------------------------------------------------- films
 
 def nara(naid):
@@ -122,6 +140,9 @@ def film(identifier):
     out = {"id": identifier, "title": m.get("title"), "date": m.get("date") or m.get("year"),
            "creator": m.get("creator"), "page": f"archive.org/details/{identifier}",
            "licenseurl": m.get("licenseurl"), "ok": False}
+    if identifier in blacklisted().get("films", {}):
+        out["why"] = "blacklisted after a Content ID claim"
+        return out
     num = re.search(r"adc-?(\d+)", identifier, re.I)
     if num and int(num.group(1)) >= 10000:
         out["why"] = "111-ADC 10000+ (World in Film range)"
@@ -137,7 +158,12 @@ def film(identifier):
         out["nara"] = nara(ids[0])
     lic = str(m.get("licenseurl") or "")
     lic_free = any(k in lic for k in FREE_URL) and not re.search(r"by-sa|by-nc|by-nd|/nc|/nd", lic)
-    gov = bool(GOV.search(str(m.get("creator") or ""))) or (out.get("nara", {}).get("record_group") in (111, 342, 306, 330, 18))
+    # owner 23.11: a US government department as the author in the NARA card (Army, Air Force, USIA ...),
+    # whatever use status the card shows ("Restricted - Possibly" included); newsreels and commercial inserts never
+    card = " ".join(out.get("nara", {}).get("creators") or [])
+    gov = bool(GOV.search(str(m.get("creator") or "") + " " + card)) or (
+        out.get("nara", {}).get("record_group") in (111, 342, 306, 330, 18))
+    out["nara_status"] = out.get("nara", {}).get("status")
     if gov:
         out.update(ok=True, basis="US federal work, public domain (17 U.S.C. 105)")
     elif lic_free and not re.search(r"newsreel|march of time|pathe|movietone", text, re.I):
@@ -219,6 +245,8 @@ def check(slug, today=None):
         (films if f["ok"] else refused).append(f)
         log.info("film %s: %s", i, f.get("basis") or f.get("why"))
     for p in photos(want.get("photos", [])):
+        if p["ok"] and p["file"] in blacklisted().get("photos", {}):
+            p.update(ok=False, why="blacklisted after a Content ID claim")
         if p["ok"] and resting("photos", p["file"], slug, today):
             p.update(ok=False, why="used by another episode in the last 4 weeks")
         (photos_ok if p["ok"] else refused).append(p)
