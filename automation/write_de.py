@@ -4,7 +4,7 @@
     python automation/write_de.py --next      # the next queued topic without a script
 
 Exit codes: 0 written; 3 skipped (not enough free pictures: the topic is marked skipped in the queue and the
-next one follows, owner 22.11); 4 no text provider could answer today (state/quota_hold.json, nothing is
+next one follows, owner 22.11); 5 the script failed (counted; a second failure skips the topic); 4 no text provider could answer today (state/quota_hold.json, nothing is
 retried before the Gemini/Groq day turns); 1 any other failure.
 No pictures, no script: the material is searched first, so no LLM tokens go to a topic that cannot be shown.
 """
@@ -82,7 +82,12 @@ def main(slug):
                         h["until"])
             return 4
         log.error("%s: script not written: %s", slug, e)
-        return 1
+        fails = int(topic.get("script_fails", 0)) + 1
+        if fails >= 2:
+            mark(slug, status="skipped", script_fails=fails, skipped_why=f"its script failed {fails} times: {str(e)[:120]}")
+        else:
+            mark(slug, script_fails=fails)
+        return 5
     (ROOT / "episodes" / slug / "script.json").write_text(json.dumps(script, indent=1, ensure_ascii=False) + "\n",
                                                           encoding="utf-8")
     mark(slug, status="ready")

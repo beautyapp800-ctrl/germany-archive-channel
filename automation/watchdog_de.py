@@ -235,7 +235,8 @@ def main():
                 gh("workflow", "run", "episode-de.yml", "-R", REPO, "--ref", "main", "-f", f"slug={ready['slug']}", parse=False)
                 record_attempt(mem, ready["slug"])
                 actions.append(f"stock {len(waiting)} waiting + {len(reserve)} reserve; {ready['slug']} started")
-            elif not ready:
+            elif not ready and sum(a.startswith(f"{now():%Y-%m-%d}") for a in mem.get("attempts", {}).get("scripts", [])) < 4:
+                record_attempt(mem, "scripts")
                 gh("workflow", "run", "scripts-de.yml", "-R", REPO, "--ref", "main", parse=False)
                 actions.append(f"stock {len(waiting)} waiting + {len(reserve)} reserve; no script ready, writing one")
     old = load(BEAT, {})

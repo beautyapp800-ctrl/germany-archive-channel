@@ -84,7 +84,7 @@ FAKTEN (nur diese und die Quellen unten verwenden):
 QUELLEN:
 {_src(sources, 14000)}
 
-Schreibe {7 + more if more else '6 bis 9'} Sprecherzeilen (zusammen {'180 bis 260' if more else '130 bis 200'} Wörter). Antworte NUR mit JSON: {{"lines": [...]}}
+Schreibe {7 + more if more else 'mindestens 6, höchstens 9'} Sprecherzeilen (zusammen {'180 bis 260' if more else '130 bis 200'} Wörter). Antworte NUR mit JSON: {{"lines": [...]}}
 Jede Zeile: {{"text": "...", "en": "...", "look": "...", "tag": "..."(optional)}}
 - text: gesprochenes Deutsch, höchstens 30 Wörter; ALLE Zahlen als Wörter ausschreiben, wie ein Sprecher sie liest
   (neunzehnhundertachtundvierzig, eintausenddreihundertachtundneunzig, sechzehnter April, vierzig D-Mark, zwölf Prozent)
@@ -152,10 +152,10 @@ def write(topic, sources):
         for attempt in range(3):
             raw = chapter(topic, sources, c["title"], c.get("facts") or [], first=i == 0, last=i == len(o["chapters"]) - 1)
             lines, dropped = clean_lines(raw, corpus_nums)
-            if len(lines) >= 4:
+            if len(lines) >= 3:
                 break
             log.info("chapter %d '%s': %d usable lines (%s); again", i + 1, c["title"], len(lines), dropped[:3])
-        if len(lines) < 4:
+        if len(lines) < 3:
             raise llm.LLMError(f"chapter '{c['title']}' has {len(lines)} usable lines")
         chapters.append({"title": c["title"], "facts": c.get("facts") or [], "lines": lines})
         log.info("chapter %d '%s': %d lines, %d dropped", i + 1, c["title"], len(lines), len(dropped))
