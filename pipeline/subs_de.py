@@ -7,6 +7,8 @@ comma boundary in proportion to its characters.
 import re
 import textwrap
 
+from pipeline import numbers_de
+
 MAX_ROW, MAX_ROWS = 42, 2
 
 
@@ -45,11 +47,13 @@ def srt(timeline, field="text"):
     cues = []
     for ln in timeline:
         text = ln.get(field) or ln["text"]
+        if field == "text":
+            text = numbers_de.to_digits(text)        # the script spells numbers out for the voice
         parts = _pieces(text)
         total = sum(len(p) for p in parts)
         t = ln["start"]
         for p in parts:
             d = (ln["end"] - ln["start"]) * len(p) / total
-            cues.append((t, t + d, "\n".join(textwrap.wrap(p, MAX_ROW))))
+            cues.append((t, t + d, "\n".join(textwrap.wrap(p, MAX_ROW, break_on_hyphens=False))))
             t += d
     return "".join(f"{k}\n{_ts(a)} --> {_ts(b)}\n{txt}\n\n" for k, (a, b, txt) in enumerate(cues, 1))

@@ -198,18 +198,37 @@ def candidate_c(base, year, hook, label, box=None):
     x0, y0, x1, y1 = _subject_box(bg.convert("RGB"))
     cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
     r = max(90, min(260, max(x1 - x0, y1 - y0) * 0.6))
+    # the whole circle stays on the cover (pilot: it ran off the top edge)
+    r = min(r, (H - 48) / 2)
+    cx, cy = min(max(cx, r + 24), W - r - 24), min(max(cy, r + 24), H - r - 24)
     d = ImageDraw.Draw(bg)
     d.ellipse((cx - r, cy - r, cx + r, cy + r), outline=RED, width=16)
-    ax, ay = max(60, cx - r - 230), min(H - 150, cy + r + 40)
-    d.line((ax, ay, cx - r * 0.72, cy + r * 0.72), fill=RED, width=22)
-    ang = math.atan2(cy + r * 0.72 - ay, cx - r * 0.72 - ax)
-    tip = (cx - r * 0.72, cy + r * 0.72)
-    d.polygon([tip, (tip[0] - 60 * math.cos(ang - 0.5), tip[1] - 60 * math.sin(ang - 0.5)),
-               (tip[0] - 60 * math.cos(ang + 0.5), tip[1] - 60 * math.sin(ang + 0.5))], fill=RED)
     st = stamp(label, 270)
-    bg.alpha_composite(st, (40, H - st.height - 30))
+    left_side = cx > W / 2
+    sx = 40 if left_side else W - st.width - 40
+    sy = H - st.height - 30
+    ax, ay = (sx + st.width * 0.85, sy + st.height * 0.2) if left_side else (sx + st.width * 0.15, sy + st.height * 0.2)
+    tx, ty = cx + (-1 if left_side else 1) * r * 0.72, cy + r * 0.72
+    d.line((ax, ay, tx, ty), fill=RED, width=22)
+    ang = math.atan2(ty - ay, tx - ax)
+    d.polygon([(tx, ty), (tx - 60 * math.cos(ang - 0.5), ty - 60 * math.sin(ang - 0.5)),
+               (tx - 60 * math.cos(ang + 0.5), ty - 60 * math.sin(ang + 0.5))], fill=RED)
+    bg.alpha_composite(st, (int(sx), int(sy)))
     _text(d, (44, 30), year, 110, YELLOW)
-    _text(d, (W - 44, 40), hook, _fit(hook, W * 0.5, 105), WHITE, anchor="ra")
+    # the hook goes where it covers neither the circle nor the stamp
+    size = _fit(hook, W * 0.5, 105)
+    tw = _font(size).getlength(hook)
+    spots = [(W - 44, 40, "ra"), (44, 170, "la"), (W - 44, H - size - 60, "ra"), (44, H - size - 60, "la")]
+
+    def clear(x, y, anchor):
+        rx0 = x - tw if anchor == "ra" else x
+        rect = (rx0 - 20, y - 10, rx0 + tw + 20, y + size + 30)
+        nx, ny = min(max(cx, rect[0]), rect[2]), min(max(cy, rect[1]), rect[3])
+        hits_circle = (nx - cx) ** 2 + (ny - cy) ** 2 < (r + 20) ** 2
+        hits_stamp = not (rect[2] < sx or rect[0] > sx + st.width or rect[3] < sy or rect[1] > sy + st.height)
+        return not hits_circle and not hits_stamp
+    x, y, anchor = next((sp for sp in spots if clear(*sp)), spots[0])
+    _text(d, (x, y), hook, size, WHITE, anchor=anchor)
     return bg.convert("RGB"), math.pi * r * r / (W * H)
 
 
