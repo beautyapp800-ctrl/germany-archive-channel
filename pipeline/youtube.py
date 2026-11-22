@@ -1,15 +1,14 @@
-"""YouTube for this channel: private uploads with a publishAt, never twice.
+"""YouTube for "Als Oma jung war": private uploads with a publishAt, never twice.
 
-Token: YT_TOKEN_JSON (OAuth client of closed-tabs, as for the dinosaur channel),
-from the environment only. Slots (config/channel.json "schedule"): Tuesday and
-Friday 12:00 America/New_York, at least 30 minutes ahead, one video a day.
+Token: YT_TOKEN_JSON (hypothetica-511509 client, this channel's own token), from the environment only.
+Slots (config/channel.json "schedule"): Sunday 17:00 Europe/Berlin, at least min_lead_minutes ahead,
+one video a slot. Captions de + en go up with captions.insert (never burnt in).
 
-Anti-duplicate (owner 17.11, after one topic went up twice): before an upload the channel's
-COMPLETE uploads list is read (every page, retried, checked against the ids the state already
-knows). A video whose description carries this episode's marker "[ref: archive/<slug>]" (or has
-the same title) is the episode already uploaded. If the list cannot be read in full, or anything
-looks wrong, Doubt is raised: nothing is uploaded and the owner is mailed. The slots are taken
-from the channel's own publishAt dates, not from the state alone.
+Anti-duplicate (owner 17.11): before an upload the channel's COMPLETE uploads list is read (every
+page, retried, checked against the ids the state already knows). A video whose description carries
+this episode's marker "[ref: germany/<slug>]" (or has the same title) is the episode already
+uploaded. If the list cannot be read in full, or anything looks wrong, Doubt is raised: nothing is
+uploaded. The slots are taken from the channel's own publishAt dates, not from the state alone.
 """
 import json
 import os
@@ -22,14 +21,15 @@ from core.logger import get_logger
 log = get_logger("youtube")
 ROOT = Path(__file__).resolve().parent.parent
 CFG = json.loads((ROOT / "config" / "channel.json").read_text(encoding="utf-8"))["schedule"]
-SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube"]
+SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly",
+          "https://www.googleapis.com/auth/youtube.force-ssl"]
 
 
 class Doubt(RuntimeError):
     """Not sure the channel was read in full: no upload (owner 17.11: when unsure, do not upload)."""
 
 
-REF = "[ref: archive/{slug}]"
+REF = "[ref: germany/{slug}]"
 
 
 def _retry(fn, what, tries=4):
@@ -119,7 +119,7 @@ def service():
 
 
 def next_slot(taken=(), now=None):
-    """The nearest free Tue/Fri 12:00 New York slot, as an aware UTC datetime."""
+    """The nearest free Sunday 17:00 Berlin slot, as an aware UTC datetime."""
     tz = ZoneInfo(CFG["timezone"])
     now = now or datetime.now(timezone.utc)
     hh, mm = (int(x) for x in CFG["local_time"].split(":"))
@@ -134,16 +134,20 @@ def next_slot(taken=(), now=None):
     raise RuntimeError("no free slot in 90 days")
 
 
-def upload(video, title, description, tags, publish_at=None, yt=None):
-    """Private, with publishAt when given (None: private, waiting for approval). The caller has
-    already read the whole channel (all_uploads / find_existing); this only sends."""
+def upload(video, title, description, tags, publish_at=None, yt=None, synthetic=False):
+    """Private, with publishAt when given. The caller has already read the whole channel
+    (all_uploads / find_existing); this only sends. Category 27, language de, not for kids;
+    containsSyntheticMedia only when the episode says so (colour added by AI)."""
     from googleapiclient.http import MediaFileUpload
     yt = yt or service()
-    status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False, "containsSyntheticMedia": True}
+    up = json.loads((ROOT / "config" / "channel.json").read_text(encoding="utf-8"))["upload"]
+    status = {"privacyStatus": "private", "selfDeclaredMadeForKids": bool(up["made_for_kids"]),
+              "containsSyntheticMedia": bool(synthetic)}
     if publish_at:
         status["publishAt"] = publish_at.strftime("%Y-%m-%dT%H:%M:%SZ")
     body = {"snippet": {"title": title[:100], "description": description[:5000], "tags": tags[:30],
-                        "categoryId": "27", "defaultLanguage": "en", "defaultAudioLanguage": "en"},
+                        "categoryId": up["category_id"], "defaultLanguage": up["language"],
+                        "defaultAudioLanguage": up["language"]},
             "status": status}
     req = yt.videos().insert(part="snippet,status", body=body,
                              media_body=MediaFileUpload(str(video), chunksize=8 * 1024 * 1024, resumable=True))
@@ -152,6 +156,23 @@ def upload(video, title, description, tags, publish_at=None, yt=None):
         _, resp = req.next_chunk()
     log.info("uploaded %s", resp["id"])
     return resp["id"]
+
+
+def set_captions(video_id, files, yt=None):
+    """captions.insert: {"de": path, "en": path}. A missing track is a warning, never a lost video."""
+    from googleapiclient.http import MediaFileUpload
+    yt = yt or service()
+    done = {}
+    for lang, path in files.items():
+        try:
+            yt.captions().insert(part="snippet", body={"snippet": {"videoId": video_id, "language": lang,
+                                 "name": {"de": "Deutsch", "en": "English"}.get(lang, lang), "isDraft": False}},
+                                 media_body=MediaFileUpload(str(path), mimetype="application/octet-stream")).execute()
+            done[lang] = "ok"
+        except Exception as e:                                       # noqa: BLE001
+            done[lang] = f"failed: {str(e)[:120]}"
+            log.warning("captions %s for %s: %s", lang, video_id, str(e)[:160])
+    return done
 
 
 def set_thumbnail(video_id, path, yt=None):

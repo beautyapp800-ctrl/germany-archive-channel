@@ -1,6 +1,7 @@
 name: episode-de
-# One episode of "Als Oma jung war". Manual only until the owner says "ok" (automation off).
-# Jobs: prepare (narration, licences, scan, plan) -> cut x6 (shots) -> render (video, QA, covers, subtitles).
+# One episode of "Als Oma jung war" (started by the watchdog or by hand).
+# Jobs: prepare (narration, licences, scan, plan) -> cut x6 (shots) -> render (video, QA, covers, subtitles)
+# -> release (QA verdict into state/episodes.json; upload with captions when the run is on main).
 run-name: episode-de ${{ inputs.slug }}
 on:
   workflow_dispatch:
@@ -108,3 +109,27 @@ jobs:
           name: out-${{ inputs.slug }}
           path: episodes/${{ inputs.slug }}/out/
           retention-days: 14
+  release:
+    needs: [cut, render]
+    if: ${{ !cancelled() && needs.cut.result == 'success' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    permissions:
+      contents: write
+    env:
+      YT_TOKEN_JSON: ${{ secrets.YT_TOKEN_JSON }}
+      YT_CHANNEL_ID: ${{ vars.YT_CHANNEL_ID }}
+      # only a run on main records and uploads; a run on dev (smoke) says what it would do
+      DRY_RUN: ${{ github.ref != 'refs/heads/main' && '1' || '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q google-api-python-client google-auth
+      - uses: actions/download-artifact@v4
+        with:
+          name: out-${{ inputs.slug }}
+          path: episodes/${{ inputs.slug }}/out
+      - name: Record the verdict, upload when it passed
+        run: python automation/release.py record "$SLUG"
