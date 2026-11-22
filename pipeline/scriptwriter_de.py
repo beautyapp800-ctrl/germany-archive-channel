@@ -84,7 +84,7 @@ FAKTEN (nur diese und die Quellen unten verwenden):
 QUELLEN:
 {_src(sources, 14000)}
 
-Schreibe {7 + more if more else 'mindestens 6, höchstens 9'} Sprecherzeilen (zusammen {'180 bis 260' if more else '130 bis 200'} Wörter). Antworte NUR mit JSON: {{"lines": [...]}}
+Schreibe {'mindestens 11, höchstens 14' if more else 'mindestens 9, höchstens 12'} Sprecherzeilen von je 12 bis 26 Wörtern (zusammen {'230 bis 300' if more else '170 bis 240'} Wörter, nicht weniger). Erzähle ausführlich: Ausgangslage, Zahl, Folge, Beispiel aus dem Alltag, solange es in den Quellen steht. Antworte NUR mit JSON: {{"lines": [...]}}
 Jede Zeile: {{"text": "...", "en": "...", "look": "...", "tag": "..."(optional)}}
 - text: gesprochenes Deutsch, höchstens 30 Wörter; ALLE Zahlen als Wörter ausschreiben, wie ein Sprecher sie liest
   (neunzehnhundertachtundvierzig, eintausenddreihundertachtundneunzig, sechzehnter April, vierzig D-Mark, zwölf Prozent)
@@ -137,6 +137,10 @@ def clean_lines(lines, corpus):
     return out, dropped
 
 
+def _w(lines):
+    return sum(len(ln["text"].split()) for ln in lines)
+
+
 def words(script):
     return sum(len(ln["text"].split()) for c in script["chapters"] for ln in c["lines"])
 
@@ -148,13 +152,17 @@ def write(topic, sources):
     o = outline(topic, sources)
     chapters = []
     for i, c in enumerate(o["chapters"]):
-        lines, dropped = [], []
+        best, dropped = [], []
         for attempt in range(3):
-            raw = chapter(topic, sources, c["title"], c.get("facts") or [], first=i == 0, last=i == len(o["chapters"]) - 1)
+            raw = chapter(topic, sources, c["title"], c.get("facts") or [], first=i == 0, last=i == len(o["chapters"]) - 1,
+                          more=1 if attempt else 0)
             lines, dropped = clean_lines(raw, corpus_nums)
-            if len(lines) >= 3:
+            if _w(lines) > _w(best):
+                best = lines
+            if _w(best) >= 150:
                 break
-            log.info("chapter %d '%s': %d usable lines (%s); again", i + 1, c["title"], len(lines), dropped[:3])
+            log.info("chapter %d '%s': %d words (%s); again", i + 1, c["title"], _w(best), dropped[:3])
+        lines = best
         if len(lines) < 3:
             raise llm.LLMError(f"chapter '{c['title']}' has {len(lines)} usable lines")
         chapters.append({"title": c["title"], "facts": c.get("facts") or [], "lines": lines})
@@ -166,15 +174,15 @@ def write(topic, sources):
                            "revision": s.get("revision")} for s in sources],
               "chapters": chapters}
     # too short: the chapters with the fewest words are written again, longer
-    for _ in range(3):
+    for _ in range(4):
         if words(script) >= WORDS_MIN:
             break
-        short = sorted(range(len(chapters)), key=lambda k: sum(len(l["text"].split()) for l in chapters[k]["lines"]))[:4]
+        short = [k for k in range(len(chapters)) if _w(chapters[k]["lines"]) < 150][:8] or             sorted(range(len(chapters)), key=lambda k: _w(chapters[k]["lines"]))[:4]
         for k in short:
             c = chapters[k]
-            raw = chapter(topic, sources, c["title"], c["facts"], first=k == 0, last=k == len(chapters) - 1, more=2)
+            raw = chapter(topic, sources, c["title"], c["facts"], first=k == 0, last=k == len(chapters) - 1, more=1)
             lines, _ = clean_lines(raw, corpus_nums)
-            if len(lines) > len(c["lines"]):
+            if _w(lines) > _w(c["lines"]):
                 c["lines"] = lines
         log.info("after extending: %d words", words(script))
     # too long: whole lines off the end of the longest chapters (never the first or last)
