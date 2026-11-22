@@ -101,6 +101,13 @@ def main(slug):
 
 
 if __name__ == "__main__":
+    if "--skip" in sys.argv:                       # a topic taken out of the queue by hand (with its reason)
+        i = sys.argv.index("--skip")
+        why = sys.argv[i + 1]
+        slug = sys.argv[1]
+        mark(slug, status="skipped", skipped_why=why)
+        print(f"{slug} skipped: {why}")
+        sys.exit(0)
     if "--reset" in sys.argv:                      # a skipped topic given another chance (by hand)
         sys.argv.remove("--reset")
         mark(sys.argv[1], status="queued", script_fails=0, skipped_why=None)
