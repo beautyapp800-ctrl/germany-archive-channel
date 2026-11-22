@@ -64,6 +64,17 @@ def groq_model():
         if m in served and m not in taken:
             _groq_model = m
             return m
+    # none of the preferred ones: the best other model Groq serves that no other channel of the owner uses
+    # (22.11: kimi-k2 / llama-4 are gone from the list; the served ids go to the log)
+    log.info("Groq serves: %s", sorted(served))
+    skip = re.compile(r"whisper|guard|tts|orpheus|embed|allam|compound|safeguard|vision|distil", re.I)
+    rank = ["kimi", "llama-4", "deepseek", "qwen", "llama-3.1-70b", "mixtral", "gemma"]
+    usable = [m for m in sorted(served) if m not in taken and not skip.search(m)]
+    usable.sort(key=lambda m: next((i for i, k in enumerate(rank) if k in m.lower()), len(rank)))
+    if usable:
+        _groq_model = usable[0]
+        log.info("Groq model chosen: %s", _groq_model)
+        return _groq_model
     raise LLMError(f"none of {CFG['groq_preference']} is served by Groq")
 
 

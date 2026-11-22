@@ -81,6 +81,11 @@ def main(slug):
             log.warning("TEXT_DAY_SPENT: no provider can write %s today (%s); builds wait until %s", slug, str(e)[:160],
                         h["until"])
             return 4
+        if "no provider answered" in str(e) and all(c in ("429", "500", "502", "503", "504")
+                                                    for c in __import__("re").findall(r"HTTP (\d{3})", str(e))):
+            # every provider overloaded right now (22.11: Gemini 503 for an hour): not the topic's fault
+            log.warning("%s: text providers overloaded, not counted against the topic: %s", slug, str(e)[:160])
+            return 4
         log.error("%s: script not written: %s", slug, e)
         fails = int(topic.get("script_fails", 0)) + 1
         if fails >= 2:

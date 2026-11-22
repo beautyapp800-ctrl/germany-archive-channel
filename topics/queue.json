@@ -39,8 +39,9 @@
     "berlin airlift",
     "berlin airfield"
    ],
-   "status": "queued",
-   "script_fails": 1
+   "status": "skipped",
+   "script_fails": 2,
+   "skipped_why": "its script failed 2 times: no provider answered: gemini: HTTP 503; gemini: HTTP 503; gemini-flash: HTTP 503; gemini-flash: HTTP 503; gemini-flash: "
   },
   {
    "slug": "waehrungsreform",
