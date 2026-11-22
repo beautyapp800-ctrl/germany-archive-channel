@@ -26,7 +26,7 @@ jobs:
           find out -type f ! -name '*.mp4' -size -30M -exec cp {} review/ \;
           v=$(ls out/*.mp4 | head -1)
           ffmpeg -hide_banner -loglevel error -i "$v" -vf scale=-2:480 -c:v libx264 -preset veryfast -crf 30 \
-            -c:a aac -b:a 96k -movflags +faststart review/preview_480p.mp4
+            -maxrate 650k -bufsize 1300k -c:a aac -b:a 80k -movflags +faststart preview_480p.mp4
           ls -la review
       - uses: actions/upload-artifact@v4
         with:
