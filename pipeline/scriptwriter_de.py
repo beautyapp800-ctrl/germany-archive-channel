@@ -207,7 +207,7 @@ def check(script):
     if not 3 <= len(script["hashtags"]) <= 5:
         out.append("hashtags")
     n = words(script)
-    if not WORDS_MIN - 100 <= n <= WORDS_MAX + 100:
+    if not 1600 <= n <= WORDS_MAX + 100:          # 1600 words = 12.0 min at the slowest retime (length_scale 1.10)
         out.append(f"{n} words")
     if len(script["cover"].get("hooks", [])) < 3:
         out.append("cover hooks")
