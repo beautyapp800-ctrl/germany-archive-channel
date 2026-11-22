@@ -176,6 +176,28 @@ def emergency(rows, actions):
     actions.append(f"EMERGENCY: reserve {r['slug']} ({r['youtube_id']}) scheduled into the empty slot {z(slot)}")
 
 
+def thumbnails(rows, mem, actions):
+    """A cover YouTube refused (new channel, not verified yet) is tried again once a day."""
+    if not os.environ.get("YT_TOKEN_JSON"):
+        return
+    for r in rows:
+        f = ROOT / "episodes" / r["slug"] / "thumbnail.jpg"
+        if not (str(r.get("thumbnail", "")).startswith("failed") and r.get("youtube_id") and f.exists()):
+            continue
+        if not attempt_allowed(mem, "thumb-" + r["slug"]):
+            continue
+        record_attempt(mem, "thumb-" + r["slug"])
+        try:
+            from pipeline import youtube
+            youtube.set_thumbnail(r["youtube_id"], f)
+            r["thumbnail"] = "ok"
+            save(STATE, rows)
+            actions.append(f"{r['slug']}: thumbnail set")
+        except Exception as e:                                       # noqa: BLE001
+            r["thumbnail_note"] = str(e)[:120]
+            save(STATE, rows)
+
+
 def main():
     mem = load(MEM, {"attempts": {}, "noted": []})
     actions = []
@@ -197,6 +219,7 @@ def main():
                 record_attempt(mem, "up-" + r["slug"])
                 actions.append(f"{r['slug']}: built but not on YouTube; upload started again")
                 busy = True
+    thumbnails(rows, mem, actions)
     waiting, reserve = stock(rows)
     want = len(waiting) < AHEAD or len(reserve) < RESERVE_MIN
     if want and len(waiting) + len(reserve) < AHEAD + RESERVE_MAX and not busy:

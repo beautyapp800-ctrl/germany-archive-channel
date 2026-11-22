@@ -72,7 +72,9 @@ def persist(message):
         return subprocess.run(["git", *a], capture_output=True, text=True, check=check)
     git("config", "user.name", "github-actions[bot]")
     git("config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com")
-    for f in ("state/episodes.json", "topics/queue.json", "state/usage.json"):
+    import glob
+    for f in ["state/episodes.json", "topics/queue.json", "state/usage.json",
+              *[Path(x).relative_to(ROOT).as_posix() for x in glob.glob(str(ROOT / "episodes" / "*" / "thumbnail.jpg"))]]:
         if (ROOT / f).exists():
             git("add", f)
     if git("diff", "--cached", "--quiet", check=False).returncode == 0:
@@ -158,6 +160,10 @@ def _upload(slug, r):
         youtube.set_thumbnail(vid, out / "thumbnail.jpg")
     except Exception as e:                                           # noqa: BLE001
         row["thumbnail"] = f"failed: {str(e)[:120]}"
+        # a new channel must be phone-verified before custom thumbnails work: keep the cover in git,
+        # the watchdog sets it once YouTube accepts it
+        import shutil
+        shutil.copyfile(out / "thumbnail.jpg", ROOT / "episodes" / slug / "thumbnail.jpg")
         save(r)
         persist(f"state: {slug} thumbnail failed")
     return row
