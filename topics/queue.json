@@ -39,7 +39,8 @@
     "berlin airlift",
     "berlin airfield"
    ],
-   "status": "queued"
+   "status": "queued",
+   "script_fails": 1
   },
   {
    "slug": "waehrungsreform",
