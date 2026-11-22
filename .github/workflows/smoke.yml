@@ -33,7 +33,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
-      - run: pip install -q numpy pillow soundfile google-api-python-client google-auth
+      - run: pip install -q numpy pillow soundfile pyyaml google-api-python-client google-auth
       - run: python scripts/smoke_de.py
       - name: Promote dev to main
         if: (inputs.ref || 'dev') == 'dev'

@@ -26,7 +26,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -q numpy pillow
-      - name: Write the script (exit 3 = skipped for lack of pictures, 4 = text day spent: not failures)
+      - name: "Write the script (exit 3 = skipped for lack of pictures, 4 = text day spent: not failures)"
         run: |
           set +e
           python automation/write_de.py "${{ inputs.slug || '--next' }}"

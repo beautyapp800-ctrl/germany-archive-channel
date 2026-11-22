@@ -30,6 +30,13 @@ def check(name, ok, detail=""):
 def compiles():
     ok = all(compileall.compile_dir(str(ROOT / d), quiet=1) for d in ("core", "pipeline", "automation", "scripts"))
     check("all modules compile", ok)
+    try:
+        import yaml
+        for f in sorted((ROOT / ".github" / "workflows").glob("*.yml")):
+            d = yaml.safe_load(f.read_text(encoding="utf-8"))
+            check(f"workflow {f.name} parses", bool(d.get("name")) and bool(d.get(True) or d.get("on")))
+    except ImportError:
+        print("SKIP workflow YAML check (no pyyaml)")
 
 
 def text_tools():
