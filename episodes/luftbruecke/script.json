@@ -1,9 +1,27 @@
 {
  "slug": "luftbruecke",
- "title": "Berliner Luftbrücke 1948: Alle 3 Minuten ein Flugzeug – ging das wirklich?",
+ "title": "Berliner Luftbrücke 1948: Alle 3 Minuten ein Flugzeug – wie ging das?",
  "year_label": "1948",
  "place": "Berlin",
  "hook_question": "Kann man eine Stadt mit über zwei Millionen Menschen ein Jahr lang nur aus der Luft versorgen?",
+ "intro": "Im Sommer 1948 sperrte die Sowjetunion alle Land- und Wasserwege nach West-Berlin – und die Westalliierten antworteten mit der größten Luftbrücke der Geschichte. Mit echten Archivfilmen und Fotos, konkreten Zahlen und Quellen.",
+ "hashtags": [
+  "#Luftbrücke",
+  "#Berlin",
+  "#Nachkriegszeit",
+  "#Geschichte",
+  "#Rosinenbomber"
+ ],
+ "tags": [
+  "Berliner Luftbrücke",
+  "Luftbrücke 1948",
+  "Rosinenbomber",
+  "Berlin Blockade",
+  "Nachkriegszeit",
+  "Geschichte Deutschland",
+  "Tempelhof",
+  "Archivfilm"
+ ],
  "cover": {
   "hero": "a C-54 cargo plane landing over people",
   "hooks": [

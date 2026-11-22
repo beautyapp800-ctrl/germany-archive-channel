@@ -1,7 +1,8 @@
 """Checks a finished episode must pass before anything goes to YouTube.
 
   frames   one frame every second (owner 21.11): a black or flat band along the top/bottom or
-           left/right edge (letterbox, pillarbox) or blurred side panels = the render fails
+           left/right edge (letterbox, pillarbox), blurred side panels or a coloured strip along
+           an edge of a black-and-white picture = the render fails
   shots    no shot longer than 4.0 s on screen (owner: constant movement)
   black    no black stretch of 3 s or more
   loudness -14 LUFS +- 1
@@ -20,10 +21,23 @@ FW, FH = 320, 180
 
 
 def _frames(video):
+    """(gray frames, colour saturation frames), one per second at 320x180."""
     r = subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-i", str(video), "-vf",
-                        f"fps=1,scale={FW}:{FH},format=gray", "-f", "rawvideo", "-"], capture_output=True, timeout=3600)
+                        f"fps=1,scale={FW}:{FH},format=rgb24", "-f", "rawvideo", "-"], capture_output=True, timeout=3600)
     a = np.frombuffer(r.stdout, np.uint8)
-    return a[: len(a) // (FW * FH) * FW * FH].reshape(-1, FH, FW).astype(np.float32)
+    rgb = a[: len(a) // (FW * FH * 3) * FW * FH * 3].reshape(-1, FH, FW, 3).astype(np.float32)
+    return rgb @ np.array([0.299, 0.587, 0.114], np.float32), rgb.max(3) - rgb.min(3)
+
+
+def coloured_edge(sat):
+    """A coloured strip along an edge of a black-and-white picture (the red tape of a scanned
+    print, pilot 22.11), invisible to the gray checks."""
+    if np.median(sat[:, 40:-40]) > 14:
+        return None                       # a colour picture: its edges may be coloured
+    for name, band in (("left", sat[:, :8]), ("right", sat[:, -8:]), ("top", sat[:6]), ("bottom", sat[-6:])):
+        if band.mean() > 40:
+            return f"coloured edge ({name})"
+    return None
 
 
 def _lap(x):
@@ -48,8 +62,8 @@ def frame_problem(f):
 
 def check(video, plan, timeline):
     res = {}
-    fr = _frames(video)
-    bad = [(i, p) for i, f in enumerate(fr) if (p := frame_problem(f))]
+    fr, sat = _frames(video)
+    bad = [(i, p) for i, (f, c) in enumerate(zip(fr, sat)) if (p := frame_problem(f) or coloured_edge(c))]
     res["frames"] = {"pass": not bad, "checked": len(fr), "bad": [{"t": i, "what": p} for i, p in bad[:30]],
                      "blocking": True}
     long_ = [s for s in plan["shots"] if s["end"] - s["start"] > CFG["edit"]["shot_max_s"] + 0.02]

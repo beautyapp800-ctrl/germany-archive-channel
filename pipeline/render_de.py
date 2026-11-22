@@ -73,8 +73,12 @@ def _boxes(iw, ih, seed):
     return (left, right) if rnd.random() < 0.5 else (right, left)
 
 
-def photo_clip(src, seconds, out, seed=0):
+def photo_clip(src, seconds, out, seed=0, trim=None):
     im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
+    if trim and tuple(trim) != (0.0, 0.0, 1.0, 1.0):
+        # inside the scanned print's border (pipeline/frames_de.trim, found on the thumbnail)
+        l, t, r, b = trim
+        im = im.crop((round(l * im.width), round(t * im.height), round(r * im.width), round(b * im.height)))
     # keep the work size sane: 1.6x the output at most along the box's long side
     lim = 3600
     if max(im.size) > lim:

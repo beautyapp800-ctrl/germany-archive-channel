@@ -29,6 +29,9 @@ EDIT = json.loads((ROOT / "config" / "channel.json").read_text(encoding="utf-8")
 SHOT_MIN, SHOT_MAX = EDIT["shot_min_s"], EDIT["shot_max_s"]
 SYMBOL_TEXTS = ["a swastika", "a flag with a swastika", "a nazi eagle emblem with a swastika", "a nazi salute"]
 NEUTRAL_TEXTS = ["an old photograph", "a black and white film frame", "people in a street", "an airplane"]
+# production leftovers in raw army footage (pilot 22.11): slates and chalk cards are not pictures
+CARD_TEXTS = ["a film slate clapperboard with chalk writing", "a handwritten sign held up in front of the camera",
+              "a title card with text", "white letters on a black screen"]
 
 
 def segments(timeline):
@@ -71,12 +74,13 @@ def score_matrix(texts, frames):
     return T @ F.T
 
 
-def symbol_flags(frames, margin=0.02):
-    """True for frames SigLIP finds closer to a Nazi symbol than to any neutral description."""
+def symbol_flags(frames, margin=0.02, texts=None):
+    """True for frames SigLIP finds closer to a Nazi symbol (or to `texts`) than to any neutral description."""
     if not frames:
         return []
-    S = score_matrix(SYMBOL_TEXTS + NEUTRAL_TEXTS, frames)
-    sym, neu = S[:len(SYMBOL_TEXTS)].max(0), S[len(SYMBOL_TEXTS):].max(0)
+    texts = texts or SYMBOL_TEXTS
+    S = score_matrix(texts + NEUTRAL_TEXTS, frames)
+    sym, neu = S[:len(texts)].max(0), S[len(texts):].max(0)
     return [bool(s > n + margin) for s, n in zip(sym, neu)]
 
 
@@ -91,6 +95,11 @@ def plan(timeline, cands, year="1948", hook_s=30.0):
     cands = [c for c, f in zip(cands, flags) if not f]
     for c in dropped:
         log.warning("dropped as a possible Nazi symbol: %s", c.get("id"))
+    cards = symbol_flags([c["kf"] for c in cands], texts=CARD_TEXTS)
+    for c, f in zip(cands, cards):
+        if f:
+            log.info("dropped as a slate / text card: %s", c.get("id"))
+    cands = [c for c, f in zip(cands, cards) if not f]
     segs = segments(timeline)
     looks = [prompt(timeline[i]["look"], year) for _, _, i in segs]
     uniq = list(dict.fromkeys(looks))
@@ -135,7 +144,7 @@ def plan(timeline, cands, year="1948", hook_s=30.0):
             shot.update(film_id=c["film_id"], src=c["src"], src_start=round(off, 2), year=c.get("year"))
         else:
             photos_used += 1
-            shot.update(src=c["src"], year=c.get("year"), size=c.get("size"))
+            shot.update(src=c["src"], year=c.get("year"), size=c.get("size"), trim=c.get("trim"))
         recent.append(c.get("film_id") or c["id"])
         shots.append(shot)
     # mark the first shot of every line that carries a tag, and of every chapter

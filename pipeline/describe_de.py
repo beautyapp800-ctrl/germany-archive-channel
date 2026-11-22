@@ -42,9 +42,7 @@ def _author(p):
 
 
 def description(script, timeline, used_films, used_photos, slug):
-    intro = (f"{script['hook_question']} Im Sommer 1948 sperrte die Sowjetunion alle Land- und Wasserwege nach West-Berlin – "
-             "und die Westalliierten antworteten mit der größten Luftbrücke der Geschichte. "
-             "Mit echten Archivfilmen und Fotos, konkreten Zahlen und Quellen.")
+    intro = f"{script['hook_question']} {script['intro']}"
     parts = [intro, "", "KAPITEL", *chapters(timeline), "", "QUELLEN"]
     parts += [f"- {s['what']}: {s['where']}" for s in script["sources"]]
     parts += ["", "ARCHIVFILME (gemeinfrei; jede Lizenz an der Quelle geprüft)"]
@@ -64,7 +62,7 @@ def description(script, timeline, used_films, used_photos, slug):
     parts += ["", "SO ENTSTEHT DAS VIDEO",
               "Die Sprecherstimme ist synthetisch (Piper). Alle Bilder sind echte Archivaufnahmen; restauriert wird nur "
               "klassisch (Entrauschen, Stabilisieren, leichtes Hochskalieren), ohne generative KI. Schwarz-Weiß bleibt "
-              "Schwarz-Weiß.", "", "#Luftbrücke #Berlin #Nachkriegszeit #Geschichte #Rosinenbomber", "",
+              "Schwarz-Weiß.", "", " ".join(script["hashtags"]), "",
               f"[ref: {CFG['ref']}/{slug}]"]
     text = clean("\n".join(parts))
     while len(text.encode("utf-8")) > 4900:

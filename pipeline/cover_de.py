@@ -44,11 +44,41 @@ def enhance(im):
     return im.filter(ImageFilter.UnsharpMask(radius=2, percent=130, threshold=2))
 
 
-def cover(im, size=(W, H), cy=0.45):
+def focus(im):
+    """The box around the sizeable subjects (rembg) as fractions of the picture, or None."""
+    try:
+        from rembg import new_session, remove
+        from scipy import ndimage
+        small = im.convert("RGB").resize((640, max(1, round(640 * im.height / im.width))))
+        a = np.array(remove(small, session=new_session("isnet-general-use")).getchannel("A")) > 60
+        lab, n = ndimage.label(a)
+        if n == 0:
+            return None
+        sizes = np.asarray(ndimage.sum(np.ones_like(a), lab, range(1, n + 1)))
+        big = 1 + np.nonzero(sizes >= 0.15 * sizes.max())[0]       # every sizeable piece: plane AND crowd
+        ys, xs = np.nonzero(np.isin(lab, big))
+        if len(xs) < 300:
+            return None
+        return (xs.min() / a.shape[1], ys.min() / a.shape[0], (xs.max() + 1) / a.shape[1], (ys.max() + 1) / a.shape[0])
+    except Exception:                                               # noqa: BLE001
+        return None
+
+
+def cover(im, size=(W, H), cy=0.45, box=None):
+    """Fill the cover size; with a subject box, the crop slides so the subject stays whole
+    (pilot 22.11: the C-54 lost its top on all three covers)."""
     s = max(size[0] / im.width, size[1] / im.height)
     im = im.resize((math.ceil(im.width * s), math.ceil(im.height * s)), Image.LANCZOS)
     x = (im.width - size[0]) // 2
     y = int((im.height - size[1]) * cy)
+    if box:
+        bx0, by0, bx1, by1 = box[0] * im.width, box[1] * im.height, box[2] * im.width, box[3] * im.height
+        mx, my = size[0] * 0.04, size[1] * 0.05
+        # keep the subject's top (heads, a plane) first, then as much of its bottom as fits
+        y = min(max(y, by1 + my - size[1]), by0 - my)
+        x = min(max(x, bx1 + mx - size[0]), bx0 - mx)
+        x = int(max(0, min(im.width - size[0], x)))
+        y = int(max(0, min(im.height - size[1], y)))
     return im.crop((x, y, x + size[0], y + size[1]))
 
 
@@ -129,8 +159,8 @@ def _subject_box(im):
     return (W * 0.35, H * 0.25, W * 0.75, H * 0.75)
 
 
-def candidate_a(base, hero_src, year, hook):
-    bg = cover(enhance(base)).convert("RGBA")
+def candidate_a(base, hero_src, year, hook, box=None):
+    bg = cover(enhance(base), box=box).convert("RGBA")
     bg = Image.alpha_composite(bg, Image.new("RGBA", bg.size, (0, 0, 0, 40)))
     hero = cutout(enhance(hero_src))
     if hero is None:
@@ -150,8 +180,8 @@ def candidate_a(base, hero_src, year, hook):
     return bg.convert("RGB"), hero.width * hero.height / (W * H)
 
 
-def candidate_b(base, year, hook, label):
-    bg = cover(enhance(base)).convert("RGBA")
+def candidate_b(base, year, hook, label, box=None):
+    bg = cover(enhance(base), box=box).convert("RGBA")
     t = tag(label, 190)
     if t.width > W * 0.8:
         k = W * 0.8 / t.width
@@ -163,8 +193,8 @@ def candidate_b(base, year, hook, label):
     return bg.convert("RGB"), t.width * t.height / (W * H)
 
 
-def candidate_c(base, year, hook, label):
-    bg = cover(enhance(base)).convert("RGBA")
+def candidate_c(base, year, hook, label, box=None):
+    bg = cover(enhance(base), box=box).convert("RGBA")
     x0, y0, x1, y1 = _subject_box(bg.convert("RGB"))
     cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
     r = max(90, min(260, max(x1 - x0, y1 - y0) * 0.6))
@@ -192,18 +222,22 @@ def readable(im):
     return out
 
 
-def make(base, hero_src, meta, out_dir):
+def make(base, hero_src, meta, out_dir, a_base=None):
+    """a_base: background for the cut-out cover when the hero is cut from the base picture
+    itself (the same plane twice looked odd in the pilot)."""
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     c = meta["cover"]
     year = meta.get("year_label", "")
     made = []
-    a, share = candidate_a(base, hero_src, year, c["hooks"][0])
+    box = focus(base)
+    ab = a_base if a_base is not None else base
+    a, share = candidate_a(ab, hero_src, year, c["hooks"][0], box=focus(ab) if a_base is not None else box)
     if a is not None:
         made.append(("A_hero", a, share, c["hooks"][0]))
-    b, share = candidate_b(base, year, c["hooks"][1] if len(c["hooks"]) > 1 else c["hooks"][0], c["tag"])
+    b, share = candidate_b(base, year, c["hooks"][1] if len(c["hooks"]) > 1 else c["hooks"][0], c["tag"], box=box)
     made.append(("B_tag", b, share, c["tag"]))
-    cc, share = candidate_c(base, year, c["hooks"][2] if len(c["hooks"]) > 2 else c["hooks"][0], c["stamp"])
+    cc, share = candidate_c(base, year, c["hooks"][2] if len(c["hooks"]) > 2 else c["hooks"][0], c["stamp"], box=box)
     made.append(("C_circle", cc, share, c["stamp"]))
     report = []
     for name, im, share, words in made:
