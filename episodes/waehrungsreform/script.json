@@ -1,0 +1,786 @@
+{
+ "slug": "waehrungsreform",
+ "title": "Währungsreform 1948: Als jeder 40 D-Mark in Westdeutschland bekam",
+ "year_label": "1948",
+ "place": "Westdeutschland",
+ "hook_question": "Was machten Sie, als Sie plötzlich 40 D-Mark in der Hand hielten?",
+ "intro": "Die Währungsreform im Juni 1948 brachte die Deutsche Mark nach Westdeutschland. Erleben Sie die dramatischen Tage des Umtauschs, der Verteilung und das Ende des Schwarzmarkts.",
+ "hashtags": [
+  "#DMark",
+  "#1948",
+  "#Währungsreform",
+  "#Nachkriegszeit"
+ ],
+ "tags": [
+  "Währungsreform 1948",
+  "40 D-Mark",
+  "Deutsche Mark",
+  "Westdeutschland",
+  "Ludwig Erhard",
+  "Trizone",
+  "Reichsmark",
+  "Nachkriegsgeschichte"
+ ],
+ "cover": {
+  "hero": "A pile of old banknotes and new D-Mark bills on a wooden table",
+  "hooks": [
+   "40 D-MARK",
+   "PLÖTZLICH GELD",
+   "NEUER START"
+  ],
+  "tag": "40 DM KOPFGELD",
+  "stamp": "NEU?"
+ },
+ "sources": [
+  {
+   "what": "Währungsreform 1948 (Westdeutschland)",
+   "where": "de.wikipedia.org/wiki/Währungsreform_1948_(Westdeutschland)",
+   "revision": 267830248
+  },
+  {
+   "what": "Deutsche Mark",
+   "where": "de.wikipedia.org/wiki/Deutsche_Mark",
+   "revision": 271361073
+  },
+  {
+   "what": "Ludwig Erhard",
+   "where": "de.wikipedia.org/wiki/Ludwig_Erhard",
+   "revision": 272378323
+  }
+ ],
+ "chapters": [
+  {
+   "title": "Das Ende der Reichsmark",
+   "lines": [
+    {
+     "text": "Bis Mitte neunzehnhundertachtundvierzig war die Reichsmark das allein in Deutschland gültige Zahlungsmittel.",
+     "en": "Until mid-1948, the Reichsmark was the only valid means of payment in Germany.",
+     "look": "historical banknotes of the Reichsmark lying on a wooden table"
+    },
+    {
+     "text": "Die Ausgabe von Besatzungsgeld steigerte die Geldmenge, während das Güterangebot drastisch sank.",
+     "en": "The issuance of occupation money increased the money supply while the supply of goods dropped drastically.",
+     "look": "empty shelves in a grocery store in post-war Germany"
+    },
+    {
+     "text": "Die Menschen sahen sich mit einer schweren Krise konfrontiert, da das Vertrauen in die Währung schwand.",
+     "en": "People faced a severe crisis as trust in the currency faded.",
+     "look": "people waiting in line outside a small grocery shop"
+    },
+    {
+     "text": "Tauschhandel und der schwarze Markt mit der Zigarettenwährung dominierten den täglichen Alltag.",
+     "en": "Barter trade and the black market with the cigarette currency dominated daily life.",
+     "look": "two people exchanging goods and cigarettes on a street corner"
+    },
+    {
+     "text": "Zigaretten wurden damals auf der Straße als verlässliches Tauschmittel für Nahrungsmittel genutzt.",
+     "en": "Cigarettes were used on the street back then as a reliable medium of exchange for food.",
+     "look": "an open pack of cigarettes held in a hand outdoors"
+    },
+    {
+     "text": "Zusätzlich führte das Horten von Waren durch die Bevölkerung zu völlig leeren Geschäften.",
+     "en": "In addition, the hoarding of goods by the population led to completely empty shops.",
+     "look": "empty wooden shelves inside a shuttered retail store"
+    },
+    {
+     "text": "Landwirtschaftliche Einschränkungen und Demontagen verschärften die Versorgungslage der Menschen im Land weiter.",
+     "en": "Agricultural restrictions and dismantling further worsened the supply situation for the people in the country.",
+     "look": "industrial machinery being dismantled in a factory hall"
+    },
+    {
+     "text": "Am zwanzigsten Juni neunzehnhundertachtundvierzig trat dann die entscheidende Währungsreform in der Trizone in Kraft.",
+     "en": "On 20 June 1948, the decisive currency reform then came into force in the Trizone.",
+     "look": "a large official economic announcement posted on an outdoor wall"
+    },
+    {
+     "text": "Ab dem einundzwanzigsten Juni war die Deutsche Mark das alleinige gesetzliche Zahlungsmittel.",
+     "en": "From 21 June, the Deutsche Mark was the sole legal tender.",
+     "look": "new banknotes of the Deutsche Mark displayed on a table"
+    },
+    {
+     "text": "Die beiden bisher gültigen Zahlungsmittel Reichsmark und Rentenmark wurden bei diesem Schritt zwangsumgetauscht.",
+     "en": "The two previously valid payment methods, Reichsmark and Rentenmark, were forcibly converted in this step.",
+     "look": "old paper money bundled together in a bank office"
+    },
+    {
+     "text": "Dabei wurden die alten Beträge mehr oder weniger im Nennwert herabgesetzt.",
+     "en": "In the process, the old amounts were more or less reduced in nominal value.",
+     "look": "a clerk stamping documents at a wooden desk"
+    },
+    {
+     "text": "Diese historische Maßnahme beendete die Zeit der Not und des Tauschhandels auf den Straßen.",
+     "en": "This historical measure ended the period of hardship and barter trade on the streets.",
+     "look": "people walking through a rebuilt city street with shops"
+    }
+   ]
+  },
+  {
+   "title": "Geheime Vorbereitungen in den USA",
+   "lines": [
+    {
+     "text": "Die neuen Banknoten für die westlichen Zonen entstanden nicht etwa in Deutschland, sondern jenseits des Ozeans.",
+     "en": "The new bank notes for the western zones were not created in Germany, but across the ocean.",
+     "look": "a large printing press operating in a brightly lit industrial building"
+    },
+    {
+     "text": "Bereits ab September neunzehnhundertsiebenundvierzig liefen die Druckmaschinen in New York City und in Washington auf Hochtouren.",
+     "en": "Starting as early as September 1947, the printing presses ran at full speed in New York City and Washington.",
+     "look": "stacks of fresh paper sheets being fed into a heavy printing machine"
+    },
+    {
+     "text": "Millionen von Scheinen mussten in aller Stille produziert werden, bevor irgendjemand etwas von den Plänen ahnte.",
+     "en": "Millions of notes had to be produced in absolute secrecy before anyone suspected the plans.",
+     "look": "workers inspecting piles of freshly printed banknotes at wooden tables"
+    },
+    {
+     "text": "Ein riesiger Berg an Bargeld wartete darauf, im Frühjahr neunzehnhundertachtundvierzig über den Atlantik gebracht zu werden.",
+     "en": "A huge mountain of cash awaited transportation across the Atlantic in the spring of 1948.",
+     "look": "rows of heavy wooden crates stacked inside a large warehouse"
+    },
+    {
+     "text": "Operation Bird Dog nannte sich dieser streng geheime und logistisch höchst anspruchsvolle Geldtransport über das Meer.",
+     "en": "Operation Bird Dog was the name of this strictly secret and logistically demanding transport of money across the sea.",
+     "look": "a large cargo ship docked at a concrete pier with cranes nearby"
+    },
+    {
+     "text": "Zwischen Februar und April neunzehnhundertachtundvierzig verließen die tonnenschweren Frachten die Vereinigten Staaten in Richtung Europa.",
+     "en": "Between February and April 1948, the heavy freight left the United States toward Europe.",
+     "look": "wooden crates being loaded onto a cargo ship using a heavy metal crane"
+    },
+    {
+     "text": "Insgesamt umfasste diese geheim gehaltene Aktion etwa fünfkomma sieben Milliarden Deutsche Mark.",
+     "en": "In total, this covert operation comprised about 5.7 billion Deutsche Mark.",
+     "look": "workers moving wooden crates with metal hand trucks inside a port area"
+    },
+    {
+     "text": "Das gesamte Geld war auf dreitausend Holzkisten verteilt und wog zusammen rund fünfhundert Tonnen.",
+     "en": "All the money was distributed across 23,000 wooden crates and weighed a total of about 500 tons.",
+     "look": "a long line of identical wooden storage crates sitting on a dock"
+    },
+    {
+     "text": "Als Zielhafen diente die Columbuskaje im norddeutschen Bremerhaven, wo die Schiffe sicher anlegten.",
+     "en": "The destination port was the Columbus Quay in Bremerhaven, northern Germany, where the ships safely docked.",
+     "look": "large ocean liners and cargo vessels tied up at a long stone pier"
+    },
+    {
+     "text": "Direkt nach der Ankunft wurden die schweren Kisten sofort auf deutsche Züge verladen.",
+     "en": "Immediately after arrival, the heavy crates were loaded onto German trains right away.",
+     "look": "forklifts moving wooden crates toward railway freight cars at a harbor station"
+    },
+    {
+     "text": "Acht Sonderzüge transportierten das Bargeld unter Bewachung weiter bis in die Bankenstadt Frankfurt.",
+     "en": "Eight special trains transported the cash under guard further to the banking city of Frankfurt.",
+     "look": "a steam locomotive pulling a line of dark freight cars across a bridge"
+    },
+    {
+     "text": "Damit war das Fundament für die kommende Reform gelegt, ohne dass die Bevölkerung vorher etwas erfuhr.",
+     "en": "With this, the foundation for the upcoming reform was laid without the population knowing anything beforehand.",
+     "look": "train tracks stretching away into the distance under a cloudy sky",
+     "tag": "OPERATION BIRD"
+    }
+   ]
+  },
+  {
+   "title": "Das Konklave von Rothwesten",
+   "lines": [
+    {
+     "text": "Die Leitlinien für die historische Währungsumstellung wurden im Frühjahr neunzehnhundertachtundvierzig erarbeitet.",
+     "en": "The guidelines for the historical currency conversion were developed in the spring of 1948.",
+     "look": "documents lying on a wooden desk with a fountain pen"
+    },
+    {
+     "text": "Elf deutsche Experten beschlossen diese Richtlinien im Währungskonklave in den Gebäuden der heutigen Fritz-Erler-Kaserne.",
+     "en": "Eleven German experts adopted these guidelines in the currency conclave in the buildings of today's Fritz Erler barracks.",
+     "look": "old brick military buildings seen from the outside"
+    },
+    {
+     "text": "Diese historischen Gebäude befinden sich in Rothwesten und dienten als geschützter Ort für die Beratungen.",
+     "en": "These historical buildings are located in Rothwesten and served as a protected place for the deliberations.",
+     "look": "empty meeting room with chairs and a large wooden table"
+    },
+    {
+     "text": "Die Tagung fand im Frühjahr neunzehnhundertachtundvierzig unter strengster Geheimhaltung statt, um Gerüchte und Panik zu verhindern.",
+     "en": "The conference took place in the spring of 1948 under the strictest secrecy to prevent rumors and panic.",
+     "look": "closed wooden door of a room with a brass handle"
+    },
+    {
+     "text": "Zuvor hatte die Sonderstelle Geld und Kredit in Bad Homburg das gesamte Vorhaben gründlich vorbereitet.",
+     "en": "Previously, the special office for money and credit in Bad Homburg had thoroughly prepared the entire project.",
+     "look": "front of an old office building with large windows"
+    },
+    {
+     "text": "Diese wichtige Arbeitsstelle in Bad Homburg stand damals unter der Leitung von Ludwig Erhard.",
+     "en": "This important workplace in Bad Homburg was headed by Ludwig Erhard at the time.",
+     "look": "middle-aged man sitting at a desk with papers and glasses"
+    },
+    {
+     "text": "Am ersten Juni neunzehnhundertachtundvierzig trafen die Westalliierten dann eine weitreichende und endgültige Entscheidung.",
+     "en": "On 1 June 1948, the Western Allies then made a far-reaching and final decision.",
+     "look": "three men in suits shaking hands in front of a window"
+    },
+    {
+     "text": "An diesem Tag beschlossen sie offiziell die Einführung der Währungsreform in der Trizone.",
+     "en": "On this day, they officially decided to introduce the currency reform in the Trizone.",
+     "look": "close-up of a hand signing a document with a fountain pen"
+    },
+    {
+     "text": "Die Vorbereitungen waren abgeschlossen und die neuen Pläne für das Geldwesen konnten nun umgesetzt werden.",
+     "en": "The preparations were completed and the new plans for the monetary system could now be implemented.",
+     "look": "stacks of paper documents tied with string on a shelf"
+    },
+    {
+     "text": "Kurz darauf äußerte sich Ludwig Erhard sehr optimistisch zu den bevorstehenden wirtschaftlichen Veränderungen.",
+     "en": "Shortly afterwards, Ludwig Erhard expressed himself very optimistically about the upcoming economic changes.",
+     "look": "man speaking into a vintage microphone at a press conference"
+    },
+    {
+     "text": "Am vierzehnten Juni neunzehnhundertachtundvierzig sagte Ludwig Erhard voraus, der Erfolg der Währungsreform sei verbürgt.",
+     "en": "On 14 June 1948, Ludwig Erhard predicted that the success of the currency reform was guaranteed.",
+     "look": "newspaper lying open on a table with a bold headline",
+     "tag": "14. JUNI 1948"
+    }
+   ]
+  },
+  {
+   "title": "Der geheimnisvolle Geldtransport",
+   "lines": [
+    {
+     "text": "Nachdem die wertlosen Scheine ankamen, folgte die Feinverteilung aus der Bankenstadt Frankfurt direkt zu den Ausgabestellen.",
+     "en": "After the worthless notes arrived, fine distribution followed from Frankfurt directly to the issuance offices.",
+     "look": "stacks of paper money being sorted inside a large bank building"
+    },
+    {
+     "text": "Die Lebensmittelkartenausgabestellen in der Trizone übernahmen diese wichtige Aufgabe für die wartende Bevölkerung vor Ort.",
+     "en": "The ration card issuance offices in the Trizone took over this important task for the waiting population.",
+     "look": "people standing in line outside an office building with papers in hand"
+    },
+    {
+     "text": "Als theoretische Grundlage für die neuen Währungsgesetze diente weitgehend ein im Jahr neunzehnhundertsechsundvierzig vorgelegter Plan.",
+     "en": "As a theoretical basis for the new currency laws, a plan presented in 1946 served largely.",
+     "look": "close-up of typewritten pages with statistical tables and numbers"
+    },
+    {
+     "text": "Dieser sogenannte Colm-Dodge-Goldsmith-Plan sah vor, die viel zu große Geldmenge im Verhältnis zehn zu eins zusammenzustreichen.",
+     "en": "This so-called Colm-Dodge-Goldsmith plan provided for reducing the excessively large money supply in a ratio of 10 to 1.",
+     "look": "a hand using a pen to cross out lines of numbers on a large ledger sheet"
+    },
+    {
+     "text": "Bevor alles begann, musste die Bevölkerung im Juni neunzehnhundertachtundvierzig über die anstehenden Änderungen informiert werden.",
+     "en": "Before everything started, the population had to be informed about the upcoming changes in June 1948.",
+     "look": "people gathering around a public bulletin board on a brick wall"
+    },
+    {
+     "text": "Am achtzehnten Juni neunzehnhundertachtundvierzig erfuhren die Menschen durch amtliche Aushänge von den Plänen der Alliierten.",
+     "en": "On 18 June 1948, people learned about the plans of the allies through official postings.",
+     "look": "close-up of a printed notice pasted on a wooden board outdoors"
+    },
+    {
+     "text": "Zusätzlich liefen im Radio Sendungen, in denen die bevorstehenden wirtschaftlichen Maßnahmen detailliert erklärt wurden.",
+     "en": "Additionally, radio broadcasts ran in which the upcoming economic measures were explained in detail.",
+     "look": "an old wooden tabletop radio standing on a crochet cloth in a living room"
+    },
+    {
+     "text": "Zwei bekannte Persönlichkeiten traten vor die Mikrofone, um den Bürgern die Einführung der neuen Währung zu erläutern.",
+     "en": "Two well-known personalities stepped in front of the microphones to explain the introduction of the new currency.",
+     "look": "a heavy vintage metal studio microphone standing in a broadcasting booth"
+    },
+    {
+     "text": "Jack Bennet und Max Brauer erklärten den Zuhörern im Rundfunk die konkreten Schritte der anstehenden Reform.",
+     "en": "Jack Bennet and Max Brauer explained the concrete steps of the upcoming reform to listeners on the radio.",
+     "look": "two men sitting behind a desk with microphones speaking seriously"
+    }
+   ]
+  },
+  {
+   "title": "40 D-Mark Kopfgeld",
+   "lines": [
+    {
+     "text": "Am Sonntag, dem zwanzigsten Juni neunzehnhundertachtundvierzig, bricht für die Bevölkerung ein völlig neuer Lebensabschnitt an.",
+     "en": "On Sunday, 20 June 1948, a completely new phase of life begins for the population.",
+     "look": "people standing in a quiet street looking around with curious expressions"
+    },
+    {
+     "text": "Jeder Einzelstehende und jeder Haushaltsvorstand erhält an diesem Tag eine sofortige Barauszahlung in die Hand.",
+     "en": "Every single person and every head of household receives an immediate cash payout in their hand on this day.",
+     "look": "a person holding out their open hand to receive paper money"
+    },
+    {
+     "text": "Genau vierzig D-Mark bekommt jede dieser Personen als dringendes Kopfgeld ausgehändigt.",
+     "en": "Exactly 40 D-Mark is handed out to each of these persons as an urgent bounty.",
+     "look": "several paper banknotes lying neatly counted on a wooden table",
+     "tag": "40 D-MARK"
+    },
+    {
+     "text": "Umgerechnet auf die heutige Zeit entspricht dieser Geldbetrag etwa einhundertsiebenundzwanzig Euro im Jahr zweitausendsechsundzwanzig.",
+     "en": "Adjusted for inflation, this amount of money corresponds to about 127 euros in the year 2026.",
+     "look": "modern euro coins and banknotes resting on a desk next to old documents"
+    },
+    {
+     "text": "Die damalige Barauszahlung folgt dabei einem ganz bestimmten und genau festgelegten Plan für das neue Geld.",
+     "en": "The cash payout at the time follows a very specific and precisely defined plan for the new money.",
+     "look": "bank clerk sorting different types of paper money into separate piles"
+    },
+    {
+     "text": "In der Regel erhalten die Menschen einen Zwanzigmarkschein als größten Wert für den direkten Start.",
+     "en": "As a rule, people receive a twenty-mark note as the largest value for the direct start.",
+     "look": "a single twenty-mark banknote held between two fingers"
+    },
+    {
+     "text": "Dazu kommen zwei Fünfmarkscheine für den alltäglichen Einkauf in den Geschäften.",
+     "en": "In addition, there are two five-mark notes for everyday shopping in the shops.",
+     "look": "two paper notes with the number five printed on them lying on a counter"
+    },
+    {
+     "text": "Ebenfalls in der Tasche landen drei Zweimarkscheine als handliche Zahlungsmittel für den kleinen Bedarf.",
+     "en": "Three two-mark notes also end up in the pocket as handy means of payment for small needs.",
+     "look": "three small paper banknotes being folded together"
+    },
+    {
+     "text": "Abgerundet wird diese erste Zuteilung durch zwei Einmarkscheine und vier kleinere Einhalbmarkscheine.",
+     "en": "This initial allocation is rounded off by two one-mark notes and four smaller half-mark notes.",
+     "look": "various small-denomination paper notes spread out on a flat surface"
+    },
+    {
+     "text": "Damit ist der erste Schritt zur neuen wirtschaftlichen Ordnung im Lande getan.",
+     "en": "With this, the first step towards the new economic order in the country has been taken.",
+     "look": "people walking past a newly opened shop with goods visible in the window"
+    },
+    {
+     "text": "Genau einen Monat später erhält jede natürliche Person noch einmal weitere zwanzig D-Mark bar ausgezahlt.",
+     "en": "Exactly one month later, every natural person receives another twenty D-Mark in cash.",
+     "look": "a person signing a receipt at a wooden payment counter"
+    }
+   ]
+  },
+  {
+   "title": "Rathäuser als Ausgabestellen",
+   "lines": [
+    {
+     "text": "Für die Verteilung des neuen Geldes gab es ganz praktische Anlaufstellen im ganzen Land.",
+     "en": "For the distribution of the new money, there were very practical contact points all over the country.",
+     "look": "people standing outside a public building with large doors"
+    },
+    {
+     "text": "Verschiedenste gemeindliche Stellen dienten als Ausgabestellen für das wichtige Kopfgeld an die Bevölkerung.",
+     "en": "Various municipal offices served as distribution points for the important per-capita money to the population.",
+     "look": "citizens waiting in a queue inside a crowded municipal hall"
+    },
+    {
+     "text": "Die Wege führten die Menschen dabei direkt vom Rathaus bis zum zuständigen Ernährungsamt.",
+     "en": "The paths led the people directly from the town hall to the responsible food office.",
+     "look": "an old town hall building with people walking up the stone steps"
+    },
+    {
+     "text": "Sogar einfache Lebensmittel-Ausgabestellen wurden kurzfristig als Ausgabestellen für das Geld genutzt.",
+     "en": "Even simple food distribution points were used at short notice as distribution points for the money.",
+     "look": "a small counter inside a simple room with stacked boxes on shelves"
+    },
+    {
+     "text": "Neben den Bürgern mussten auch die Unternehmen und Gewerbetreibenden mit neuen Zahlungsmitteln versorgt werden.",
+     "en": "Besides the citizens, companies and business people also had to be supplied with new means of payment.",
+     "look": "businessmen in suits standing outside a factory gate"
+    },
+    {
+     "text": "Jeder Betrieb erhielt einen festen Geschäftsbetrag als finanziellen Vorgriff für die kommende Zeit.",
+     "en": "Every business received a fixed business amount as a financial advance for the coming period.",
+     "look": "an accountant sitting at a wooden desk with stacks of documents"
+    },
+    {
+     "text": "Genau sechzig D-Mark flossen dabei als Betrag je Arbeitnehmer direkt in die Unternehmen.",
+     "en": "Exactly 60 D-Mark flowed directly into the companies as an amount per employee.",
+     "look": "factory workers standing together in a production hall"
+    },
+    {
+     "text": "Die Erstausstattung der gesamten öffentlichen Hand erfolgte parallel über die neu geschaffenen Landeszentralbanken.",
+     "en": "The initial equipment of the entire public sector took place in parallel via the newly created state central banks.",
+     "look": "bank clerks working behind large wooden counters in a financial institution"
+    },
+    {
+     "text": "Auch die großen Verkehrsträger und Verwaltungen benötigten dringend flüssige Mittel für ihre tägliche Arbeit.",
+     "en": "The major transport providers and administrations also urgently needed liquid funds for their daily work.",
+     "look": "railway station platform with steam trains and waiting passengers"
+    },
+    {
+     "text": "Bahn- und Postverwaltungen bekamen dafür jeweils die Hälfte einer durchschnittlichen Monatseinnahme ausgezahlt.",
+     "en": "Railway and postal administrations were paid half of an average monthly revenue for this purpose.",
+     "look": "postal workers sorting letters and packages in a large sorting room"
+    }
+   ]
+  },
+  {
+   "title": "Ablieferung des alten Geldes",
+   "lines": [
+    {
+     "text": "Bis zum sechsten Juni neunzehnhundertachtundvierzig mussten alle natürlichen und juristischen Personen ihr gesamtes Baraltgeld abgeliefern.",
+     "en": "By 26 June 1948, all natural and juristic persons had to hand in all their old cash.",
+     "look": "people standing in a queue carrying heavy canvas bags"
+    },
+    {
+     "text": "Die Altgeldguthaben mussten bei einer Hauptumtauschstelle der Abwicklungsbank angemeldet werden.",
+     "en": "The old money balances had to be registered at a main exchange office of the settlement bank.",
+     "look": "a clerk sitting behind a counter looking at ledger books"
+    },
+    {
+     "text": "Wer diese wichtige Frist verpasste und das Altgeld nicht anmeldete, verlor es komplett.",
+     "en": "Whoever missed this important deadline and did not register the old money lost it completely.",
+     "look": "close-up of a hand dropping worthless paper money into a waste basket",
+     "tag": "VERFALLEN"
+    },
+    {
+     "text": "Nach einer offiziellen Genehmigung durch das Finanzamt erfolgte die eigentliche Umstellung des Guthabens.",
+     "en": "After official approval by the tax office, the actual conversion of the balance took place.",
+     "look": "an official stamping a document with a heavy iron stamp"
+    },
+    {
+     "text": "Dieser Vorgang lief über ein spezielles Reichsbank-Abwicklungskonto ab.",
+     "en": "This process ran via a special Reichsbank settlement account.",
+     "look": "ledger pages with handwritten financial columns and numbers"
+    },
+    {
+     "text": "Die Menschen standen vor großen organisatorischen Hürden, während die neue Währung im Land verteilt wurde.",
+     "en": "People faced major organizational hurdles while the new currency was distributed across the country.",
+     "look": "crowds of citizens waiting outside a municipal building"
+    },
+    {
+     "text": "In den Monaten nach der erfolgreichen Reform lag das neue Geldvolumen bei etwa dreizehn Milliarden D-Mark.",
+     "en": "In the months after the successful reform, the new money volume was about 13 billion D-Mark.",
+     "look": "stacks of new bank notes lying on a wooden table"
+    },
+    {
+     "text": "Damit war der alte Geldüberhang beseitigt und die Grundlage für eine neue wirtschaftliche Ordnung gelegt.",
+     "en": "With this, the old monetary overhang was eliminated and the basis for a new economic order was laid.",
+     "look": "busy market stalls with fresh vegetables and shoppers"
+    },
+    {
+     "text": "Die Betriebe und die öffentlichen Verwaltungen konnten mit einer stabilen Währung in die Zukunft starten.",
+     "en": "Companies and public administrations could start into the future with a stable currency.",
+     "look": "factory workers operating machinery in a production hall"
+    },
+    {
+     "text": "Das tägliche Leben veränderte sich grundlegend, denn der Tauschhandel auf den Straßen verlor an Bedeutung.",
+     "en": "Daily life changed fundamentally because barter trade on the streets lost its importance.",
+     "look": "empty street corners where black market traders used to stand"
+    },
+    {
+     "text": "Die Bürger konnten nun wieder regulär bezahlen und mussten nicht mehr auf Zigaretten als Tauschmittel ausweichen.",
+     "en": "Citizens could now pay regularly again and no longer had to resort to cigarettes as a medium of exchange.",
+     "look": "a customer handing a crisp new banknote to a shopkeeper"
+    }
+   ]
+  },
+  {
+   "title": "Das Ende der alten Scheine",
+   "lines": [
+    {
+     "text": "Am einundzwanzigsten Juni neunzehnhundertachtundvierzig erlosch die Gültigkeit aller alten Zahlungsmittel in den westlichen Besatzungszonen.",
+     "en": "On 21 June 1948, the validity of all old means of payment expired in the western occupation zones.",
+     "look": "people standing outside a bank holding old paper money in their hands"
+    },
+    {
+     "text": "Die bisher gültigen Noten der Reichsmark und der Rentenmark wurden an diesem Tag endgültig abgelöst.",
+     "en": "The previously valid notes of the Reichsmark and Rentenmark were finally replaced on this day.",
+     "look": "close-up of old paper banknotes being piled on a wooden table"
+    },
+    {
+     "text": "Doch es gab wichtige Ausnahmen bei dieser plötzlichen Umstellung für die Bevölkerung im Alltag.",
+     "en": "However, there were important exceptions to this sudden change for the population in everyday life.",
+     "look": "a woman looking at various coins and notes on a kitchen table"
+    },
+    {
+     "text": "Münzen zu zehn und fünfzig Pfennig behielten weiterhin uneingeschränkt ihre volle Gültigkeit.",
+     "en": "Coins of ten and fifty pfennigs continued to retain their full validity without restriction.",
+     "look": "close-up of small metal coins lying on a wooden counter"
+    },
+    {
+     "text": "Auch Banknoten über einen Reichsmark blieben vorerst zu einem Zehntel ihres Nennwertes gültig.",
+     "en": "Banknotes of one Reichsmark also remained valid for the time being at one-tenth of their face value.",
+     "look": "a person carefully counting small denomination paper notes in a room"
+    },
+    {
+     "text": "Diese alten Noten blieben so lange im Umlauf, bis neue Münzen ausgegeben werden konnten.",
+     "en": "These old notes remained in circulation until new coins could be issued.",
+     "look": "shopkeeper sorting out old paper money and small change in a box"
+    },
+    {
+     "text": "Gleiches galt zu Beginn auch für die alten Briefmarken, die vorerst weiterverwendet werden durften.",
+     "en": "The same applied initially to the old postage stamps, which could continue to be used for the time being.",
+     "look": "close-up of old postage stamps attached to a grey envelope"
+    },
+    {
+     "text": "Schon von neunzehnhundertsechsunddreißig bis neunzehnhundertfünfundvierzig war ein gewaltiger Geldüberhang durch die Finanzierung entstanden.",
+     "en": "Already from 1936 to 1945, a massive monetary overhang had arisen through financing.",
+     "look": "historical archive footage of industrial production facilities and factory workers"
+    },
+    {
+     "text": "Die Ausgabe von Besatzungsgeld steigerte damals die Geldmenge im Lande drastisch.",
+     "en": "The issue of occupation money drastically increased the money supply in the country at that time.",
+     "look": "large piles of paper money being sorted in a dark banking hall"
+    },
+    {
+     "text": "Gleichzeitig sank das Güterangebot durch Demontagen und Einschränkungen in der landwirtschaftlichen Produktion stark ab.",
+     "en": "At the same time, the supply of goods dropped sharply due to dismantling and restrictions in agricultural production.",
+     "look": "empty shelves in a grocery store with only a few items left"
+    },
+    {
+     "text": "Weil viele Menschen und Betriebe Waren in Erwartung der Reform horteten, blieben die Regale leer.",
+     "en": "Because many people and businesses hoarded goods in anticipation of the reform, the shelves remained empty.",
+     "look": "store owner turning a closed sign on the front door of his shop",
+     "tag": "40 D-MARK"
+    }
+   ]
+  },
+  {
+   "title": "Die neue Bank deutscher Länder",
+   "lines": [
+    {
+     "text": "Am ersten März neunzehnhundertachtundvierzig wurde in den Bundesländern eine neue Institution ins Leben gerufen.",
+     "en": "On 1 March 1948, a new institution was established in the federal states.",
+     "look": "historic office building with large wooden doors"
+    },
+    {
+     "text": "Damals entstanden selbständige Landeszentralbanken in den verschiedenen Regionen der westlichen Besatzungszonen.",
+     "en": "At that time, independent state central banks were created in the various regions of the western occupation zones.",
+     "look": "people entering a large stone bank building"
+    },
+    {
+     "text": "Als Zentralbank dieser Landeszentralbanken nahm die Bank deutscher Länder an jenem Märztag ihre Arbeit auf.",
+     "en": "As the central bank of these state central banks, the Bank deutscher Länder began its work on that March day.",
+     "look": "bank employees working at old wooden desks with ledgers"
+    },
+    {
+     "text": "Von neunzehnhundertachtundvierzig bis neunzehnhundertfünfzig besaß diese Bank das offizielle Münzausgaberecht im Land.",
+     "en": "From 1948 to 1950, this bank held the official coin-issuing right in the country.",
+     "look": "metal coins being stamped inside a factory"
+    },
+    {
+     "text": "Die allerersten neuen DM-Münzen trugen deshalb ganz konkret die Umschrift Bank deutscher Länder.",
+     "en": "The very first new DM coins therefore specifically bore the inscription Bank deutscher Länder.",
+     "look": "close-up of a hand holding a new coin with embossed letters",
+     "tag": "1. MÜNZEN"
+    },
+    {
+     "text": "Die Bürger hielten diese frisch geprägten Geldstücke bald in ihren Händen.",
+     "en": "Citizens soon held these freshly minted pieces of money in their hands.",
+     "look": "close-up of coins resting on an open palm"
+    },
+    {
+     "text": "Doch diese Regelung der Münzprägung sollte nicht für immer bestehen bleiben.",
+     "en": "However, this regulation of coin minting was not to last forever.",
+     "look": "bankers discussing documents in a bright meeting room"
+    },
+    {
+     "text": "Durch ein neues Gesetz änderte sich die rechtliche Grundlage nach kurzer Zeit grundlegend.",
+     "en": "Through a new law, the legal basis changed fundamentally after a short time.",
+     "look": "parliament building exterior from the street"
+    },
+    {
+     "text": "Am achten Juli neunzehnhundertfünfzig ging das Münzrecht durch einen Beschluss auf den Bund über.",
+     "en": "On 8 July 1950, the right to mint coins passed to the Federation by a resolution.",
+     "look": "document lying on a dark wooden table with an official stamp"
+    },
+    {
+     "text": "Seither wurden alle neu hergestellten Münzen mit einer anderen Umschrift versehen.",
+     "en": "Since then, all newly produced coins have been provided with a different inscription.",
+     "look": "mint worker inspecting shiny metal coins"
+    },
+    {
+     "text": "Statt des früheren Namens stand nun die Bundesrepublik Deutschland auf der Metalloberfläche.",
+     "en": "Instead of the previous name, the Federal Republic of Germany now stood on the metal surface.",
+     "look": "extreme close-up of text on a small coin surface"
+    }
+   ]
+  },
+  {
+   "title": "Münzen aus vier Anstalten",
+   "lines": [
+    {
+     "text": "Die neuen Geldstücke für den Alltag entstanden in ganz bestimmten Fabriken des Landes.",
+     "en": "The new coins for everyday life were produced in very specific factories in the country.",
+     "look": "metal coins being stamped in a large industrial factory"
+    },
+    {
+     "text": "Die Herstellung erfolgte in den vier Prägeanstalten Hamburg, Karlsruhe, München und Stuttgart.",
+     "en": "Production took place in the four mints in Hamburg, Karlsruhe, Munich and Stuttgart.",
+     "look": "workers operating heavy machinery in a coin minting workshop"
+    },
+    {
+     "text": "Jede dieser vier Anstalten erhielt ein eigenes und unverwechselbares Kennzeichen auf den Geldstücken.",
+     "en": "Each of these four institutions received its own unmistakable mark on the coins.",
+     "look": "close-up of a small mint mark stamped onto a metal coin surface"
+    },
+    {
+     "text": "Das offizielle Münzzeichen für die Hansestadt Hamburg war der Buchstabe J.",
+     "en": "The official mint mark for the Hanseatic city of Hamburg was the letter J.",
+     "look": "a worker inspecting newly minted coins in a Hamburg workshop"
+    },
+    {
+     "text": "Für die Stadt Karlsruhe stand der Buchstabe G auf dem Geld.",
+     "en": "For the city of Karlsruhe, the letter G stood on the money.",
+     "look": "shiny metal coins lying on a wooden table in Karlsruhe"
+    },
+    {
+     "text": "Die Anstalt in München prägte ihre Stücke mit dem Buchstaben D.",
+     "en": "The institution in Munich minted its pieces with the letter D.",
+     "look": "metal blanks being prepared for stamping in Munich"
+    },
+    {
+     "text": "In Stuttgart kam hingegen der Buchstabe F als Kennzeichen zum Einsatz.",
+     "en": "In Stuttgart, however, the letter F was used as a mark.",
+     "look": "machinery pressing metal coins in a factory in Stuttgart"
+    },
+    {
+     "text": "Zunächst gab es kleine Münzen zu einem, zwei, fünf und zehn Pfennig.",
+     "en": "Initially there were small coins of one, two, five and ten pfennigs.",
+     "look": "small metal coins spread out on a flat surface"
+    },
+    {
+     "text": "Diese ersten Stücke bestanden aus einem einfachen Stahlkern mit einer Plattierung aus Kupfer oder Messing.",
+     "en": "These first pieces consisted of a simple steel core with plating made of copper or brass.",
+     "look": "close-up of coins showing the layered metal structure"
+    },
+    {
+     "text": "Eine Ausnahme bildete die zwei Pfennig Münze bis zum Jahre neunzehnhundertundsiebenundsechzig.",
+     "en": "An exception was the two-pfennig coin until the year 1967.",
+     "look": "a hand holding a small coin between two fingers"
+    },
+    {
+     "text": "Dieses Geldstück bestand durchgehend aus einer fünfundneunzig prozentigen Kupferlegierung.",
+     "en": "This piece of money consisted entirely of a ninety-five percent copper alloy.",
+     "look": "several copper-colored coins piled up on a table"
+    },
+    {
+     "text": "Die größeren Werte zu fünfzig Pfennig sowie zu einer und zwei Mark fertigte man aus einer Kupfer Nickel Legierung.",
+     "en": "The larger values of fifty pfennigs as well as one and two marks were made from a copper-nickel alloy.",
+     "look": "silver-colored coins stacked neatly next to each other",
+     "tag": "KUPFER-NICKEL"
+    }
+   ]
+  },
+  {
+   "title": "Der Vater der D-Mark",
+   "lines": [
+    {
+     "text": "Die neue Währung erhält einen Namen, der tief in die deutsche Geschichte zurückreicht.",
+     "en": "The new currency gets a name that reaches deep into German history.",
+     "look": "historic coins lying on a wooden table"
+    },
+    {
+     "text": "Die Bezeichnung Deutsche Mark knüpft direkt an die traditionelle deutsche Währungseinheit Mark an.",
+     "en": "The designation Deutsche Mark ties directly to the traditional German currency unit Mark.",
+     "look": "an old metal coin being held between fingers"
+    },
+    {
+     "text": "Hinter dieser entscheidenden Idee steht ein amerikanischer Offizier namens Edward A. Tenenbaum.",
+     "en": "Behind this crucial idea stands an American officer named Edward A. Tenenbaum.",
+     "look": "an American officer in uniform sitting at a desk"
+    },
+    {
+     "text": "Tenenbaum arbeitet damals als Assistent des Finanzberaters von Militärgouverneur Lucius D. Clay.",
+     "en": "Tenenbaum works back then as an assistant to the financial adviser of Military Governor Lucius D. Clay.",
+     "look": "historical documents and papers spread out on a large desk"
+    },
+    {
+     "text": "Sein konkreter Vorschlag wird auf den Konferenzen der Besatzungsmächte von allen Seiten einstimmig akzeptiert.",
+     "en": "His concrete proposal is unanimously accepted on all sides at the conferences of the occupying powers.",
+     "look": "several men in suits sitting around a conference table in deep conversation"
+    },
+    {
+     "text": "Damit ist der offizielle Name für das neue Geld in den westlichen Besatzungszonen gefunden.",
+     "en": "With this, the official name for the new money in the western occupation zones is found.",
+     "look": "new banknotes stacked neatly in front of an official building"
+    },
+    {
+     "text": "In der deutschen Öffentlichkeit bleibt Tenenbaums wichtige Rolle als Vater der D-Mark jedoch lange Zeit kaum bekannt.",
+     "en": "In the German public, however, Tenenbaum's important role as the father of the D-Mark remains hardly known for a long time.",
+     "look": "people walking past a newsstand on a busy city street"
+    },
+    {
+     "text": "Erst relativ spät wird seine Bedeutung in den Geschichtswissenschaften gewürdigt.",
+     "en": "Only relatively late is his significance appreciated in historical sciences.",
+     "look": "an open history book lying on a dark wooden shelf"
+    },
+    {
+     "text": "Forscher wie Wolfgang Benz und Hans-Ulrich Wehler beschäftigen sich eingehend mit den Hintergründen der Reform.",
+     "en": "Researchers like Wolfgang Benz and Hans-Ulrich Wehler deal in detail with the backgrounds of the reform.",
+     "look": "historians turning pages in large archive books"
+    },
+    {
+     "text": "Auch Werner Abelshauser untersucht die entscheidenden Schritte bei der Entstehung des neuen Geldes.",
+     "en": "Werner Abelshauser also examines the crucial steps during the creation of the new money.",
+     "look": "close-up of a fountain pen writing notes on paper"
+    },
+    {
+     "text": "So prägt die Arbeit des amerikanischen Offiziers bis heute das finanzielle Fundament der Bundesrepublik.",
+     "en": "Thus, the work of the American officer shapes the financial foundation of the Federal Republic to this day.",
+     "look": "modern bank buildings seen from a low angle on a clear day"
+    }
+   ]
+  },
+  {
+   "title": "Wirtschaftlicher Neubeginn",
+   "lines": [
+    {
+     "text": "Die Währungsreform zielte auf die Beseitigung des Geldüberhangs und den Aufbau einer funktionierenden Marktwirtschaft ab.",
+     "en": "The currency reform aimed at eliminating the monetary overhang and building a functioning market economy.",
+     "look": "empty factory floor with heavy machinery covered in dust"
+    },
+    {
+     "text": "Dazu gehörten die Aufhebung von Güterrationierung sowie die Beendigung der bisherigen Lohn- und Preisstopps.",
+     "en": "This included the abolition of goods rationing and the end of previous wage and price stops.",
+     "look": "empty shelves in a grocery store with no customers"
+    },
+    {
+     "text": "Das gesamte Bankwesen sollte durch eine unabhängige Zentralbank von Grund auf gestärkt werden.",
+     "en": "The entire banking system was to be strengthened from the ground up by an independent central bank.",
+     "look": "bank building facade with stone columns and tall windows"
+    },
+    {
+     "text": "Am vierundzwanzigsten Juni neunzehnhundertachtundvierzig wurde die Deutsche Mark auch in den drei West-Sektoren Berlins eingeführt.",
+     "en": "On 24 June 1948, the Deutsche Mark was also introduced in the three western sectors of Berlin.",
+     "look": "street scene in a city with damaged buildings and pedestrians walking"
+    },
+    {
+     "text": "Bis zum einunddreißigsten August zweitausendsechsundzwanzig waren noch DM-Banknoten im Nennwert von fünf Komma fünf acht Milliarden Mark nicht umgetauscht.",
+     "en": "Until 31 August 2026, DM banknotes with a nominal value of 5.58 billion marks had not been exchanged.",
+     "look": "stack of old paper banknotes lying on a wooden table"
+    },
+    {
+     "text": "Diese verbleibenden Beträge zeigen das enorme Ausmaß dieser historischen und wirtschaftspolitischen Umwälzung in Nachkriegsdeutschland.",
+     "en": "These remaining amounts show the enormous scale of this historical and economic policy upheaval in postwar Germany.",
+     "look": "close-up of a coin being placed on a counter"
+    },
+    {
+     "text": "Die neuen Banknoten und Münzen ersetzten die alten Zahlungsmittel und beendeten die schwierige Zeit des Tauschhandels.",
+     "en": "The new banknotes and coins replaced the old means of payment and ended the difficult period of barter trade.",
+     "look": "people buying goods in a shop using paper money"
+    },
+    {
+     "text": "Die Regale in den Geschäften füllten sich nach und nach wieder mit dringend benötigten Waren für die Bevölkerung.",
+     "en": "The shelves in the shops gradually filled up again with goods urgently needed by the population.",
+     "look": "grocer arranging fresh vegetables on a wooden market stall"
+    },
+    {
+     "text": "Die wirtschaftliche Grundlage für die kommenden Jahrzehnte der Bundesrepublik Deutschland war damit erfolgreich gelegt worden.",
+     "en": "The economic basis for the coming decades of the Federal Republic of Germany had thus been successfully laid.",
+     "look": "modern factory building with workers entering the main entrance"
+    },
+    {
+     "text": "Der offiziell verwendete Name der neuen Währung knüpfte direkt an die traditionelle deutsche Währungseinheit an.",
+     "en": "The officially used name of the new currency directly tied to the traditional German currency unit.",
+     "look": "metal coin lying on a dark surface close up"
+    },
+    {
+     "text": "Zahlreiche historische Quellen dokumentieren diesen entscheidenden Wendepunkt in der deutschen Wirtschaftsgeschichte nach dem Weltkrieg.",
+     "en": "Numerous historical sources document this decisive turning point in German economic history after the world war.",
+     "look": "historian turning pages of an old document in a library"
+    },
+    {
+     "text": "Bis zum Stichtag am einunddreißigsten August zweitausendsechsundzwanzig blieben diese Bestände in den Händen der Bürger ungetauscht.",
+     "en": "Until the deadline on 31 August 2026, these holdings remained unexchanged in the hands of citizens.",
+     "look": "safe opened in a dark room showing piles of cash",
+     "tag": "5,58 MRD. DM"
+    }
+   ]
+  }
+ ]
+}
