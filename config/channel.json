@@ -7,12 +7,17 @@
  "subject": "Deutschland 1945-1970 in Archivfilmen und Fotos (PD, CC0, CC BY)",
  "_owner": "owner 22.11.2026: name Als Oma jung war, avatar 45-70 unchanged, banner ruins + airlift plane, voice karlsson, Google Cloud hypothetica-511509, 1 video a week Sunday 17:00 Berlin",
  "schedule": {
-  "weekdays": [6],
+  "weekdays": [
+   6
+  ],
   "local_time": "17:00",
   "timezone": "Europe/Berlin",
   "min_lead_minutes": 360,
   "ahead": 2,
-  "emergency_reserve": [1, 2]
+  "emergency_reserve": [
+   1,
+   2
+  ]
  },
  "episode": {
   "minutes_min": 12,
@@ -40,9 +45,27 @@
   "photo_rest_days": 28,
   "min_fresh_shots_per_minute": 14,
   "_rule": "owner 22.11: a film at most once in 4 weeks, more free photos; a topic without enough fresh pictures is skipped in the queue",
-  "licences": ["Public domain", "CC0", "CC BY"],
+  "licences": [
+   "Public domain",
+   "CC0",
+   "CC BY"
+  ],
   "nara": "US federal works (Army Signal Corps, US Air Force, USIA, DoD) are PD (owner's spec); commercial series (Universal Newsreel, March of Time, Welt im Film, Filmed News Releases, 111-ADC numbers 10000+) are out; NARA status recorded per film",
-  "forbidden": ["Welt im Film", "World in Film", "Bundesarchiv", "DEFA", "British Pathe", "Pathe", "Movietone", "Getty", "Reuters", "AP", "March of Time", "Universal Newsreel", "Critical Past"]
+  "forbidden": [
+   "Welt im Film",
+   "World in Film",
+   "Bundesarchiv",
+   "DEFA",
+   "British Pathe",
+   "Pathe",
+   "Movietone",
+   "Getty",
+   "Reuters",
+   "AP",
+   "March of Time",
+   "Universal Newsreel",
+   "Critical Past"
+  ]
  },
  "sound": {
   "music_under_voice_db": -24,
@@ -52,12 +75,22 @@
  "music": {
   "_rule": "CC0 only; a new track goes up in a private test upload and through Content ID first (owner). These two already run on America Over Time without a claim.",
   "tracks": [
-   {"id": "oga-first-light-particles", "title": "First Light Particles", "creator": "Yoiyami", "licence": "CC0",
+   {
+    "id": "oga-first-light-particles",
+    "title": "First Light Particles",
+    "creator": "Yoiyami",
+    "licence": "CC0",
     "page": "opengameart.org/content/first-light-particles-%E2%80%93-cc0-atmospheric-pianoambient-track",
-    "url": "https://opengameart.org/sites/default/files/first_light_particles_1.mp3"},
-   {"id": "oga-november-snow", "title": "November Snow", "creator": "cynicmusic", "licence": "CC0",
+    "url": "https://opengameart.org/sites/default/files/first_light_particles_1.mp3"
+   },
+   {
+    "id": "oga-november-snow",
+    "title": "November Snow",
+    "creator": "cynicmusic",
+    "licence": "CC0",
     "page": "opengameart.org/content/november-snow",
-    "url": "https://opengameart.org/sites/default/files/155%20November_snow-33_tape_leveled.mp3"}
+    "url": "https://opengameart.org/sites/default/files/155%20November_snow-33_tape_leveled.mp3"
+   }
   ]
  },
  "text_llm": {
@@ -83,6 +116,10 @@
   "category_id": "27",
   "language": "de",
   "made_for_kids": false,
-  "google_project": "hypothetica-511509"
+  "google_project": "hypothetica-511509",
+  "keep_auto_thumbnail": [
+   "luftbruecke"
+  ],
+  "_note": "owner 22.11: phone not verified, so no custom covers yet; the pilot keeps YouTube's automatic frame for good"
  }
 }

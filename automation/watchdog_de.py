@@ -182,6 +182,8 @@ def thumbnails(rows, mem, actions):
         return
     for r in rows:
         f = ROOT / "episodes" / r["slug"] / "thumbnail.jpg"
+        if r["slug"] in CFG["upload"].get("keep_auto_thumbnail", []):
+            continue                      # owner 22.11: this video keeps YouTube's automatic frame
         if not (str(r.get("thumbnail", "")).startswith("failed") and r.get("youtube_id") and f.exists()):
             continue
         if not attempt_allowed(mem, "thumb-" + r["slug"]):
