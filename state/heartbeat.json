@@ -1,9 +1,9 @@
 {
  "date": "2026-11-22",
- "checked_at": "2026-11-22T17:11:00Z",
+ "checked_at": "2026-11-22T18:11:07Z",
  "waiting": [],
  "reserve": [],
  "actions": [
-  "stock 0 waiting + 0 reserve; no script ready, writing one"
+  "stock 0 waiting + 0 reserve; waehrungsreform started"
  ]
 }
