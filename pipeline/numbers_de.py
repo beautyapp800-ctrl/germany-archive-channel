@@ -90,3 +90,72 @@ def _word(m):
 
 def to_digits(text):
     return re.sub(r"[A-Za-zÄÖÜäöüß]+", _word, text)
+
+
+# ---------------------------------------------------------------- digits to words (for the voice)
+
+_ONES = ["null", "eins", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun", "zehn", "elf", "zwölf",
+         "dreizehn", "vierzehn", "fünfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn"]
+_TENS = ["", "", "zwanzig", "dreißig", "vierzig", "fünfzig", "sechzig", "siebzig", "achtzig", "neunzig"]
+_ORD = {1: "ersten", 3: "dritten", 7: "siebten", 8: "achten"}
+
+
+def _w100(n):
+    if n < 20:
+        return _ONES[n]
+    t, u = divmod(n, 10)
+    return _TENS[t] if u == 0 else ("ein" if u == 1 else _ONES[u]) + "und" + _TENS[t]
+
+
+def _w1000(n):
+    h, r = divmod(n, 100)
+    return (("" if h == 1 else _ONES[h]) + "hundert" if h else "") + (_w100(r) if r else "")
+
+
+def cardinal(n, year=False):
+    """1398 -> eintausenddreihundertachtundneunzig; as a year 1949 -> neunzehnhundertneunundvierzig."""
+    if n < 0:
+        return "minus " + cardinal(-n)
+    if year and 1100 <= n <= 1999:
+        h, r = divmod(n, 100)
+        return _w100(h) + "hundert" + (_w100(r) if r else "")
+    if n < 1000:
+        return _w1000(n) if n >= 100 else _w100(n)
+    if n < 1_000_000:
+        k, r = divmod(n, 1000)
+        head = "eintausend" if k == 1 else (_w1000(k) if k >= 100 else _w100(k)) + "tausend"
+        return head + (_w1000(r) if r >= 100 else (_w100(r) if r else ""))
+    m, r = divmod(n, 1_000_000)
+    head = ("eine Million" if m == 1 else f"{cardinal(m)} Millionen")
+    return head + (" " + cardinal(r) if r else "")
+
+
+def ordinal_dative(n):
+    """16 -> sechzehnten, 3 -> dritten, 21 -> einundzwanzigsten ("am 16. April")."""
+    if n in _ORD:
+        return _ORD[n]
+    return cardinal(n) + ("ten" if n < 20 else "sten")
+
+
+def to_words(text):
+    """Every digit in the text spelled out the way a speaker reads it."""
+    def num(m):
+        raw = m.group(0)
+        if re.fullmatch(r"\d+,\d+", raw):
+            a, b = raw.split(",")
+            return cardinal(int(a)) + " Komma " + " ".join(cardinal(int(d)) for d in b) if len(b) == 1 else \
+                cardinal(int(a)) + " Komma " + cardinal(int(b))
+        n = int(raw.replace(".", ""))
+        return cardinal(n, year=bool(re.fullmatch(r"1[1-9]\d\d", raw)))
+    def date(m):
+        o = ordinal_dative(int(m.group(1)))
+        before = text[max(0, m.start() - 6):m.start()].strip().lower()
+        if before.endswith("der") or before.endswith("ist"):        # nominative: "der dreizehnte August"
+            o = o[:-1] if o.endswith("n") else o
+        return o + " " + m.group(2)
+    t = re.sub(r"(\d{1,2})\.\s+(" + MONTHS + ")", date, text)
+    t = re.sub(r"(\d+)\s?%", lambda m: cardinal(int(m.group(1))) + " Prozent", t)
+    t = re.sub(r"\bD-?Mark\b|\bDM\b", "D-Mark", t)
+    t = re.sub(r"(?<![A-Za-z-])1 Million\b", "eine Million", t)
+    t = re.sub(r"\d{1,3}(?:\.\d{3})+|\d+,\d+|\d+", num, t)
+    return t

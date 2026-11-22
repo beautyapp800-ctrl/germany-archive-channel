@@ -37,7 +37,8 @@ def _now_z():
 
 
 def rows():
-    return json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else []
+    data = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else []
+    return data if isinstance(data, list) else []
 
 
 def save(r):
@@ -193,6 +194,14 @@ def record(slug):
         return 1
     row.setdefault("state", "built")
     row["slug"] = slug
+    row["run_id"] = os.environ.get("GITHUB_RUN_ID") or row.get("run_id")   # the artifact an upload can come from again
+    q = ROOT / "topics" / "queue.json"
+    if q.exists():
+        data = json.loads(q.read_text(encoding="utf-8"))
+        for t in data["topics"]:
+            if t["slug"] == slug:
+                t["status"] = "built"
+        q.write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     save(r)
     persist(f"state: {slug} built")               # from here no later build of the topic renders again
     if youtube.has_token():

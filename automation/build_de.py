@@ -19,6 +19,7 @@ sys.path.insert(0, str(ROOT))
 from core.logger import get_logger  # noqa: E402
 
 log = get_logger("build_de")
+CFG_MATERIAL = json.loads((ROOT / "config" / "channel.json").read_text(encoding="utf-8"))["material"]
 
 
 def paths(slug):
@@ -87,6 +88,12 @@ def stage_prepare(slug):
                       "year": plan_de.year_of(p.get("date")) or plan_de.year_of(p.get("file")),
                       "size": p.get("size")})
     log.info("pictures refused by the frame check: %s", refused)
+    need = CFG_MATERIAL["min_fresh_shots_per_minute"] * secs / 60
+    have = sum(c.get("uses", 1) for c in cands)
+    if have < need:
+        # owner 22.11: a topic without enough fresh pictures is skipped in the queue (the watchdog does it on exit 3)
+        log.error("NOT_ENOUGH_PICTURES: %d shots possible, %.0f needed for %.1f minutes", have, need, secs / 60)
+        raise SystemExit(3)
     film_secs = sum(c["end"] - c["start"] for c in cands if c["kind"] == "film")
     log.info("candidates: %d film shots (%.0f s), %d photos", sum(c["kind"] == "film" for c in cands), film_secs,
              sum(c["kind"] == "photo" for c in cands))

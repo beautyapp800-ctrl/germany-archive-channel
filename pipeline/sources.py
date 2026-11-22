@@ -22,7 +22,8 @@ from core.logger import get_logger
 
 log = get_logger("sources")
 API = "https://en.wikipedia.org/w/api.php"
-UA = {"User-Agent": "archive-channel/1.0 (documentary research)"}
+API_DE = "https://de.wikipedia.org/w/api.php"
+UA = {"User-Agent": "germany-archive-channel/1.0 (https://github.com/beautyapp800-ctrl/germany-archive-channel)"}
 MAX_CHARS = 22000
 CACHE = Path(__file__).resolve().parent.parent / "cache" / "wikipedia"
 MIN_GAP_S = 1.5
@@ -53,20 +54,21 @@ def _get(url, attempts=6):
             time.sleep(3 * (a + 1))
 
 
-def wikipedia(title):
+def wikipedia(title, lang="en"):
     CACHE.mkdir(parents=True, exist_ok=True)
-    cached = CACHE / (hashlib.sha1(title.encode()).hexdigest()[:16] + ".json")
+    cached = CACHE / (hashlib.sha1((lang + ":" + title).encode()).hexdigest()[:16] + ".json")
     if cached.exists():
         return json.loads(cached.read_text(encoding="utf-8"))
-    q = urllib.parse.urlencode({"action": "query", "titles": title, "redirects": 1, "prop": "extracts|info",
-                                "inprop": "url", "explaintext": 1, "format": "json", "formatversion": 2})
-    page = _get(f"{API}?{q}")["query"]["pages"][0]
+    q = urllib.parse.urlencode({"action": "query", "titles": title, "redirects": 1, "prop": "extracts|info|revisions",
+                                "rvprop": "ids", "inprop": "url", "explaintext": 1, "format": "json", "formatversion": 2})
+    page = _get(f"{API_DE if lang == 'de' else API}?{q}")["query"]["pages"][0]
     if page.get("missing"):
         raise LookupError(f"no Wikipedia article {title!r}")
     text = page.get("extract", "")
     # the reference and link sections carry no facts to narrate
     text = re.split(r"\n== (See also|References|Notes|Further reading|External links|Bibliography) ==", text)[0]
-    out = {"title": page["title"], "url": page["fullurl"], "text": text[:MAX_CHARS]}
+    out = {"title": page["title"], "url": page["fullurl"], "text": text[:MAX_CHARS],
+           "revision": ((page.get("revisions") or [{}])[0]).get("revid")}
     cached.write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
     return out
 
@@ -74,7 +76,7 @@ def wikipedia(title):
 BLS_REPORT = "https://www.bls.gov/opub/100-years-of-u-s-consumer-spending.pdf"
 BLS_PERIODS = ("1901", "1918-19", "1934-36", "1950", "1960-61", "1972-73", "1984-85", "1996-97", "2002-03")
 BLS_DATA = Path(__file__).resolve().parent.parent / "data" / "bls_100_years.json"
-UA = {"User-Agent": "Mozilla/5.0 (compatible; archive-channel/1.0; documentary research)"}
+UA = {"User-Agent": "germany-archive-channel/1.0 (https://github.com/beautyapp800-ctrl/germany-archive-channel)"}
 
 
 def _pdf_text(pdf):
@@ -117,11 +119,11 @@ def bls_spending(years):
              "url": BLS_REPORT, "text": chapters[p][:MAX_CHARS]} for p in pick]
 
 
-def gather(titles):
+def gather(titles, lang="en"):
     out = []
     for t in titles:
         try:
-            out.append(wikipedia(t))
+            out.append(wikipedia(t, lang))
         except LookupError as e:
             log.warning("%s", e)
     if not out:

@@ -1,0 +1,47 @@
+name: scripts-de
+# The next queued topic's pictures searched and script written (automation/write_de.py), ahead of its build,
+# so a build never waits on a text provider. Started by the watchdog (or by hand); one topic per run.
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: a topic slug; empty = the next queued topic without a script
+        default: ""
+permissions:
+  contents: write
+concurrency:
+  group: scripts-de
+  cancel-in-progress: false
+jobs:
+  write:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      GROQ_API_KEY_AR: ${{ secrets.GROQ_API_KEY_AR }}
+      GEMINI_API_KEY_AR: ${{ secrets.GEMINI_API_KEY_AR }}
+      PYTHONUTF8: 1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q numpy pillow
+      - name: Write the script (exit 3 = skipped for lack of pictures, 4 = text day spent: not failures)
+        run: |
+          set +e
+          python automation/write_de.py "${{ inputs.slug || '--next' }}"
+          code=$?
+          echo "write_de exit $code"
+          [ "$code" = "3" ] || [ "$code" = "4" ] || [ "$code" = "0" ] || exit $code
+      - name: Keep the result in the repository
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for f in episodes/*/script.json episodes/*/material.json topics/queue.json state/quota_hold.json state/usage.json; do
+            git add "$f" 2>/dev/null || true
+          done
+          git diff --cached --quiet && exit 0
+          git commit -q -m "scripts-de: topic written"
+          for i in 1 2 3 4 5; do git pull -q --rebase --autostash origin main && git push -q origin HEAD:main && exit 0; sleep $((i*8)); done
+          exit 1

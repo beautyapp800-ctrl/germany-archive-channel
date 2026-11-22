@@ -47,6 +47,21 @@ def text_tools():
     taken = [s.strftime("%Y-%m-%dT%H:%M:%SZ")]
     s2 = youtube.next_slot(taken, now=datetime(2026, 11, 23, 9, 0, tzinfo=timezone.utc))
     check("a held slot is skipped", (s2 - s).days == 7)
+    from automation import watchdog_de
+    ns = watchdog_de.next_sunday_slot().astimezone(ZoneInfo("Europe/Berlin"))
+    check("watchdog: next slot is a Sunday 17:00 Berlin", (ns.weekday(), ns.hour) == (6, 17), str(ns))
+    w, r = watchdog_de.stock([{"slug": "a", "state": "built"}, {"slug": "b", "state": "reserve"},
+                              {"slug": "c", "state": "scheduled", "publish_at": "2999-01-01T00:00:00Z"},
+                              {"slug": "d", "state": "scheduled", "publish_at": "2001-01-01T00:00:00Z"}])
+    check("watchdog: stock counts waiting and reserve", (len(w), len(r)) == (2, 1))
+    from pipeline import scriptwriter_de
+    check("writer: unsupported number dropped",
+          scriptwriter_de.clean_lines([{"text": "Es kamen 77777 Flugzeuge.", "en": "77,777 aircraft came.", "look": "planes"}],
+                                      {"1948"})[0] == [])
+    check("writer: digits spelled out",
+          scriptwriter_de.clean_lines([{"text": "Am 16. April 1949 kamen 1.398 Flugzeuge.", "en": "On 16 April 1949, 1,398 aircraft came.",
+                                        "look": "planes"}], {"1949", "1398"})[0][0]["text"]
+          == "Am sechzehnten April neunzehnhundertneunundvierzig kamen eintausenddreihundertachtundneunzig Flugzeuge.")
     script = json.loads((ROOT / "episodes" / "luftbruecke" / "script.json").read_text(encoding="utf-8"))
     tl = [{"chapter": i, "chapter_title": c["title"], "start": 60.0 * i, "end": 60.0 * i + 50, "text": "x"}
           for i, c in enumerate(script["chapters"])]

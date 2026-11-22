@@ -1,1 +1,417 @@
-{"topics": []}
+{
+ "topics": [
+  {
+   "slug": "luftbruecke",
+   "name": "Berliner Luftbrücke 1948: Alle 3 Minuten ein Flugzeug",
+   "year_label": "1948",
+   "place": "Berlin",
+   "years": [
+    1948,
+    1949
+   ],
+   "wikipedia": [
+    "Berliner Luftbrücke",
+    "Berlin-Blockade",
+    "Gail Halvorsen",
+    "Flughafen Berlin-Tegel",
+    "Währungsreform 1948 (Westdeutschland)"
+   ],
+   "status": "built"
+  },
+  {
+   "slug": "tempelhof",
+   "name": "Tempelhof: Der Flughafen, der Berlin rettete",
+   "year_label": "1948",
+   "place": "Berlin",
+   "years": [
+    1947,
+    1949
+   ],
+   "wikipedia": [
+    "Flughafen Berlin-Tempelhof",
+    "Berliner Luftbrücke"
+   ],
+   "commons_categories": [
+    "Category:Berlin Airlift"
+   ],
+   "film_queries": [
+    "tempelhof",
+    "berlin airlift",
+    "berlin airfield"
+   ],
+   "status": "queued"
+  },
+  {
+   "slug": "waehrungsreform",
+   "name": "Währungsreform 1948: 40 D-Mark für jeden",
+   "year_label": "1948",
+   "place": "Westdeutschland",
+   "years": [
+    1947,
+    1949
+   ],
+   "wikipedia": [
+    "Währungsreform 1948 (Westdeutschland)",
+    "Deutsche Mark",
+    "Ludwig Erhard"
+   ],
+   "commons_categories": [
+    "Category:Deutsche Mark"
+   ],
+   "film_queries": [
+    "currency reform germany",
+    "german currency",
+    "deutsche mark"
+   ],
+   "status": "queued"
+  },
+  {
+   "slug": "schwarzmarkt",
+   "name": "Schwarzmarkt 1946: Zigaretten statt Geld",
+   "year_label": "1946",
+   "place": "Deutschland",
+   "years": [
+    1945,
+    1947
+   ],
+   "wikipedia": [
+    "Schwarzmarkt",
+    "Nachkriegszeit",
+    "Zigarettenwährung"
+   ],
+   "commons_categories": [],
+   "film_queries": [
+    "black market germany",
+    "germany 1946",
+    "german food"
+   ],
+   "status": "queued"
+  },
+  {
+   "slug": "hungerwinter",
+   "name": "Hungerwinter 1946/47: Wie überlebte man ihn?",
+   "year_label": "1946",
+   "place": "Deutschland",
+   "years": [
+    1945,
+    1947
+   ],
+   "wikipedia": [
+    "Hungerwinter 1946/47",
+    "Nachkriegszeit",
+    "Lebensmittelkarte"
+   ],
+   "commons_categories": [],
+   "film_queries": [
+    "german food story",
+    "germany hunger",
+    "food germany 1946"
+   ],
+   "status": "queued"
+  },
+  {
+   "slug": "care-pakete",
+   "name": "CARE-Pakete: Was steckte drin?",
+   "year_label": "1946",
+   "place": "Deutschland",
+   "years": [
+    1945,
+    1947
+   ],
+   "wikipedia": [
+    "CARE-Paket",
+    "Nachkriegszeit",
+    "Marshallplan"
+   ],
+   "commons_categories": [],
+   "film_queries": [
+    "care package",
+    "relief germany",
+    "food aid germany"
+   ],
+   "status": "queued"
+  },
+  {
+   "slug": "truemmerfrauen",
+   "name": "Trümmerfrauen: Wer räumte Deutschland auf?",
+   "year_label": "1946",
+   "place": "Deutschland",
+   "years": [
+    1945,
+    1947
+   ],
+   "wikipedia": [
+    "Trümmerfrau",
+    "Trümmerbahn",
+    "Nachkriegszeit"
+   ],
+   "commons_categories": [
+    "Category:Trümmerfrauen"
+   ],
+   "film_queries": [
+    "rubble germany",
+    "germany rebuilding",
+    "rebuilding germany"
+   ],
+   "status": "queued"
+  },
+  {
+   "slug": "vertriebene",
+   "name": "Flüchtlinge und Vertriebene: Zwölf Millionen Neuanfänge",
+   "year_label": "1946",
+   "place": "Deutschland",
+   "years": [
+    1945,
+    1947
+   ],
+   "wikipedia": [
+    "Flucht und Vertreibung Deutscher aus Mittel- und Osteuropa 1945–1950",
+    "Heimatvertriebener (Bundesvertriebenengesetz)",
+    "Lastenausgleich"
+   ],
+   "commons_categories": [
+    "Category:Displaced persons camps in Germany",
+    "Category:Refugees in Germany"
+   ],
+   "film_queries": [
+    "refugees germany",
+    "displaced persons germany",
+    "refugee camp germany"
+   ],
+   "status": "queued"
+  },
+  {
+   "slug": "marshallplan",
+   "name": "Marshallplan: Wohin flossen die Dollar?",
+   "year_label": "1948",
+   "place": "Westdeutschland",
+   "years": [
+    1947,
+    1949
+   ],
+   "wikipedia": [
+    "Marshallplan",
+    "Marshallplan",
+    "Wirtschaftswunder"
+   ],
+   "commons_categories": [
+    "Category:Marshall Plan",
+    "Category:Marshall Plan in Germany"
+   ],
+   "film_queries": [
+    "marshall plan",
+    "marshall plan germany",
+    "european recovery"
+   ],
+   "status": "queued"
+  },
+  {
+   "slug": "kaefer",
+   "name": "Der Käfer: 5.000 Mark und der millionste Wagen",
+   "year_label": "1955",
+   "place": "Wolfsburg",
+   "years": [
+    1954,
+    1956
+   ],
+   "wikipedia": [
+    "VW Käfer",
+    "Volkswagenwerk Wolfsburg",
+    "Wirtschaftswunder"
+   ],
+   "commons_categories": [],
+   "film_queries": [
+    "volkswagen",
+    "wolfsburg"
+   ],
+   "status": "queued"
+  },
+  {
+   "slug": "17-juni-1953",
+   "name": "17. Juni 1953: Aufstand in der DDR",
+   "year_label": "1953",
+   "place": "Ost-Berlin",
+   "years": [
+    1952,
+    1954
+   ],
+   "wikipedia": [
+    "Aufstand vom 17. Juni 1953",
+    "Walter Ulbricht"
+   ],
+   "commons_categories": [],
+   "film_queries": [
+    "east berlin 1953",
+    "berlin uprising",
+    "east germany 1953"
+   ],
+   "status": "queued"
+  },
+  {
+   "slug": "flucht-westberlin",
+   "name": "Flucht nach West-Berlin: Wie lief eine Flucht ab?",
+   "year_label": "1959",
+   "place": "Berlin",
+   "years": [
+    1958,
+    1960
+   ],
+   "wikipedia": [
+    "Ungesetzlicher Grenzübertritt im DDR-Recht",
+    "West-Berlin",
+    "Notaufnahmelager Marienfelde"
+   ],
+   "commons_categories": [],
+   "film_queries": [
+    "refugee berlin",
+    "east german refugees",
+    "west berlin refugee"
+   ],
+   "status": "queued"
+  },
+  {
+   "slug": "mauerbau",
+   "name": "13. August 1961: Über Nacht eine Grenze",
+   "year_label": "1961",
+   "place": "Berlin",
+   "years": [
+    1960,
+    1962
+   ],
+   "wikipedia": [
+    "Berliner Mauer",
+    "Ost-Berlin"
+   ],
+   "commons_categories": [
+    "Category:Berlin Wall in 1961",
+    "Category:Berlin Wall"
+   ],
+   "film_queries": [
+    "berlin wall",
+    "berlin border",
+    "berlin 1961"
+   ],
+   "status": "queued"
+  },
+  {
+   "slug": "checkpoint-charlie",
+   "name": "Checkpoint Charlie 1961: Panzer Auge in Auge",
+   "year_label": "1961",
+   "place": "Berlin",
+   "years": [
+    1960,
+    1962
+   ],
+   "wikipedia": [
+    "Checkpoint Charlie",
+    "Berlin-Krise",
+    "Berliner Mauer"
+   ],
+   "commons_categories": [
+    "Category:Checkpoint Charlie"
+   ],
+   "film_queries": [
+    "checkpoint charlie",
+    "berlin tanks",
+    "berlin crisis"
+   ],
+   "status": "queued"
+  },
+  {
+   "slug": "kennedy-berlin",
+   "name": "Kennedy in Berlin 1963: Der Satz, der die Stadt erobert hat",
+   "year_label": "1963",
+   "place": "Berlin",
+   "years": [
+    1962,
+    1964
+   ],
+   "wikipedia": [
+    "Ich bin ein Berliner",
+    "Berliner Mauer",
+    "West-Berlin"
+   ],
+   "commons_categories": [],
+   "film_queries": [
+    "kennedy berlin",
+    "kennedy germany",
+    "kennedy visit"
+   ],
+   "status": "queued"
+  },
+  {
+   "slug": "gi-familien",
+   "name": "GIs in Deutschland: Besatzer und Besetzte Tür an Tür",
+   "year_label": "1947",
+   "place": "Deutschland",
+   "years": [
+    1946,
+    1948
+   ],
+   "wikipedia": [
+    "Amerikanische Besatzungszone",
+    "Besatzungszone",
+    "Ausländische Militärbasen in Deutschland"
+   ],
+   "commons_categories": [
+    "Category:United States Army in Germany",
+    "Category:Bremerhaven"
+   ],
+   "film_queries": [
+    "occupation germany",
+    "us army germany",
+    "american soldiers germany"
+   ],
+   "status": "queued"
+  },
+  {
+   "slug": "westberlin-alltag",
+   "name": "West-Berlin: Das Leben auf der Insel",
+   "year_label": "1953",
+   "place": "West-Berlin",
+   "years": [
+    1952,
+    1954
+   ],
+   "wikipedia": [
+    "West-Berlin",
+    "Berliner Luftbrücke",
+    "Berlin-Blockade"
+   ],
+   "commons_categories": [
+    "Category:Berlin in the 1950s"
+   ],
+   "film_queries": [
+    "west berlin",
+    "this is berlin",
+    "berlin 1953"
+   ],
+   "status": "queued"
+  },
+  {
+   "slug": "wirtschaftswunder",
+   "name": "Wirtschaftswunder: Was kostete das gute Leben?",
+   "year_label": "1955",
+   "place": "Westdeutschland",
+   "years": [
+    1954,
+    1956
+   ],
+   "wikipedia": [
+    "Wirtschaftswunder",
+    "Soziale Marktwirtschaft",
+    "Ludwig Erhard"
+   ],
+   "commons_categories": [
+    "Category:Germany in the 1950s",
+    "Category:West Germany in the 1950s"
+   ],
+   "film_queries": [
+    "west germany 1950s",
+    "germany economy",
+    "german industry"
+   ],
+   "status": "queued"
+  }
+ ]
+}
