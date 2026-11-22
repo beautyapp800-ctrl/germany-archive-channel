@@ -32,10 +32,11 @@ def _frames(video):
 def coloured_edge(sat):
     """A coloured strip along an edge of a black-and-white picture (the red tape of a scanned
     print, pilot 22.11), invisible to the gray checks."""
-    if np.median(sat[:, 40:-40]) > 14:
-        return None                       # a colour picture: its edges may be coloured
+    if np.median(sat[:, 40:-40]) > 30:
+        return None                       # a colour picture (b/w and sepia stay under 30)
+    base = float(np.median(sat[:, 40:-40]))
     for name, band in (("left", sat[:, :8]), ("right", sat[:, -8:]), ("top", sat[:6]), ("bottom", sat[-6:])):
-        if band.mean() > 40:
+        if band.mean() > max(40, base + 30):
             return f"coloured edge ({name})"
     return None
 

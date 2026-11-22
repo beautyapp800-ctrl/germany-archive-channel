@@ -32,7 +32,7 @@ def _border_lines(gray, sat, mono, strict=False):
     strict (film frames): only a truly even black/white bar or a coloured edge counts,
     so an overcast sky or a dark foreground is not taken for a border."""
     m, s, c = gray.mean(1), gray.std(1), sat.mean(1)
-    coloured = mono & (c > 45)
+    coloured = mono & (c > 70)
     if strict:
         return ((s < 5) & ((m < 18) | (m > 235))) | coloured
     flat = s < 9
@@ -95,14 +95,20 @@ def _inside_mount(img):
     gray, sat = _arrays(img)
     h, w = gray.shape
     centre = sat[h // 4: 3 * h // 4, w // 4: 3 * w // 4]
-    col = sat > 40
-    if np.median(centre) > 14 or col.mean() < 0.03:
+    col = sat > 70                       # a red/orange card; a sepia print stays near 20-30
+    if np.median(centre) > 30 or col.mean() < 0.03:
         return (0.0, 0.0, 1.0, 1.0)
-    r0, r1 = _longest_run(col.mean(1) < 0.08)
-    if r1 - r0 < h * 0.4:
-        return (0.0, 0.0, 1.0, 1.0)
-    c0, c1 = _longest_run(col[r0:r1].mean(0) < 0.08)
-    if c1 - c0 < w * 0.4:
+    # rows and columns in turn, each inside the other's block: a mount wider on one side
+    # (or a typed caption under the photo) does not hide the photo's own block
+    r0, r1, c0, c1 = 0, h, 0, w
+    for _ in range(3):
+        c0, c1 = _longest_run(col[r0:r1].mean(0) < 0.15)
+        if c1 - c0 < w * 0.4:
+            break
+        r0, r1 = _longest_run(col[:, c0:c1].mean(1) < 0.15)
+        if r1 - r0 < h * 0.4:
+            break
+    if r1 - r0 < h * 0.4 or c1 - c0 < w * 0.4:
         return (0.0, 0.0, 1.0, 1.0)
     return (c0 / w, r0 / h, c1 / w, r1 / h)
 
@@ -110,7 +116,7 @@ def _inside_mount(img):
 def _trim_once(img, strict=False):
     gray, sat = _arrays(img)
     h, w = gray.shape
-    mono = float(np.median(sat)) < 14
+    mono = float(np.median(sat)) < 30    # black-and-white or sepia
     lim_h, lim_w = int(h * MAX_TRIM), int(w * MAX_TRIM)
     top = _edge(_border_lines(gray, sat, mono, strict), lim_h)
     bottom = _edge(_border_lines(gray[::-1], sat[::-1], mono, strict), lim_h)
