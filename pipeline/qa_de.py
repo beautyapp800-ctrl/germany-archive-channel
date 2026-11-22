@@ -45,6 +45,30 @@ def _lap(x):
     return float(np.var(x[1:-1, 1:-1] * 4 - x[:-2, 1:-1] - x[2:, 1:-1] - x[1:-1, :-2] - x[1:-1, 2:]))
 
 
+def _symmetric_panels(f):
+    """A pillarbox fill is symmetric: the sharp picture starts as far from the left edge as
+    it ends from the right. A close-up with a soft background is not (pilot 22.11)."""
+    lap = np.abs(f[1:-1, 1:-1] * 4 - f[:-2, 1:-1] - f[2:, 1:-1] - f[1:-1, :-2] - f[1:-1, 2:]).mean(0)
+    k = np.convolve(lap, np.ones(5) / 5, mode="same")
+    level = 0.35 * float(np.median(k[len(k) // 3: 2 * len(k) // 3]))
+    sharp = np.nonzero(k > level)[0]
+    if len(sharp) == 0:
+        return False
+    left, right = sharp[0], len(k) - 1 - sharp[-1]
+    if not (min(left, right) > 20 and abs(left - right) <= 8):
+        return False
+    # and the edge of the sharp picture is a straight vertical line in every band of rows
+    starts = []
+    for r in range(0, f.shape[0] - 20, 20):
+        b = f[r:r + 20]
+        lb = np.abs(b[1:-1, 1:-1] * 4 - b[:-2, 1:-1] - b[2:, 1:-1] - b[1:-1, :-2] - b[1:-1, 2:]).mean(0)
+        lb = np.convolve(lb, np.ones(5) / 5, mode="same")
+        on = np.nonzero(lb > level)[0]
+        if len(on):
+            starts.append(on[0])
+    return len(starts) >= 6 and float(np.std(starts)) < 4
+
+
 def frame_problem(f):
     """None, or what is wrong with this frame's edges."""
     bands = {"top": f[:7], "bottom": f[-7:], "left": f[:, :10], "right": f[:, -10:]}
@@ -56,7 +80,7 @@ def frame_problem(f):
     if f.mean() > 30:
         centre = _lap(f[:, 80:240])
         sides = [_lap(f[:, :40]), _lap(f[:, -40:])]
-        if centre > 120 and max(sides) < 0.06 * centre:
+        if centre > 120 and max(sides) < 0.06 * centre and _symmetric_panels(f):
             return "blurred side panels"
     return None
 
