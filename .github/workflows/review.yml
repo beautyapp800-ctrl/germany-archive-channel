@@ -20,10 +20,18 @@ jobs:
           path: out
           run-id: ${{ inputs.run_id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: build-prepare
+          path: prep
+          run-id: ${{ inputs.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - run: |
           sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg >/dev/null
           mkdir review
           find out -type f ! -name '*.mp4' -size -30M -exec cp {} review/ \;
+          cp prep/plan.json review/plan.json 2>/dev/null || true
           v=$(ls out/*.mp4 | head -1)
           ffmpeg -hide_banner -loglevel error -i "$v" -vf scale=-2:480 -c:v libx264 -preset veryfast -crf 30 \
             -maxrate 650k -bufsize 1300k -c:a aac -b:a 80k -movflags +faststart preview_480p.mp4

@@ -6,6 +6,9 @@ https:// (a new channel has no advanced features, links would be cut), no < or >
 Title: German, at most 70 characters.
 """
 import json
+import os
+import re
+import urllib.parse
 from collections import Counter
 from pathlib import Path
 
@@ -54,8 +57,22 @@ def description(script, timeline, used_films, used_photos, slug):
     rest = [p for p in used_photos if p not in by]
     groups = Counter(f"{_author(p)} ({p['licence']})" for p in rest)
     parts += [f"- {k}: {v} Foto{'s' if v > 1 else ''}" for k, v in groups.most_common()]
+    # CC BY: title, author, source and licence for every picture, one line per author
+    # (six Saarinen photos of one series made the pilot's description run over 5000 bytes)
+    by_author = {}
     for p in by:
-        parts.append(f"- {p['file'].replace('File:', '')} – {_author(p)} – {p['licence']} – {p['page']}")
+        by_author.setdefault((_author(p), p["licence"]), []).append(p)
+    for (who, lic), ps in by_author.items():
+        names = [re.sub(r"\.(tiff?|jpe?g|png)$", "", p["file"].replace("File:", ""), flags=re.I) for p in ps]
+        if len(names) == 1:
+            parts.append(f"- {names[0]} – {who} – {lic} – {urllib.parse.unquote(ps[0]['page'])}")
+            continue
+        stem = os.path.commonprefix(names)
+        stem = stem[: max(stem.rfind(" "), stem.rfind("("), stem.rfind("-")) + 1] if len(stem) > 12 else ""
+        tails = [n[len(stem):] for n in names]
+        close = "(" in stem and all(t.endswith(")") for t in tails)
+        rest = ", ".join(t[:-1] if close else t for t in tails) + (")" if close else "")
+        parts.append(f"- {stem}{rest} – {who} – {lic} – commons.wikimedia.org ({len(ps)} Fotos)")
     parts += ["Fotos über Wikimedia Commons; die Liste aller Bilder mit Lizenz steht im Projekt-Repository.", "",
               "MUSIK (CC0)"]
     parts += [f"- {t['title']} – {t['creator']} – {t['page']}" for t in CFG["music"]["tracks"]]

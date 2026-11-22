@@ -44,6 +44,8 @@ jobs:
             episodes/${{ inputs.slug }}/build/material.json
             episodes/${{ inputs.slug }}/build/plan.json
             episodes/${{ inputs.slug }}/build/scan/
+            !episodes/${{ inputs.slug }}/build/scan/*/proxy.mp4
+            !episodes/${{ inputs.slug }}/build/scan/*/sec/
             episodes/${{ inputs.slug }}/build/thumbs/
           retention-days: 7
   cut:
