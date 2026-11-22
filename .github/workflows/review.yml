@@ -1,0 +1,40 @@
+name: review-files
+# Small review copy of a finished build: everything from out-<slug> except the video
+# (the owner's PC never downloads files over 100 MB), plus a 480p preview cut.
+on:
+  workflow_dispatch:
+    inputs:
+      run_id: {description: "episode-de run id", required: true}
+      slug: {description: "episode slug", required: true}
+permissions:
+  actions: read
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: out-${{ inputs.slug }}
+          path: out
+          run-id: ${{ inputs.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg >/dev/null
+          mkdir review
+          find out -type f ! -name '*.mp4' -size -30M -exec cp {} review/ \;
+          v=$(ls out/*.mp4 | head -1)
+          ffmpeg -hide_banner -loglevel error -i "$v" -vf scale=-2:480 -c:v libx264 -preset veryfast -crf 30 \
+            -c:a aac -b:a 96k -movflags +faststart review/preview_480p.mp4
+          ls -la review
+      - uses: actions/upload-artifact@v4
+        with:
+          name: review-${{ inputs.slug }}
+          path: review/
+          retention-days: 14
+      - uses: actions/upload-artifact@v4
+        with:
+          name: preview-${{ inputs.slug }}
+          path: preview_480p.mp4
+          retention-days: 14
