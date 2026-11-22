@@ -159,6 +159,26 @@ def _subject_box(im):
     return (W * 0.35, H * 0.25, W * 0.75, H * 0.75)
 
 
+TRUST = "ECHTE AUFNAHMEN"
+
+
+def badge(im, corner="br"):
+    """The small trust mark in a corner (owner 22.11): real footage, no generated pictures."""
+    im = im.convert("RGBA")
+    f = _font(36)
+    tw = f.getlength(TRUST)
+    w, h, pad = int(tw + 64), 58, 28
+    x = W - w - pad if corner.endswith("r") else pad
+    y = H - h - pad if corner.startswith("b") else pad
+    layer = Image.new("RGBA", im.size, (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    d.rounded_rectangle((x, y, x + w, y + h), radius=14, fill=(0, 0, 0, 175), outline=(255, 255, 255, 220), width=3)
+    d.ellipse((x + 12, y + 15, x + 40, y + 43), fill=YELLOW + (255,))
+    d.line((x + 18, y + 29, x + 24, y + 36, x + 35, y + 21), fill=(0, 0, 0, 255), width=4)
+    d.text((x + 50, y + h / 2 + 1), TRUST, font=f, fill=(255, 255, 255, 255), anchor="lm")
+    return Image.alpha_composite(im, layer).convert("RGB")
+
+
 def candidate_a(base, hero_src, year, hook, box=None):
     bg = cover(enhance(base), box=box).convert("RGBA")
     bg = Image.alpha_composite(bg, Image.new("RGBA", bg.size, (0, 0, 0, 40)))
@@ -177,7 +197,7 @@ def candidate_a(base, hero_src, year, hook, box=None):
         size = _fit(ln, W - hero.width - 100, 150)
         _text(d, (44, y), ln, size, WHITE)
         y += size + 14
-    return bg.convert("RGB"), hero.width * hero.height / (W * H)
+    return badge(bg.convert("RGB"), "br"), hero.width * hero.height / (W * H)
 
 
 def candidate_b(base, year, hook, label, box=None):
@@ -190,7 +210,7 @@ def candidate_b(base, year, hook, label, box=None):
     d = ImageDraw.Draw(bg)
     _text(d, (44, 36), year, 110, YELLOW)
     _text(d, (W - 44, 50), hook, _fit(hook, W * 0.55, 110), WHITE, anchor="ra")
-    return bg.convert("RGB"), t.width * t.height / (W * H)
+    return badge(bg.convert("RGB"), "br"), t.width * t.height / (W * H)
 
 
 def candidate_c(base, year, hook, label, box=None):
@@ -229,7 +249,7 @@ def candidate_c(base, year, hook, label, box=None):
         return not hits_circle and not hits_stamp
     x, y, anchor = next((sp for sp in spots if clear(*sp)), spots[0])
     _text(d, (x, y), hook, size, WHITE, anchor=anchor)
-    return bg.convert("RGB"), math.pi * r * r / (W * H)
+    return badge(bg.convert("RGB"), "br" if left_side else "bl"), math.pi * r * r / (W * H)
 
 
 def readable(im):
