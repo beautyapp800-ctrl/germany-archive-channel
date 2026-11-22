@@ -7,6 +7,9 @@ on:
       slug:
         description: a topic slug; empty = the next queued topic without a script
         default: ""
+      reset:
+        description: "true = a skipped topic is queued again first (by hand)"
+        default: "false"
 permissions:
   contents: write
 concurrency:
@@ -29,7 +32,7 @@ jobs:
       - name: "Write the script (exit 3 = skipped for lack of pictures, 4 = text day spent: not failures)"
         run: |
           set +e
-          python automation/write_de.py "${{ inputs.slug || '--next' }}"
+          python automation/write_de.py "${{ inputs.slug || '--next' }}" $([ "${{ inputs.reset }}" = "true" ] && echo --reset)
           code=$?
           echo "write_de exit $code"
           [ "$code" = "3" ] || [ "$code" = "4" ] || [ "$code" = "5" ] || [ "$code" = "0" ] || exit $code

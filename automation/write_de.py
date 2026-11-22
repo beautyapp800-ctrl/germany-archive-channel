@@ -101,6 +101,9 @@ def main(slug):
 
 
 if __name__ == "__main__":
+    if "--reset" in sys.argv:                      # a skipped topic given another chance (by hand)
+        sys.argv.remove("--reset")
+        mark(sys.argv[1], status="queued", script_fails=0, skipped_why=None)
     arg = sys.argv[1]
     slug = next_slug() if arg == "--next" else arg
     if not slug:
