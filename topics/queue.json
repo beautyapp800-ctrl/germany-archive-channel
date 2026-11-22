@@ -39,9 +39,9 @@
     "berlin airlift",
     "berlin airfield"
    ],
-   "status": "ready",
+   "status": "skipped",
    "script_fails": 0,
-   "skipped_why": null
+   "skipped_why": "its facts duplicate the pilot (Luftbruecke) and the draft repeated itself"
   },
   {
    "slug": "waehrungsreform",
