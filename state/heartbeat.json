@@ -1,9 +1,7 @@
 {
- "date": "2026-11-22",
- "checked_at": "2026-11-22T18:41:11Z",
+ "date": "2026-11-23",
+ "checked_at": "2026-11-23T00:12:14Z",
  "waiting": [],
  "reserve": [],
- "actions": [
-  "waehrungsreform: run 45053612112 stopped on a quota/429/cancel; not retried"
- ]
+ "actions": []
 }
